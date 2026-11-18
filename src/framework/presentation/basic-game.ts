@@ -1,9 +1,12 @@
 import "./basic-game.css";
-import { Container, Graphics, Text } from "pixi.js";
+import { Container, Graphics, Sprite, Text, type Texture } from "pixi.js";
 import { createSlotSession } from "../session.ts";
-import { HttpTransport } from "../transport/http.ts";
+import { createGameTransport } from "../transport/proposal.ts";
+import { formatMoney } from "./money.ts";
 import type { GameDefinition } from "../domain/contracts.ts";
 import type { BrandLoader } from "./brand-loading.ts";
+import { loadTextures } from "./assets.ts";
+import { gameRuntime } from "../app/game-runtime.ts";
 
 export async function mountBasicGame(
   root: HTMLElement,
@@ -30,10 +33,12 @@ export async function mountBasicGame(
   root.querySelector(".board-details")!.textContent =
     `${game.reels} × ${game.rows} reels · ${game.lines.length} paylines · ${game.presentation.spinType} spin`;
   const symbols = new Map(game.symbols.map((symbol) => [symbol.id, symbol]));
+  const images = Object.fromEntries(game.symbols.flatMap(({ id, image }) => image ? [[id, image]] : []));
+  let textures = new Map<string, Texture>();
 
-  const { controller, board, mount } = createSlotSession(
+  const { controller, board, mount, waitAfterReels } = createSlotSession(
     game,
-    new HttpTransport(game.routing.apiBase),
+    createGameTransport(game, localStorage),
     (cellSizePx) => {
       const view = new Container();
       const scale = cellSizePx / 102;
@@ -42,18 +47,35 @@ export async function mountBasicGame(
       });
       text.anchor.set(0.5);
       text.position.set(cellSizePx / 2);
+      const sprite = textures.size ? new Sprite() : undefined;
+      if (sprite) {
+        sprite.anchor.set(0.5);
+        sprite.position.copyFrom(text.position);
+      }
       view.addChild(
         new Graphics()
           .roundRect(2 * scale, 2 * scale, 98 * scale, 98 * scale, 10 * scale)
           .fill(0x352735),
         text,
       );
+      if (sprite) view.addChild(sprite);
       return {
         view,
         set(id) {
           const symbol = symbols.get(id)!;
-          text.text = symbol.glyph;
-          text.style.fill = symbol.color;
+          const texture = textures.get(id);
+          text.visible = !texture;
+          if (sprite) {
+            sprite.visible = !!texture;
+            if (texture && sprite.texture !== texture) {
+              sprite.texture = texture;
+              sprite.scale.set(cellSizePx * 0.82 / Math.max(texture.width, texture.height));
+            }
+          }
+          if (!texture) {
+            text.text = symbol.glyph;
+            text.style.fill = symbol.color;
+          }
         },
       };
     },
@@ -64,15 +86,18 @@ export async function mountBasicGame(
   const status = root.querySelector<HTMLElement>("#reuse-status")!;
   const balance = root.querySelector<HTMLElement>("#reuse-balance")!;
   function sync() {
-    balance.textContent = `Balance ${(controller.state!.balance / 100).toFixed(2)}`;
+    balance.textContent = `Balance ${formatMoney(game, controller.state!.balance)}`;
     button.textContent =
       controller.phase === "recovery" ? "Recover result" : "Spin";
     button.disabled = false;
   }
   try {
     const host = root.querySelector<HTMLElement>("#reuse-board")!;
+    const runtime = gameRuntime(game);
+    await runtime.prepare(loader);
+    textures = await loadTextures(images, runtime.resources);
     await mount(host);
-    host.style.aspectRatio = `${board.app.screen.width} / ${board.app.screen.height}`;
+    host.style.aspectRatio = `${board.contentWidth} / ${board.contentHeight}`;
     sync();
     status.textContent = "";
     loader?.ready();
@@ -83,7 +108,12 @@ export async function mountBasicGame(
   }
 
   button.onclick = async () => {
-    button.disabled = true;
+    if (controller.phase === "pending" || controller.phase === "presenting") {
+      board.skip();
+      return;
+    }
+    button.disabled = !board.allowForceStop;
+    button.textContent = board.allowForceStop ? "Stop" : "Spinning";
     board.start(false);
     try {
       const outcome = await (controller.phase === "recovery"
@@ -94,10 +124,11 @@ export async function mountBasicGame(
             chance: "standard",
           }));
       await board.stop(outcome.state.board);
+      await waitAfterReels(false);
       board.highlight(outcome.wins);
-      controller.completePresentation();
+      await controller.completePresentation();
       status.textContent = outcome.wins.length
-        ? `Win ${(outcome.spinWin / 100).toFixed(2)}`
+        ? `Win ${formatMoney(game, outcome.spinWin)}`
         : "No line win";
     } catch {
       board.setBoard(controller.state!.board);

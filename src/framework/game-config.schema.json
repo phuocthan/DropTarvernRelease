@@ -18,6 +18,17 @@
     "defaultBet"
   ],
   "properties": {
+    "resources": { "$ref": "./resources/resource-manifest.schema.json" },
+    "currency": {
+      "type": "object",
+      "required": ["code", "exponent"],
+      "properties": {
+        "code": { "type": "string", "pattern": "^[A-Z]{3}$" },
+        "exponent": { "type": "integer", "minimum": 0, "maximum": 6 },
+        "locale": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
     "$schema": {
       "type": "string",
       "minLength": 1
@@ -88,6 +99,7 @@
         "skin"
       ],
       "properties": {
+        "contract": { "const": "proposal-v1" },
         "query": {
           "type": "string",
           "pattern": "^[a-z][a-z0-9-]*$"
@@ -115,6 +127,24 @@
         "drop"
       ],
       "properties": {
+        "allowForceStop": { "type": "boolean", "default": true },
+        "foregroundWinSymbols": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "winOverflowPaddingPx": { "type": "integer", "minimum": 0 },
+        "landing": {
+          "type": "object",
+          "required": ["compressMs", "stretchMs", "settleMs", "leadMs", "squashX", "squashY", "stretchX", "stretchY"],
+          "properties": {
+            "compressMs": { "type": "integer", "minimum": 1 },
+            "stretchMs": { "type": "integer", "minimum": 1 },
+            "settleMs": { "type": "integer", "minimum": 1 },
+            "leadMs": { "type": "integer", "minimum": 0 },
+            "squashX": { "type": "number", "minimum": 0.5, "maximum": 1.5 },
+            "squashY": { "type": "number", "minimum": 0.5, "maximum": 1.5 },
+            "stretchX": { "type": "number", "minimum": 0.5, "maximum": 1.5 },
+            "stretchY": { "type": "number", "minimum": 0.5, "maximum": 1.5 }
+          },
+          "additionalProperties": false
+        },
         "spinType": {
           "enum": [
             "normal",
@@ -144,7 +174,10 @@
               "minItems": 1,
               "uniqueItems": true,
               "items": { "type": "integer", "minimum": 1 }
-            }
+            },
+            "autoUnlimited": { "type": "boolean" },
+            "autoTopUp": { "type": "integer", "minimum": 1 },
+            "betMenuCloseDelayMs": { "type": "integer", "minimum": 0 }
           },
           "additionalProperties": false
         },
@@ -155,9 +188,23 @@
             "background": { "type": "string", "pattern": "\\S" },
             "brandLogo": { "type": "string", "pattern": "\\S" },
             "brandName": { "type": "string", "pattern": "\\S" },
-            "gameLogo": { "type": "string", "pattern": "\\S" }
+            "gameLogo": { "type": "string", "pattern": "\\S" },
+            "brandIntro": {
+              "type": "object",
+              "required": ["src", "durationMs"],
+              "properties": {
+                "src": { "type": "string", "pattern": "\\S" },
+                "durationMs": { "type": "integer", "minimum": 1 },
+                "holdUntilReady": { "type": "boolean" }
+              },
+              "additionalProperties": false
+            }
           },
           "additionalProperties": false
+        },
+        "reelMaskPaddingPx": {
+          "type": "integer",
+          "minimum": 0
         },
         "winDimmerOpacity": {
           "description": "Opacity of the dark overlay beneath the active winning symbols.",
@@ -204,6 +251,28 @@
               "minimum": 0,
               "maximum": 1
             },
+            "openingReveal": {
+              "type": "object",
+              "required": ["durationMs", "symbolDelayMs", "mascotDelayMs"],
+              "properties": {
+                "durationMs": { "type": "integer", "minimum": 1 },
+                "symbolDelayMs": { "type": "integer", "minimum": 0 },
+                "mascotDelayMs": { "type": "integer", "minimum": 0 },
+                "playbackRate": { "type": "number", "exclusiveMinimum": 0 }
+              },
+              "additionalProperties": false
+            },
+            "winScreen": {
+              "type": "object",
+              "required": ["centerY", "paddingPx", "landscapeFit", "portraitFit"],
+              "properties": {
+                "centerY": { "type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 1 },
+                "paddingPx": { "type": "integer", "minimum": 0 },
+                "landscapeFit": { "type": "number", "exclusiveMinimum": 0 },
+                "portraitFit": { "type": "number", "exclusiveMinimum": 0 }
+              },
+              "additionalProperties": false
+            },
             "chestCamera": {
               "type": "object",
               "required": ["scale", "originY", "durationMs"],
@@ -211,6 +280,16 @@
                 "scale": { "type": "number", "minimum": 1 },
                 "originY": { "type": "number", "minimum": 0, "maximum": 1 },
                 "durationMs": { "type": "integer", "minimum": 1 }
+              },
+              "additionalProperties": false
+            },
+            "sideLogo": {
+              "type": "object",
+              "required": ["referenceAspect", "leftFactor", "upFactor"],
+              "properties": {
+                "referenceAspect": { "type": "number", "exclusiveMinimum": 1 },
+                "leftFactor": { "type": "number", "minimum": 0 },
+                "upFactor": { "type": "number", "minimum": 0 }
               },
               "additionalProperties": false
             },
@@ -229,6 +308,15 @@
           },
           "additionalProperties": false
         },
+        "checkWinDelayMs": {
+          "type": "object",
+          "required": ["normal", "turbo"],
+          "properties": {
+            "normal": { "type": "integer", "minimum": 0 },
+            "turbo": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
+        },
         "feature": {
           "type": "object",
           "required": ["startDelayMs", "endDelayMs"],
@@ -243,7 +331,6 @@
               "type": "integer",
               "minimum": 0
             },
-            "totalWinHoldMs": { "type": "integer", "minimum": 1 },
             "hideSymbolsUntilFirstSpin": {
               "type": "boolean",
               "default": false
@@ -555,6 +642,10 @@
           "minLength": 1
         },
         "glyph": {
+          "type": "string",
+          "minLength": 1
+        },
+        "image": {
           "type": "string",
           "minLength": 1
         },

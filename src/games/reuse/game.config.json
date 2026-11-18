@@ -3,6 +3,13 @@
   "schemaVersion": 1,
   "id": "reuse-3x3",
   "title": "3 × 3 Reuse Demo",
+  "resources": {
+    "assets": {},
+    "bundles": { "core": { "assets": [] } },
+    "startup": ["core"],
+    "concurrency": 4,
+    "retries": 1
+  },
   "reels": 3,
   "rows": 3,
   "lines": [
@@ -87,9 +94,13 @@
   "routing": {
     "query": "reuse",
     "apiBase": "/api/reuse",
-    "skin": "basic"
+    "skin": "basic",
+    "contract": "proposal-v1"
   },
   "presentation": {
+    "allowForceStop": true,
+    "landing": { "compressMs": 70, "stretchMs": 90, "settleMs": 120, "leadMs": 80, "squashX": 1.1, "squashY": 0.88, "stretchX": 0.94, "stretchY": 1.06 },
+    "reelMaskPaddingPx": 10,
     "spinType": "normal",
     "cellSizePx": 96,
     "gapPx": 6,
@@ -99,7 +110,7 @@
       "stopDelayMs": 130,
       "turboStopDelayMs": 20,
       "bounceMs": 170,
-      "bouncePx": 8
+      "bouncePx": 14
     },
     "drop": {
       "exit": {
@@ -114,7 +125,7 @@
         "rowStaggerMs": 52,
         "holdMs": 0
       },
-      "bounceMs": 100,
+      "bounceMs": 200,
       "bouncePx": 8,
       "turboMultiplier": 4
     }

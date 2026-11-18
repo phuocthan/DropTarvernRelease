@@ -1,3 +1,5 @@
+import type { ResourceManifest } from "../resources/contracts.ts";
+import type { LandingMotion } from "../presentation/landing-motion.ts";
 /** Money is always an integer in demo minor units. Boards are column-major. */
 export type Mode = "base" | "tavern" | "drop";
 export type Chance = "standard" | "extra" | "super";
@@ -28,6 +30,7 @@ export interface RoundState {
   cap: number;
 }
 export interface Snapshot {
+  resume?: { curStep: string; featureMode: FeatureState["mode"] | null; kind: string };
   version: number;
   balance: number;
   board: Board;
@@ -50,11 +53,21 @@ export interface Completion {
   capped: boolean;
 }
 export interface Outcome {
+  checkpoint?: {
+    curStep: string;
+    staticResult?: boolean;
+    resumed?: boolean;
+    reel?: number;
+    multiplier?: number;
+    displayWinMinor: number;
+    beforeWinMinor: number;
+  };
   requestId: string;
   bet: number;
   state: Snapshot;
   wins: LineWin[];
   spinWin: number;
+  scatterPositions?: Position[];
   entry: Mode | null;
   retrigger: number;
   collected: Position[];
@@ -69,6 +82,7 @@ export interface SymbolDefinition {
   kind: "royal" | "premium" | "wild" | "bonus";
   color: string;
   glyph: string;
+  image?: string;
   pays: Record<number, number>;
 }
 export type ReelMotion = "normal" | "drop";
@@ -78,6 +92,7 @@ export interface BrandLoadingConfig {
   brandLogo: string;
   brandName: string;
   gameLogo: string;
+  brandIntro?: { src: string; durationMs: number; holdUntilReady?: boolean };
 }
 export interface DropTiming {
   fallMs: number;
@@ -91,20 +106,29 @@ export interface DropAnticipation {
   reelPauseMs: number;
 }
 export interface ReelPresentation {
+  allowForceStop?: boolean;
+  foregroundWinSymbols?: string[];
+  winOverflowPaddingPx?: number;
+  landing?: LandingMotion;
   spinType: ReelMotion;
   cellSizePx: number;
   gapPx: number;
   symbolEdgeInsetPx?: number;
+  reelMaskPaddingPx?: number;
   winDimmerOpacity?: number;
   symbolLandingEffects?: Record<string, SymbolLandingEffects>;
   loadingScreen?: BrandLoadingConfig;
-  controls?: { menu: boolean; autoRounds: number[] };
+  controls?: { menu: boolean; autoRounds: number[]; autoUnlimited?: boolean; autoTopUp?: number; betMenuCloseDelayMs?: number };
+  checkWinDelayMs?: { normal: number; turbo: number };
   animationGrid?: { originSlot: string; reelPitch: number; rowPitch: number };
   scene?: {
     layers: Record<string, number>;
     slots: Record<string, string>;
     openingDimmerOpacity?: number;
+    openingReveal?: { durationMs: number; symbolDelayMs: number; mascotDelayMs: number; playbackRate?: number };
+    winScreen?: { centerY: number; paddingPx: number; landscapeFit: number; portraitFit: number };
     chestCamera?: { scale: number; originY: number; durationMs: number };
+    sideLogo?: { referenceAspect: number; leftFactor: number; upFactor: number };
     backgroundCamera?: {
       width: number;
       top: number;
@@ -116,7 +140,6 @@ export interface ReelPresentation {
   feature?: {
     startDelayMs: number;
     endDelayMs: number;
-    totalWinHoldMs?: number;
     hideSymbolsUntilFirstSpin?: boolean;
   };
   normal: {
@@ -137,10 +160,12 @@ export interface ReelPresentation {
   };
 }
 export interface GameDefinition {
+  resources?: ResourceManifest;
   schemaVersion: 1;
   id: string;
   title: string;
-  routing: { query: string; apiBase: string; skin: "basic" | "tavern" };
+  routing: { query: string; apiBase: string; skin: "basic" | "tavern"; contract?: "proposal-v1" };
+  currency?: { code: string; exponent: number; locale?: string };
   presentation: ReelPresentation;
   reels: number;
   rows: number;
@@ -163,6 +188,10 @@ export interface GameDefinition {
   };
 }
 export interface GameTransport {
+  hasResume?: boolean;
+  resume?(refresh?: boolean): Promise<Outcome>;
+  completePresentation?(): Promise<Snapshot>;
+  nextPresentation?(): Outcome | null;
   session(): Promise<Snapshot>;
   execute(command: Command): Promise<Outcome>;
 }

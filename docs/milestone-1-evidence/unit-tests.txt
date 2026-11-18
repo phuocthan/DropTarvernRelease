@@ -1,0 +1,59 @@
+
+> tavern-slot-framework@0.2.0 test
+> node --experimental-strip-types --test tests/*.test.ts
+
+✔ landing preserves rest size before motion, after completion, and when skipped (2.0381ms)
+✔ landing compresses, counter-stretches and settles without changing the base symbol scale (2.1834ms)
+✔ config rejects broken landing timing and extreme deformation (1.3672ms)
+✔ framework policies validate force stop and foreground symbol configuration (0.5493ms)
+✔ Tavern placeholder glyphs retain their Unicode code points through export (1.1729ms)
+✔ proposal KRW wager is durable and duplicate token never creates another debit (29.8838ms)
+✔ proposal bonus releases one step, resumes after-result state, and settles once (133.0655ms)
+✔ proposal inactive rounds settle without browser ACK and require summary dismissal (14.7226ms)
+✔ FE adapter drives checkpoints, resumes an issued spin, and credits only final ACK (109.3155ms)
+✔ boot reuses the prepared session without another game-info request (6.2532ms)
+✔ landing keeps a pending bonus intro in base while retaining prepared resume intent (12.3748ms)
+✔ landing reuses the prepared free-spin result and preserves its completed-spin counts (12.1604ms)
+✔ FE retries a lost paid response with the original Play-Token after reload (11.4952ms)
+✔ FE lost ACK resumes the next released result instead of replaying the completed spin (14.7147ms)
+✔ same reusable adapter runs 3x3 config with KRW (5.0256ms)
+✔ lost final ACK response reconciles the settled wallet without reopening a finished feature (37.7665ms)
+✔ resources load dependencies first, deduplicate consumers, and report actual progress (4.3345ms)
+✔ shared resource stays alive until the final game's ownership is released (0.9895ms)
+✔ resource concurrency remains bounded while queued bundles complete (70.2243ms)
+✔ failed required assets can retry and optional failures are observable without blocking (1.9504ms)
+✔ reacquiring a resource waits for its old unload before loading a new instance (0.438ms)
+✔ bad manifests and cyclic dependencies fail before issuing network requests (0.3396ms)
+✔ remote resource resolution preserves CDN folders and expands brand/locale/version safely (0.3421ms)
+✔ lifetime releases listeners in reverse order even when one cleanup throws (0.2794ms)
+✔ Drop anticipation serializes remaining reels after two Scatters land (1.3654ms)
+✔ audio sprite cues share fallback files and use millisecond ranges (0.2451ms)
+✔ definition and all 15 line paths stay inside the board (0.1386ms)
+✔ the authored payline grid aligns unequal source pitches with the reel cells (0.2034ms)
+✔ reel edge correction translates only the outlines crossing its vertical safe area (0.809ms)
+✔ config validation rejects invalid board geometry, symbol IDs and timing (0.5809ms)
+✔ config validates the win dimmer and scene effects for known symbols (0.6334ms)
+✔ the 3 by 3 config disables bonus purchases and higher chances (0.3964ms)
+✔ Wild prefix selects best valid symbol without paying duplicate substitutions (0.4615ms)
+✔ chest collects distinct winning rows across lines and spins (0.2993ms)
+✔ settlement multiplies all chest multipliers and caps entire paid round (0.1538ms)
+✔ retrying a command returns same result without another debit (0.7529ms)
+✔ paid and free spin wallet accounting, locked bet and bonus buy (0.6374ms)
+✔ Tavern retrigger adds five free spins (0.882ms)
+✔ bonus purchases land the exact number of Scatters on distinct reels (0.4818ms)
+✔ free spins favor first-chest progress using the sampled Scatter positions (0.5445ms)
+✔ naturally triggered feature keeps its paid round and retriggers stay bounded (4.2012ms)
+✔ buy Drop has a distinct mode and completion credits feature once (1.4958ms)
+✔ three and four Scatters trigger the correct chest multiplier minimums (1.6919ms)
+✔ losing and single-line boards remain distinct (0.2722ms)
+✔ feature termination caps award across the full round and never double-credits base (0.3842ms)
+✔ base round cap is reflected in the returned amount and wallet (0.3406ms)
+✔ slot content fits long amounts and animated poses without enlarging short amounts (0.6518ms)
+ℹ tests 47
+ℹ suites 0
+ℹ pass 47
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 448.9093

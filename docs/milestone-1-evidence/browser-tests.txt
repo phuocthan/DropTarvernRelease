@@ -1,0 +1,11 @@
+
+> tavern-slot-framework@0.2.0 test:browser
+> playwright test
+
+
+Running 2 tests using 1 worker
+
+  ok 1 tests\browser\milestone-1.spec.ts:3:2 › M1 5 × 5 drop uses shared v1 runtime and survives reload (5.0s)
+  ok 2 tests\browser\milestone-1.spec.ts:3:2 › M1 3 × 3 normal uses shared v1 runtime and survives reload (1.5s)
+
+  2 passed (13.7s)

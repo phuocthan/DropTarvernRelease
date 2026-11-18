@@ -1,5 +1,5 @@
 import { GameController } from "./controller.ts";
-import type { GameDefinition, GameTransport } from "./domain/contracts.ts";
+import type { GameDefinition, GameTransport, Snapshot } from "./domain/contracts.ts";
 import { BoardView, type SymbolFactory } from "./presentation/board.ts";
 
 export function createSlotSession(
@@ -11,7 +11,7 @@ export function createSlotSession(
   const controller = new GameController(
     transport,
     storage,
-    game.id + ".pending",
+    game.id + (game.routing.contract ? ".proposal-v1.pending" : ".pending"),
   );
   const board = new BoardView(game, symbols);
   const timing = game.presentation.feature;
@@ -22,6 +22,11 @@ export function createSlotSession(
     controller,
     board,
     prepareFeatureEntry,
+    async waitAfterReels(turbo: boolean) {
+      const timing = game.presentation.checkWinDelayMs;
+      const ms = timing ? (turbo ? timing.turbo : timing.normal) : 0;
+      if (ms) await new Promise<void>((resolve) => setTimeout(resolve, ms));
+    },
     nextSpinDelay(baseDelayMs: number) {
       const feature = controller.state?.feature;
       return baseDelayMs +
@@ -33,8 +38,8 @@ export function createSlotSession(
       if (timing?.endDelayMs)
         await new Promise<void>((resolve) => setTimeout(resolve, timing.endDelayMs));
     },
-    async mount(host: HTMLElement) {
-      await Promise.all([board.mount(host), controller.boot()]);
+    async mount(host: HTMLElement, options?: { autoStart?: boolean; initialState?: Snapshot }) {
+      await Promise.all([board.mount(host, options), controller.boot(options?.initialState)]);
       board.setBoard(controller.state!.board);
       if (controller.state!.feature?.played === 0) prepareFeatureEntry();
     },

@@ -1,5 +1,6 @@
 import type { GameDefinition } from "./domain/contracts.ts";
 import { validateDefinition } from "./domain/rules.ts";
+import { validateResourceManifest } from "./resources/validate-manifest.ts";
 
 const key = /^[a-z][a-z0-9-]*$/;
 const nonEmpty = (value: unknown) =>
@@ -13,6 +14,7 @@ export function loadGameConfig(raw: unknown): GameDefinition {
   if (!raw || typeof raw !== "object")
     throw Error("Game config must be an object");
   const game = raw as GameDefinition;
+  if (game.resources !== undefined) validateResourceManifest(game.resources);
   const invalid = (field: string): never => {
     throw Error(`Invalid game config [${game.id ?? "unknown"}]: ${field}`);
   };
@@ -20,6 +22,8 @@ export function loadGameConfig(raw: unknown): GameDefinition {
   if (!nonEmpty(game.id) || !key.test(game.id) || !nonEmpty(game.title))
     invalid("id or title");
   const route = game.routing;
+  if (route?.contract !== undefined && route.contract !== "proposal-v1") invalid("routing.contract");
+  if (game.currency && (!/^[A-Z]{3}$/.test(game.currency.code) || !nonNegativeInt(game.currency.exponent) || game.currency.exponent > 6)) invalid("currency");
   if (
     !route ||
     !nonEmpty(route.query) ||
@@ -39,6 +43,7 @@ export function loadGameConfig(raw: unknown): GameDefinition {
         nonEmpty(symbol.id) &&
         nonEmpty(symbol.label) &&
         nonEmpty(symbol.glyph) &&
+        (symbol.image === undefined || nonEmpty(symbol.image)) &&
         typeof symbol.color === "string" &&
         /^#[\da-f]{6}$/i.test(symbol.color) &&
         ["royal", "premium", "wild", "bonus"].includes(symbol.kind) &&
@@ -89,6 +94,18 @@ export function loadGameConfig(raw: unknown): GameDefinition {
   )
     invalid("presentation");
   const { normal, drop, feature, animationGrid, scene } = display;
+  if (display.allowForceStop !== undefined && typeof display.allowForceStop !== "boolean") invalid("presentation.allowForceStop");
+  if (display.foregroundWinSymbols !== undefined && (!Array.isArray(display.foregroundWinSymbols) ||
+      !display.foregroundWinSymbols.every((id) => ids.has(id)))) invalid("presentation.foregroundWinSymbols");
+  if (display.winOverflowPaddingPx !== undefined && (!nonNegativeInt(display.winOverflowPaddingPx) || display.winOverflowPaddingPx > display.cellSizePx * 2))
+    invalid("presentation.winOverflowPaddingPx");
+  const deformation = display.landing;
+  if (deformation !== undefined && (!deformation ||
+      ![deformation.compressMs, deformation.stretchMs, deformation.settleMs].every(positiveInt) ||
+      !nonNegativeInt(deformation.leadMs) || deformation.leadMs > deformation.compressMs + deformation.stretchMs + deformation.settleMs ||
+      ![deformation.squashX, deformation.squashY, deformation.stretchX, deformation.stretchY]
+        .every((value) => Number.isFinite(value) && value >= 0.5 && value <= 1.5)))
+    invalid("presentation.landing");
   const anticipation = drop?.anticipation;
   if (anticipation !== undefined &&
     (!anticipation || !ids.has(anticipation.symbolId) ||
@@ -98,11 +115,19 @@ export function loadGameConfig(raw: unknown): GameDefinition {
   if (loading !== undefined &&
     (!loading || ![loading.background, loading.brandLogo, loading.brandName, loading.gameLogo].every(nonEmpty)))
     invalid("presentation.loadingScreen");
+  const brandIntro = loading?.brandIntro;
+  if (brandIntro !== undefined &&
+      (!brandIntro || !nonEmpty(brandIntro.src) || !positiveInt(brandIntro.durationMs) ||
+       (brandIntro.holdUntilReady !== undefined && typeof brandIntro.holdUntilReady !== "boolean")))
+    invalid("presentation.loadingScreen.brandIntro");
   const controls = display.controls;
   if (controls !== undefined &&
     (!controls || typeof controls.menu !== "boolean" || !Array.isArray(controls.autoRounds) ||
       !controls.autoRounds.length || !controls.autoRounds.every(positiveInt) ||
-      new Set(controls.autoRounds).size !== controls.autoRounds.length))
+      new Set(controls.autoRounds).size !== controls.autoRounds.length ||
+      (controls.autoUnlimited !== undefined && typeof controls.autoUnlimited !== "boolean") ||
+      (controls.autoTopUp !== undefined && !positiveInt(controls.autoTopUp)) ||
+      (controls.betMenuCloseDelayMs !== undefined && !nonNegativeInt(controls.betMenuCloseDelayMs))))
     invalid("presentation.controls");
   if (
     display.symbolEdgeInsetPx !== undefined &&
@@ -110,6 +135,8 @@ export function loadGameConfig(raw: unknown): GameDefinition {
       display.symbolEdgeInsetPx * 2 >= game.rows * (display.cellSizePx + display.gapPx) - display.gapPx)
   )
     invalid("presentation.symbolEdgeInsetPx");
+  if (display.reelMaskPaddingPx !== undefined && !nonNegativeInt(display.reelMaskPaddingPx))
+    invalid("presentation.reelMaskPaddingPx");
   if (
     animationGrid !== undefined &&
     (!animationGrid || !nonEmpty(animationGrid.originSlot) ||
@@ -127,7 +154,19 @@ export function loadGameConfig(raw: unknown): GameDefinition {
     invalid("presentation.scene");
   const camera = scene?.backgroundCamera;
   const openingDimmer = scene?.openingDimmerOpacity;
+  const winScreen = scene?.winScreen;
+  if (winScreen !== undefined && (!winScreen ||
+      !Number.isFinite(winScreen.centerY) || winScreen.centerY <= 0 || winScreen.centerY >= 1 ||
+      !nonNegativeInt(winScreen.paddingPx) ||
+      ![winScreen.landscapeFit, winScreen.portraitFit].every((fit) => Number.isFinite(fit) && fit > 0)))
+    invalid("presentation.scene.winScreen");
+  const openingReveal = scene?.openingReveal;
   const chestCamera = scene?.chestCamera;
+  const sideLogo = scene?.sideLogo;
+  if (sideLogo !== undefined &&
+      (!sideLogo || !Number.isFinite(sideLogo.referenceAspect) || sideLogo.referenceAspect <= 1 ||
+       !nonNegative(sideLogo.leftFactor) || !nonNegative(sideLogo.upFactor)))
+    invalid("presentation.scene.sideLogo");
   if (chestCamera !== undefined &&
       (!chestCamera || !Number.isFinite(chestCamera.scale) || chestCamera.scale < 1 ||
        !nonNegative(chestCamera.originY) || chestCamera.originY > 1 ||
@@ -135,6 +174,14 @@ export function loadGameConfig(raw: unknown): GameDefinition {
     invalid("presentation.scene.chestCamera");
   if (openingDimmer !== undefined && (!nonNegative(openingDimmer) || openingDimmer > 1))
     invalid("presentation.scene.openingDimmerOpacity");
+  if (openingReveal !== undefined &&
+      (!openingReveal || !positiveInt(openingReveal.durationMs) ||
+       (openingReveal.playbackRate !== undefined &&
+        (!Number.isFinite(openingReveal.playbackRate) || openingReveal.playbackRate <= 0)) ||
+       ![openingReveal.symbolDelayMs, openingReveal.mascotDelayMs].every(
+         (delay) => nonNegativeInt(delay) && delay < openingReveal.durationMs,
+       )))
+    invalid("presentation.scene.openingReveal");
   if (
     camera !== undefined &&
     (!camera || ![camera.width, camera.top, camera.landscapeBottom, camera.portraitBottom].every(positiveInt) ||
@@ -147,6 +194,10 @@ export function loadGameConfig(raw: unknown): GameDefinition {
   )
     invalid("presentation.winDimmerOpacity");
   const landing = display.symbolLandingEffects;
+  const checkWinDelay = display.checkWinDelayMs;
+  if (checkWinDelay !== undefined &&
+      (!checkWinDelay || !nonNegativeInt(checkWinDelay.normal) || !nonNegativeInt(checkWinDelay.turbo)))
+    invalid("presentation.checkWinDelayMs");
   if (
     landing !== undefined &&
     (!landing || typeof landing !== "object" || Array.isArray(landing) ||
@@ -163,7 +214,6 @@ export function loadGameConfig(raw: unknown): GameDefinition {
     (!feature ||
       !nonNegativeInt(feature.startDelayMs) ||
       !nonNegativeInt(feature.endDelayMs) ||
-      (feature.totalWinHoldMs !== undefined && !positiveInt(feature.totalWinHoldMs)) ||
       (feature.hideSymbolsUntilFirstSpin !== undefined && typeof feature.hideSymbolsUntilFirstSpin !== "boolean"))
   )
     invalid("presentation.feature");

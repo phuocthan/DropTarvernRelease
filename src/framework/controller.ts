@@ -22,8 +22,8 @@ export class GameController {
     this.storage = storage;
     this.storageKey = storageKey;
   }
-  async boot() {
-    this.state = await this.transport.session();
+  async boot(initialState?: Snapshot) {
+    this.state = initialState ?? await this.transport.session();
     const saved = this.storage.getItem(this.storageKey);
     try {
       this.pending = saved ? JSON.parse(saved) : null;
@@ -31,7 +31,7 @@ export class GameController {
       this.storage.removeItem(this.storageKey);
       this.pending = null;
     }
-    this.phase = this.pending ? "recovery" : "ready";
+    this.phase = this.pending || this.transport.hasResume ? "recovery" : "ready";
   }
   async execute(
     input: Omit<Command, "requestId" | "expectedVersion">,
@@ -45,7 +45,18 @@ export class GameController {
     this.storage.setItem(this.storageKey, JSON.stringify(this.pending));
     return this.send();
   }
-  async recover() {
+  async recover(refresh = true) {
+    if ((!this.pending || (!refresh && this.state?.resume)) && this.transport.resume) {
+      this.phase = "pending";
+      try {
+        const outcome = await this.transport.resume(refresh || !this.state?.resume);
+        this.state = outcome.state;
+        this.pending = null;
+        this.storage.removeItem(this.storageKey);
+        this.phase = "presenting";
+        return outcome;
+      } catch (error) { this.phase = "recovery"; throw error; }
+    }
     if (!this.pending) throw Error("NO_PENDING_ROUND");
     return this.send();
   }
@@ -69,7 +80,18 @@ export class GameController {
       throw error;
     }
   }
-  completePresentation() {
-    if (this.phase === "presenting") this.phase = "ready";
+  async completePresentation() {
+    if (this.phase !== "presenting") return;
+    try {
+      if (this.transport.completePresentation) this.state = await this.transport.completePresentation();
+      this.phase = "ready";
+    } catch (error) { this.phase = "recovery"; throw error; }
+  }
+  nextPresentation() {
+    const outcome = this.transport.nextPresentation?.();
+    if (!outcome) return null;
+    this.state = outcome.state;
+    this.phase = "presenting";
+    return outcome;
   }
 }
