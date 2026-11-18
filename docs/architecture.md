@@ -30,7 +30,7 @@ flowchart TD
 | Audio/UI | `audio`, `ui`, `presentation/audio.ts` | Reusable file/sprite cue support and controls/formatting; preview is intentionally silent |
 | Presentation | `presentation/board.ts` and helpers | Drop 5x5 and Normal 3x3; configurable landing and force-stop policies |
 
-Source implementation is independent of Gen3. It follows shared app/resource/network/core boundaries; it is not a packaged monorepo SDK. In-place game switching/disposal, arbitrary third-party game onboarding and production wallet integration are not M1 acceptance claims.
+fw-pixi follows shared app/resource/network/core boundaries; it is not a packaged monorepo SDK. In-place game switching/disposal, arbitrary third-party game onboarding and production wallet integration are not M1 acceptance claims.
 
 See [acceptance checklist](milestone-1.md), [API field guide](milestone-1-api.md) and [asset verification](milestone-1-asset-spec.md).
 

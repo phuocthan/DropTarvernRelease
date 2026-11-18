@@ -1,8 +1,8 @@
 {
   "milestone": "M1",
-  "reviewTag": "milestone-1-v1.1",
+  "reviewTag": null,
   "checksumNormalization": "UTF-8 text without BOM with LF; binary unchanged",
-  "sourceRevision": "503d3e36a59bfe0da1dde0628f214bd96267d94f",
+  "sourceRevision": "72e076cfe7380db534368d8860b34d0b45c35fc5",
   "files": [
     {
       "path": ".gitignore",
@@ -10,19 +10,19 @@
     },
     {
       "path": "docs/architecture.md",
-      "sha256": "82b6eb54ad11476f23dd9e45b53fedff6f6461b96f173bcbc683f6098c61142f"
+      "sha256": "4a5c824f176844e6f81858c91ac32e992708793ac6b80500ecaf4e8198c37c38"
     },
     {
       "path": "docs/backend-localhost-v1.md",
-      "sha256": "79538879c6d4e1e49a763f0aad280f361efa35157c7a1e8e478d1ba27d2aa488"
+      "sha256": "26b568d929a9015801ce26f6d348fe39dd9d6b71d1b125f274aaf127213318f9"
     },
     {
       "path": "docs/FE-BE-Proposal.md",
-      "sha256": "ea4b6524ae5604aa1c081d1a195c1c2eaf75dbe95d216e963fcc75f409d82a96"
+      "sha256": "3f404407d4720d90b6958741eb3c73efa62960aa71454347532c8e95decaeeac"
     },
     {
-      "path": "docs/framework-gen3-review.md",
-      "sha256": "d736e11714ef0c1985304c995c943473738de69e41533723ffa1f1f040e387cd"
+      "path": "docs/fw-pixi-architecture.md",
+      "sha256": "4cb5f90ee4134de5d30af16df875dee444ba57eddf38958401d35c6ee4b40381"
     },
     {
       "path": "docs/milestone-1-api.md",
@@ -106,7 +106,7 @@
     },
     {
       "path": "SOURCE_REVISION",
-      "sha256": "0bf18a225b49608b5e0f72f86fe5cfe9d4b4065fe62200617b0a1b365229f70f"
+      "sha256": "5beb6075fb6a79695bea4600d867629dda4008a5407e2c0040a4f4e6d1179568"
     },
     {
       "path": "src/framework/app/game-runtime.ts",
@@ -348,5 +348,6 @@
       "path": "vite.config.ts",
       "sha256": "dd09fa87b49f14624e354479b6aaa7e55022f0ffe090c6705a20551b28792780"
     }
-  ]
+  ],
+  "baseReviewTag": "milestone-1-v1.1"
 }

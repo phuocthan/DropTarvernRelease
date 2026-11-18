@@ -1,4 +1,4 @@
-﻿# FE-BE-Proposal
+# FE-BE-Proposal
 
 Tavern Drop · Bản đề xuất để Team A review.
 
@@ -6,7 +6,7 @@ Tavern Drop · Bản đề xuất để Team A review.
 
 Prefix đề xuất là `/api/v1`. Sau login, FE dùng `sessionId` và `token` do BE cấp theo cơ chế xác thực A định nghĩa. Các endpoint và field là đề xuất để Team A chốt contract.
 
-**Routing update:** POST dùng URL sạch (`/login`, `/spin`, `/buy-feature`) và mang `gameCode` trong JSON payload, ví dụ `{"gameCode":"tavern-drop","isFreespin":0,"betMinor":1000,"chanceMode":"normal"}`. Áp dụng cả các ACK/checkpoint; các ví dụ rút gọn bên dưới tập trung vào field gameplay. Game-info/status cũng dùng POST và mang `gameCode` trong body; không API v1 nào nhận query parameters. Local implementation và resource standard: [framework extension](framework-gen3-review.md).
+**Routing update:** POST dùng URL sạch (`/login`, `/spin`, `/buy-feature`) và mang `gameCode` trong JSON payload, ví dụ `{"gameCode":"tavern-drop","isFreespin":0,"betMinor":1000,"chanceMode":"normal"}`. Áp dụng cả các ACK/checkpoint; các ví dụ rút gọn bên dưới tập trung vào field gameplay. Game-info/status cũng dùng POST và mang `gameCode` trong body; không API v1 nào nhận query parameters. Local implementation và resource standard: [framework extension](fw-pixi-architecture.md).
 
 | API | Mục đích | FE gửi | BE trả | FE xử lý |
 | --- | --- | --- | --- | --- |

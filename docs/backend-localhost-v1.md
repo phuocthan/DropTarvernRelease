@@ -2,7 +2,7 @@
 
 Implementation cho [FE-BE-Proposal](FE-BE-Proposal.md), revision `v1-review-6`. Đây là backend synthetic để review contract với Team A, chưa phải math/wallet production. Những ví dụ cũ dùng `spinWinMinor` không thay thế tên mới `totalwin_amt` và `winLines[].win_amt` trong proposal.
 
-Update: mọi POST từ FE dùng URL sạch và gửi `gameCode` trong JSON, bao gồm login, spin, buy-feature và các ACK. Ví dụ `POST /api/v1/spin` với `{"gameCode":"tavern-drop","isFreespin":0,"betMinor":1000,"chanceMode":"normal"}`. Game-info/status cũng dùng POST với body JSON; URL của toàn bộ API v1 không có query parameters. Xem [framework/resource extension](framework-gen3-review.md).
+Update: mọi POST từ FE dùng URL sạch và gửi `gameCode` trong JSON, bao gồm login, spin, buy-feature và các ACK. Ví dụ `POST /api/v1/spin` với `{"gameCode":"tavern-drop","isFreespin":0,"betMinor":1000,"chanceMode":"normal"}`. Game-info/status cũng dùng POST với body JSON; URL của toàn bộ API v1 không có query parameters. Xem [framework/resource extension](fw-pixi-architecture.md).
 
 ## Chạy
 
