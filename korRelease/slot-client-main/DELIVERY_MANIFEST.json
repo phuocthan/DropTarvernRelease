@@ -1,0 +1,992 @@
+{
+  "deliveryId": "than-m1-initial-20261119",
+  "profile": "review-only client source and compatibility evidence",
+  "officialGitLabApprovedStartingCommitReference": "880a75e406d3a28c03dfa39b3ead93d1a4b4a13b",
+  "gitLabCommitAncestryVerified": false,
+  "verifiedBuildSourceCommit": "80b1ad0578d18a88ef9c6bdcdcc94e187b30d495",
+  "apiAccepted": false,
+  "seedPreserved": true,
+  "scope": "Seed plus scoped client additions; excludes manifest itself, dependencies, builds and local data",
+  "files": {
+    ".gitattributes": {
+      "sha256": "6be91ddacb73db21788cafd736dfb61f4928509196f0d161405b23aec6d3e6d3",
+      "bytes": 143
+    },
+    ".gitignore": {
+      "sha256": "ece7129cedb86932cbf7d7e4c070833ba17fd9636a6bf250955a14a05f74cd7d",
+      "bytes": 176
+    },
+    "AGENTS.md": {
+      "sha256": "11fab79505c74f2f568e64f15386145eafa660b6a9b2ac8164103e513d2d48fa",
+      "bytes": 1859
+    },
+    "ASSET_INVENTORY.json": {
+      "sha256": "1a2f077edbac870cfb6b7185e760e6225328794ce41779a7a9955c9ee06345b3",
+      "bytes": 1357
+    },
+    "README.md": {
+      "sha256": "3468d1d1699a3170513b7555b1fdefe362b6223cbcfeb39e10f01a7e7d20aae7",
+      "bytes": 2793
+    },
+    "SNAPSHOT_MANIFEST.json": {
+      "sha256": "a7abe5725737d692c4ea961b3194be3f02c1cee513c88175dcff5e0413291cff",
+      "bytes": 11266
+    },
+    "apps/board-sample/contract.js": {
+      "sha256": "8089e3f2ee9047fc1e6f9efdbe9488c8ef8b34bfe1476f3c7a3226c32825510c",
+      "bytes": 1947
+    },
+    "apps/board-sample/index.html": {
+      "sha256": "fdda438683ba27716cff655a9ff1dd2bb1ac3a270aab4e8880f4260dd9449143",
+      "bytes": 1593
+    },
+    "apps/board-sample/main.js": {
+      "sha256": "7a6a7b178ce77e57a8680bf23db1624aecd3008aa079ddb57931474e8ad1d72f",
+      "bytes": 1571
+    },
+    "apps/board-sample/recorded.js": {
+      "sha256": "c3836d3bebe4e937ea895bee8d34e9d8b571e790fdfe1e3b733820c4b15746fa",
+      "bytes": 1255
+    },
+    "apps/board-sample/renderer.js": {
+      "sha256": "a4c44499dd1efec6856571056477181be9728ad917fa13e248b019cf5e841c77",
+      "bytes": 1038
+    },
+    "apps/board-sample/styles.css": {
+      "sha256": "ef2972914f610e06911e0f8ee5b55b0bd14830d75f576c100935911e52a6fa9e",
+      "bytes": 1832
+    },
+    "apps/player-web/index.html": {
+      "sha256": "407369918658b635fda5bbaf3d7e046cc7fe380dd54ef0818ad9ab30ff20db40",
+      "bytes": 8940
+    },
+    "apps/player-web/package.json": {
+      "sha256": "978d25ccf991061b56423a53afa8011f37b2ecc4123e884d52ce1d8b1ef63688",
+      "bytes": 436
+    },
+    "apps/player-web/src/adapters/mock-adapter.js": {
+      "sha256": "064cd5b95223dc0088b02f1758845a340a3d098b1f95622d627c1b0b5a1038a4",
+      "bytes": 7404
+    },
+    "apps/player-web/src/audio.js": {
+      "sha256": "2f1299177a3d433978f077904b54756094992bf36d9dcd6c1596ef7247cf7529",
+      "bytes": 1610
+    },
+    "apps/player-web/src/contract.js": {
+      "sha256": "8112152a5d4e1492316a0b899e7466d4d400943acfc71d44bf2c74b1736f0fa3",
+      "bytes": 7094
+    },
+    "apps/player-web/src/main.js": {
+      "sha256": "169b81e0bc0af073546f2a58da4d2512e095ec81246e71b9d9c318bf94da9edd",
+      "bytes": 8083
+    },
+    "apps/player-web/src/round-controller.js": {
+      "sha256": "3213fc45da0e91dc09226489947c42ec8e10dc5527f38021014ad95583b1269e",
+      "bytes": 10016
+    },
+    "apps/player-web/src/snapshot-revisions.js": {
+      "sha256": "255d04cebf48cce499edaf6a189f75cfbad9fc70c9fce90ee6a657df1278879c",
+      "bytes": 1255
+    },
+    "apps/player-web/src/wallet-balance.js": {
+      "sha256": "3fe89eb9ae6518dd59154cbb772b111e3dd74c190702a8d46cb4fd2d4b7f8756",
+      "bytes": 372
+    },
+    "apps/player-web/styles.css": {
+      "sha256": "9f2143d1a4a427d98c846525fe6f9adfb11854e53587900a3ca89e2fe1d86051",
+      "bytes": 22845
+    },
+    "apps/player-web/tests/controller.test.js": {
+      "sha256": "8a90f11904c786a00cec2f3edb828d25d0d7c2e955cbd88d0f2b0f4edc03d163",
+      "bytes": 11709
+    },
+    "apps/player-web/tests/core.test.js": {
+      "sha256": "1011f16fa565b70d1ae3731e47d1dfde4bab2dd9f2f78fbe8905e0615518c121",
+      "bytes": 13409
+    },
+    "apps/player-web/tests/hosting.test.js": {
+      "sha256": "0ea9e2b9a48d2f69dac17c08a09eaa0ee53bb799ddafa979b9001e795b1b60dd",
+      "bytes": 1711
+    },
+    "apps/player-web/tests/recorded-board.test.js": {
+      "sha256": "005f6b15d2fca4407b3bec5cb4ea993343d7612d4c6b3d9a3245b2613fe081bb",
+      "bytes": 2510
+    },
+    "apps/player-web/tests/renderer.test.js": {
+      "sha256": "63d9b59a6a653a5743e6e5fdfbf646862c9998e13feda5f89bbcb066ea62ff9c",
+      "bytes": 9969
+    },
+    "apps/player-web/than/.env.example": {
+      "sha256": "d434f8d0310bbc11d2877e275ffcef0feac9ee93929bd3798c595d98e8244955",
+      "bytes": 162
+    },
+    "apps/player-web/than/.gitignore": {
+      "sha256": "61901f6c55d120d02e8b235eb4d78ac8a18273bb9c406cb05a00c881f4a80a45",
+      "bytes": 69
+    },
+    "apps/player-web/than/IMPLEMENTATION.md": {
+      "sha256": "a8894db9e561ac50c125e943edbbf2bb658f2f0b8a3aa166350f0b99bdb27dc5",
+      "bytes": 282
+    },
+    "apps/player-web/than/README.md": {
+      "sha256": "036778a6c71dae5a46fab8fabd1ceaad76da85259d6d14bdbcdf7cd6676aed91",
+      "bytes": 348
+    },
+    "apps/player-web/than/THIRD_PARTY_NOTICES.json": {
+      "sha256": "c4218810a65325e92f4da13a7a9d0f9554519434c9b5d737a07dba97f77e4499",
+      "bytes": 15492
+    },
+    "apps/player-web/than/dev/mock-entry.ts": {
+      "sha256": "36b4700d8ed864efa9cc5b06a73057d3d9ace991457435b03e8bfe1d3bc52d91",
+      "bytes": 5612
+    },
+    "apps/player-web/than/dev/recorded-3x3.config.json": {
+      "sha256": "d9de665a9eeff19d1917cec00a62f584cdde66b845ce065077a0cdfd28b94df2",
+      "bytes": 1671
+    },
+    "apps/player-web/than/dev/recorded-source.ts": {
+      "sha256": "868d79ce877fa211147f5edd0867adb4868b6f6c66c2c956157131fa044f1f6d",
+      "bytes": 1070
+    },
+    "apps/player-web/than/index.html": {
+      "sha256": "4830b1eb0c2290e23032728393cc603b73b232b5797a1c4cf729de3453e1eb3e",
+      "bytes": 265
+    },
+    "apps/player-web/than/licenses/@esotericsoftware__spine-canvas/LICENSE": {
+      "sha256": "435774fb793b0f67892899fc934f98009e64fd90ad3ab964117274e279a0f50e",
+      "bytes": 1468
+    },
+    "apps/player-web/than/licenses/@esotericsoftware__spine-core/LICENSE": {
+      "sha256": "435774fb793b0f67892899fc934f98009e64fd90ad3ab964117274e279a0f50e",
+      "bytes": 1468
+    },
+    "apps/player-web/than/licenses/@playwright__test/LICENSE": {
+      "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
+      "bytes": 11601
+    },
+    "apps/player-web/than/licenses/@playwright__test/NOTICE": {
+      "sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d",
+      "bytes": 254
+    },
+    "apps/player-web/than/licenses/@types__earcut/LICENSE": {
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    "apps/player-web/than/licenses/@types__estree/LICENSE": {
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    "apps/player-web/than/licenses/@types__fontfaceobserver/LICENSE": {
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    "apps/player-web/than/licenses/@types__howler/LICENSE": {
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    "apps/player-web/than/licenses/@types__node/LICENSE": {
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    "apps/player-web/than/licenses/@webgpu__types/LICENSE": {
+      "sha256": "ad88400fc55c2871ba2ed33930dc13001ef01907c2ddcbfa3caa8656e9142f05",
+      "bytes": 1500
+    },
+    "apps/player-web/than/licenses/@xmldom__xmldom/LICENSE": {
+      "sha256": "4da724fc305d81606b245b324d4d2586916b9d248b23d82183df753ace0fdf71",
+      "bytes": 1298
+    },
+    "apps/player-web/than/licenses/colord/LICENSE.md": {
+      "sha256": "7613d4594ee8b6163926af3435dae61c9e3d5a27cd137bd76a543ba40002d8fc",
+      "bytes": 1083
+    },
+    "apps/player-web/than/licenses/earcut/LICENSE": {
+      "sha256": "0b348fff56384b43dbb37593906904e56d0f9deb51eae590d4dc6d427fbf1808",
+      "bytes": 738
+    },
+    "apps/player-web/than/licenses/esbuild/LICENSE.md": {
+      "sha256": "b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681",
+      "bytes": 1069
+    },
+    "apps/player-web/than/licenses/eventemitter3/LICENSE": {
+      "sha256": "3aecc12b1cb28832b5f65ab64291de96568c3f236a74d646281b4491f7bcadbf",
+      "bytes": 1082
+    },
+    "apps/player-web/than/licenses/fdir/LICENSE": {
+      "sha256": "9a39f2aadab11a3697edd668ff2d8ad885b649737b7ab4d3bf12b34e5ada0c86",
+      "bytes": 1053
+    },
+    "apps/player-web/than/licenses/fontfaceobserver/LICENSE": {
+      "sha256": "4f9eb12ff4eb3ac9ef7088d9f3926dab1402669c1317f50fd72fa938874f958f",
+      "bytes": 1313
+    },
+    "apps/player-web/than/licenses/gifuct-js/LICENSE": {
+      "sha256": "8633cda68d7b47e98e3e563a2833e63792edeecdb24cab02bfb15f25c1b37072",
+      "bytes": 1098
+    },
+    "apps/player-web/than/licenses/howler/LICENSE.md": {
+      "sha256": "0ad5aef7beeb552832fe01db1c46933f948dfe5da35017bd0efa0006ffd2ced9",
+      "bytes": 1088
+    },
+    "apps/player-web/than/licenses/ismobilejs/LICENSE": {
+      "sha256": "57c43c929cbc20653cb0e62620a413a8bc456888c1874ebc25d08e0122cd953e",
+      "bytes": 1067
+    },
+    "apps/player-web/than/licenses/js-binary-schema-parser/LICENSE": {
+      "sha256": "8633cda68d7b47e98e3e563a2833e63792edeecdb24cab02bfb15f25c1b37072",
+      "bytes": 1098
+    },
+    "apps/player-web/than/licenses/nanoid/LICENSE": {
+      "sha256": "da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987",
+      "bytes": 1095
+    },
+    "apps/player-web/than/licenses/parse-svg-path/LICENSE": {
+      "sha256": "2d5ffdfe09268750ba687a149db8392038772e7f156db3a98b615a7de0cab76e",
+      "bytes": 1093
+    },
+    "apps/player-web/than/licenses/picocolors/LICENSE": {
+      "sha256": "6582629e2979466878f6014313dcc2f3756c9616148682227ce3063dde310750",
+      "bytes": 787
+    },
+    "apps/player-web/than/licenses/picomatch/LICENSE": {
+      "sha256": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9",
+      "bytes": 1091
+    },
+    "apps/player-web/than/licenses/pixi.js/LICENSE": {
+      "sha256": "5ce7447bc57f7349ffc48338782fbcabe613696e00712b20d66bc58e780f9473",
+      "bytes": 1092
+    },
+    "apps/player-web/than/licenses/playwright-core/LICENSE": {
+      "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
+      "bytes": 11601
+    },
+    "apps/player-web/than/licenses/playwright-core/NOTICE": {
+      "sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d",
+      "bytes": 254
+    },
+    "apps/player-web/than/licenses/playwright/LICENSE": {
+      "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
+      "bytes": 11601
+    },
+    "apps/player-web/than/licenses/playwright/NOTICE": {
+      "sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d",
+      "bytes": 254
+    },
+    "apps/player-web/than/licenses/postcss/LICENSE": {
+      "sha256": "5be1f3465bba68a626777f984878814aaf35e7ef8e9fd314d469bcf887050fb8",
+      "bytes": 1095
+    },
+    "apps/player-web/than/licenses/rollup/LICENSE.md": {
+      "sha256": "fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8",
+      "bytes": 35231
+    },
+    "apps/player-web/than/licenses/source-map-js/LICENSE": {
+      "sha256": "6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd",
+      "bytes": 1526
+    },
+    "apps/player-web/than/licenses/tiny-lru/LICENSE": {
+      "sha256": "8106f20bacca3558946439afb5e4854333f0a9944eee1c60488aa7ac7fc8f52b",
+      "bytes": 1480
+    },
+    "apps/player-web/than/licenses/tinyglobby/LICENSE": {
+      "sha256": "22c68811e174cbbfb3813d4135918df4f540959c14d872e601d9abe83d3cde8f",
+      "bytes": 1076
+    },
+    "apps/player-web/than/licenses/typescript/LICENSE.txt": {
+      "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47",
+      "bytes": 9197
+    },
+    "apps/player-web/than/licenses/undici-types/LICENSE": {
+      "sha256": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27",
+      "bytes": 1090
+    },
+    "apps/player-web/than/licenses/vite/LICENSE.md": {
+      "sha256": "a77a1c089806b39ad339535bdf3677f636c91d96693e8ad7b11fe733f650ea64",
+      "bytes": 101176
+    },
+    "apps/player-web/than/mock.html": {
+      "sha256": "bc20b97ee84d046a21f38f77a31349a25019c5bc5cb38e1042d752c28312f592",
+      "bytes": 273
+    },
+    "apps/player-web/than/package-lock.json": {
+      "sha256": "c7405265d1fda43b50b5bf9b5e46117114bd44b9f20ef4b1a2d15e3f63cc6e01",
+      "bytes": 44489
+    },
+    "apps/player-web/than/package.json": {
+      "sha256": "1475991502f01a290393facbfcc625776f0216bf59d91416d864a81e9ec758a4",
+      "bytes": 1006
+    },
+    "apps/player-web/than/playwright.config.ts": {
+      "sha256": "7b87a20681f4fcd056d391266f67c99be544a52c9041ea200e91ddbc4f90c93f",
+      "bytes": 506
+    },
+    "apps/player-web/than/src/audio/howler-bus.ts": {
+      "sha256": "eba384a83b028f7ba07caf8aef5f4c7269d73fa6012beb2d1cd1adc61a20d088",
+      "bytes": 3973
+    },
+    "apps/player-web/than/src/domain/contracts.ts": {
+      "sha256": "08821e992fb88798c5d2f8f8aa0bced4accbb4a5a0d6d3f4ec58657d9a39b811",
+      "bytes": 3002
+    },
+    "apps/player-web/than/src/index.ts": {
+      "sha256": "65d84ecf2ada1a7cd9df713d852433e7247141a4f48d90cb1c174b3d40198e7e",
+      "bytes": 490
+    },
+    "apps/player-web/than/src/money.ts": {
+      "sha256": "5b106b92a386803efe92fa660b164cd8c2c173bf06ace9361c5ba7fc4443a0e8",
+      "bytes": 817
+    },
+    "apps/player-web/than/src/network/json-client.ts": {
+      "sha256": "656224889dab1124f7ecd70b6d51b5e1d399077e2cb0b89a3c8cea36a704586c",
+      "bytes": 1151
+    },
+    "apps/player-web/than/src/player-controller.ts": {
+      "sha256": "a2abb0e1a5dc44d92086e0d81f974235b8574ecab1e599539b4e90c462053819",
+      "bytes": 3643
+    },
+    "apps/player-web/than/src/player-types.ts": {
+      "sha256": "33822381027b44c3baf700f5ae505fc6e7662483565f4d3d01c399bd0a75939d",
+      "bytes": 879
+    },
+    "apps/player-web/than/src/presentation/asset-url.ts": {
+      "sha256": "df02797411b80211908436a9acab9b6f89bf11f9742928f1d7317689539aa9b0",
+      "bytes": 117
+    },
+    "apps/player-web/than/src/presentation/assets.ts": {
+      "sha256": "0a1c45001471a551bda72b8c663fbebc56526b335e4dc23fb84fa4a7417b0884",
+      "bytes": 629
+    },
+    "apps/player-web/than/src/presentation/audio.ts": {
+      "sha256": "3dee947be7fe49100421b4ab75f75ded98e878901dcbd25c3d929db52a0671c7",
+      "bytes": 4772
+    },
+    "apps/player-web/than/src/presentation/bitmap-amount.ts": {
+      "sha256": "06b134431564a1eb911206c9758a0d76ede1f574a08b74270464faae69cb6ed5",
+      "bytes": 1509
+    },
+    "apps/player-web/than/src/presentation/board.ts": {
+      "sha256": "97fac126f456859d98e01d675b0f88ac7a4e6dd2e39d9ad66aca117c98f42103",
+      "bytes": 23878
+    },
+    "apps/player-web/than/src/presentation/drop-schedule.ts": {
+      "sha256": "7761bf16777804e81d9c4d0b1ea3123523b90a039f8f03f69dbaaadff1aca34d",
+      "bytes": 721
+    },
+    "apps/player-web/than/src/presentation/grid.ts": {
+      "sha256": "82ec70ffdc91d7d4115d6a463e97d090fffb1e0340c74c73dbb31fa047145fca",
+      "bytes": 1239
+    },
+    "apps/player-web/than/src/presentation/landing-motion.ts": {
+      "sha256": "ca911cd9c5ee9d705cf47143e7932ede35a910e7576d7c5ed8019ac0e44e33ea",
+      "bytes": 1474
+    },
+    "apps/player-web/than/src/presentation/slot-content-fit.ts": {
+      "sha256": "040fe833060363148a68ea65bc4f87d2e5e1bc14688373e56bcca192fcac3229",
+      "bytes": 1038
+    },
+    "apps/player-web/than/src/production-entry.ts": {
+      "sha256": "8f3f12e1f6e1b2ef2a3a7ef4dafe0d75725c1bdd406e1a920a0347a2c1ceb430",
+      "bytes": 286
+    },
+    "apps/player-web/than/src/remote/asset-resolver.ts": {
+      "sha256": "72c3748b3f194242b8d639035ff0fc4ea2670cd77a47aed9b1fbcb17669baf04",
+      "bytes": 801
+    },
+    "apps/player-web/than/src/resources/browser-driver.ts": {
+      "sha256": "b4bd260efe0819ce7ad776a5f655007c79f2a85a54f2f29f80a39ebf69a7d51a",
+      "bytes": 995
+    },
+    "apps/player-web/than/src/resources/contracts.ts": {
+      "sha256": "a5b0b5eea438e38b4744aa3c0455562c929432808401a34243b8e9b719d5e6ef",
+      "bytes": 589
+    },
+    "apps/player-web/than/src/resources/resource-manager.ts": {
+      "sha256": "7b10090f2b525f96c2a256a2f6388ddec853ee547132c52ef020c44939e5a207",
+      "bytes": 7027
+    },
+    "apps/player-web/than/src/resources/resource-manifest.schema.json": {
+      "sha256": "27d9e05b06098d84e63532751a8d4eaf2687dc53ce6f4440a7e91b52210b9bea",
+      "bytes": 1405
+    },
+    "apps/player-web/than/src/resources/validate-manifest.ts": {
+      "sha256": "1328a059c55c91942009cf0597b2cc5c1d2273a9ee0e1fff312f256264fd21b1",
+      "bytes": 2148
+    },
+    "apps/player-web/than/src/shared/disposables.ts": {
+      "sha256": "5af42ae5f43feb1f2a43fe2c5441c7c9b01e46552250b55c1aa7c65017057c25",
+      "bytes": 408
+    },
+    "apps/player-web/than/src/shell.css": {
+      "sha256": "de2f7c4b3b3ff1e8c5ce8bd4f662527ada22d5ebff1f9acda1fa815657d2df1e",
+      "bytes": 1922
+    },
+    "apps/player-web/than/tests/browser/playback.spec.ts": {
+      "sha256": "5919c6d0b4f60be5debbf11e3abf085f04115f69a0b8ddd1a7bf744b2e9d6a3e",
+      "bytes": 2102
+    },
+    "apps/player-web/than/tests/controller.test.ts": {
+      "sha256": "06e17dd5a196c43ba585559eb6d3151ef566e6c58147411d1d8359bc7f7ebedc",
+      "bytes": 3969
+    },
+    "apps/player-web/than/tools/artifact-manifest.mjs": {
+      "sha256": "2049830e35d63c837729f35a2f848b96a7d79ed180aa3ba2e16b434dd0626a2c",
+      "bytes": 1971
+    },
+    "apps/player-web/than/tools/verify-delivery.mjs": {
+      "sha256": "6dcc6b2bbab344b10944d9cbd1ec2840d35299d730c02eafdb91db4934508974",
+      "bytes": 875
+    },
+    "apps/player-web/than/tsconfig.json": {
+      "sha256": "b9ad312a4261f30abc0844db65df2c4f89928d88f3ba3563e7586f6e5294e964",
+      "bytes": 825
+    },
+    "apps/player-web/than/vite.config.ts": {
+      "sha256": "ebf51dd55c125659e8ad1874b30255feb5c0c7fa1220fc5ccbcdd62fbce35293",
+      "bytes": 2484
+    },
+    "apps/player-web/tools/build.mjs": {
+      "sha256": "2022fdf8e8628b2b28f8ccbeb0331f699bb245b071470caf4564c28ab06a9d7e",
+      "bytes": 1620
+    },
+    "apps/player-web/tools/check.mjs": {
+      "sha256": "e525a521a1338e9183104fed9fba3576edd43eea717dd8e6ce6db90be6b8a0d8",
+      "bytes": 1046
+    },
+    "apps/player-web/tools/files.mjs": {
+      "sha256": "1ee38656963426d2b00760033d8b9c7f49bf33179846d43d7a9b96a11fcb441c",
+      "bytes": 1723
+    },
+    "apps/player-web/tools/server.mjs": {
+      "sha256": "991f127fcc9169cef786d780c0c69ed2e8a0b6b920f5844a3c0d83955faf3c90",
+      "bytes": 3002
+    },
+    "contracts/player-draft-v2/API.md": {
+      "sha256": "48cf09f0eeb6142e69567917bf67b0d8415d53d2ca1e8aff3646f5a711bf515a",
+      "bytes": 8969
+    },
+    "contracts/player-draft-v2/CASES.md": {
+      "sha256": "90231f8cbe1fa98a9c61647d1643c4b9991a75dc1a8083bcf89862e6d3a3c041",
+      "bytes": 3018
+    },
+    "contracts/player-draft-v2/README.md": {
+      "sha256": "b64b9451c98d3c35bbad423484b1499de467bebc942a176c9d3db3c4af9c32d3",
+      "bytes": 2939
+    },
+    "contracts/player-draft-v2/examples/FILES.json": {
+      "sha256": "7b1b265b79f7a39216f4407199b45c808f05e709b14c330108ca1442380c3915",
+      "bytes": 2225
+    },
+    "contracts/player-draft-v2/examples/cases/cap-below.json": {
+      "sha256": "a72e22ac6d075a91f2cc6e254d4c7e6e0d428668c56a4403d0aece581b9705a9",
+      "bytes": 9161
+    },
+    "contracts/player-draft-v2/examples/cases/cap-during-base.json": {
+      "sha256": "85d7bf559df031c34e0161d56cfa53f77d3968da81501ffd5a0bfa826aa013ce",
+      "bytes": 3949
+    },
+    "contracts/player-draft-v2/examples/cases/cap-during-bonus.json": {
+      "sha256": "67aa1e047ce8b3bf1d46fbcb768e0522949b81f0a5a24c131a455c1c690f87bf",
+      "bytes": 5435
+    },
+    "contracts/player-draft-v2/examples/cases/cap-exact.json": {
+      "sha256": "05822bff533ade09b7ae9f0afeb5341a6ead3f649520fef4a95a27fb286ea9b2",
+      "bytes": 15307
+    },
+    "contracts/player-draft-v2/examples/cases/cap-overshoot.json": {
+      "sha256": "a7e9deb9a10232c818a5b89cf1db1a966d7d63e0db20290bdec51a096a1f39e5",
+      "bytes": 19008
+    },
+    "contracts/player-draft-v2/examples/cases/chests-zero-win.json": {
+      "sha256": "723103bbac2fd1f99b478b4b4ffb905e195081c3f187ca82d6ea460932e361de",
+      "bytes": 17129
+    },
+    "contracts/player-draft-v2/examples/cases/drop-buy.json": {
+      "sha256": "8c6828ee79a7e5fcfc231d6eb8ab69279061b8db197c517e23e4e629860fb02f",
+      "bytes": 9044
+    },
+    "contracts/player-draft-v2/examples/cases/drop-chests.json": {
+      "sha256": "32b610187dbacf7cb44351ffb9d0cff7f792fb41d49c86e1dad2427cefeea7b5",
+      "bytes": 17719
+    },
+    "contracts/player-draft-v2/examples/cases/drop-retrigger.json": {
+      "sha256": "ebe6f6b1a76e86f0ed39c1f764b75d3ebd7009699618c5ec85495f2df3e65456",
+      "bytes": 14206
+    },
+    "contracts/player-draft-v2/examples/cases/extra-loss.json": {
+      "sha256": "de07a2951bc2cde84eabc576a86f09723e1841a1b4557b147d1b3480ea82f278",
+      "bytes": 3506
+    },
+    "contracts/player-draft-v2/examples/cases/extra-win.json": {
+      "sha256": "1b933745a1ac999f256d79f7ba50497756a29c5f76632e676a17574cf611a38e",
+      "bytes": 3717
+    },
+    "contracts/player-draft-v2/examples/cases/long-retrigger.json": {
+      "sha256": "d1a94888bcc0143100942e2471437736f1141bfaea4fc8599f75c5346b9dfada",
+      "bytes": 409343
+    },
+    "contracts/player-draft-v2/examples/cases/natural-drop.json": {
+      "sha256": "e3427f4d171b10d69e083684fc687270d7dd30f8df110b32be9716f47ae01e7c",
+      "bytes": 9082
+    },
+    "contracts/player-draft-v2/examples/cases/natural-tavern.json": {
+      "sha256": "d2f1a12979190fe69891c7dceb6e9ce44589eac96e2d2141fab4c0188c646861",
+      "bytes": 9146
+    },
+    "contracts/player-draft-v2/examples/cases/normal-loss.json": {
+      "sha256": "0df7cd1286ea87c5f3455fb69c2d4538eab38ffdf3542c6ac6192384f187cf1b",
+      "bytes": 3487
+    },
+    "contracts/player-draft-v2/examples/cases/normal-multiple.json": {
+      "sha256": "9d53e7eb39a680fe941631c25ca5f3f8757a7f93cd5d5a46407f7d761a402b9b",
+      "bytes": 3948
+    },
+    "contracts/player-draft-v2/examples/cases/normal-single.json": {
+      "sha256": "13a84b712c9c76d1d23593753d7d935524ec093139e4b5aa9cb6e64a6c4cefab",
+      "bytes": 3731
+    },
+    "contracts/player-draft-v2/examples/cases/super-loss.json": {
+      "sha256": "781e7d9ee2b9e2a59fb725fd06d3c423755bf6d9f43732bc754bb0f311acab2c",
+      "bytes": 3506
+    },
+    "contracts/player-draft-v2/examples/cases/super-win.json": {
+      "sha256": "b4efd86b6c72a7b99aee32b3b97f1f1449c7e8840cce3b022fc14b57fbdc43db",
+      "bytes": 3717
+    },
+    "contracts/player-draft-v2/examples/cases/tavern-buy.json": {
+      "sha256": "d6e95d553a3d5e7907996e8ef8d738d799340e6768d958070e1ce473c875c365",
+      "bytes": 9124
+    },
+    "contracts/player-draft-v2/examples/cases/tavern-chests.json": {
+      "sha256": "a2d502b69bee5fc30440fc5561179770abda0f4aca7bc3d16e4b965d5266d7b4",
+      "bytes": 17815
+    },
+    "contracts/player-draft-v2/examples/cases/tavern-retrigger.json": {
+      "sha256": "0ec5ce438380f0389881fe0eb3214dddc76769a69a1d8a6d06927348c4cf539e",
+      "bytes": 14328
+    },
+    "contracts/player-draft-v2/examples/catalog.json": {
+      "sha256": "c7b86996f55be7fc73704e0ed2e1e1e99770769a9fe921ac0dbdb469ebe60890",
+      "bytes": 5343
+    },
+    "contracts/player-draft-v2/preview.py": {
+      "sha256": "c3620739873a7761da45ccd490d071f303f492b9d95bcaee497e3b972a878698",
+      "bytes": 3677
+    },
+    "contracts/player-draft-v2/than/MAPPING.md": {
+      "sha256": "c1c28b9e7196500c099e15c1b6e29a044eb729f8efa954c216379ecfd636e83d",
+      "bytes": 4289
+    },
+    "docs/ASSETS.md": {
+      "sha256": "873d66fb43a826befa684f00c42ad01edcbc72ed7d0c5e69930db297648c0edd",
+      "bytes": 1741
+    },
+    "docs/DEVELOPMENT.md": {
+      "sha256": "a1cca25fbc14f8e2add4adf38085c8223a99649c6be1924d6d62ce22ba8e3426",
+      "bytes": 3557
+    },
+    "docs/GAME_SCOPE.md": {
+      "sha256": "4bc017077a8ee98f0f679519c5a9a5f05ecc5420da9da6d8559aed8f4134c63d",
+      "bytes": 2155
+    },
+    "docs/M1_ACCEPTANCE.md": {
+      "sha256": "d9df6e0e21adcbf646a322432c194aeea428d55615e951b64caaa59efa8d8781",
+      "bytes": 2255
+    },
+    "docs/than/ARCHITECTURE.md": {
+      "sha256": "7a8b3608b065e7c87513f05185bef8e7a4365a6dc31c99e72fb321780622fd30",
+      "bytes": 2444
+    },
+    "docs/than/CLIENT_REQUEST.md": {
+      "sha256": "a6c81abf294f759e880fe5e493c6ce2ba8712fa8d69796e52058405178a4303c",
+      "bytes": 2916
+    },
+    "docs/than/DRAFT_MR.md": {
+      "sha256": "c70de3cec4b0ddbdcf32ff361e7c6f4b1447bb6a58e0e97cdf29cdfd99440a1d",
+      "bytes": 2578
+    },
+    "docs/than/M1_EVIDENCE.md": {
+      "sha256": "6590fc4090c47bf230ba410072723a9561d1fe142cab74575926ef6da5620167",
+      "bytes": 4799
+    },
+    "docs/than/SOURCE_PROVENANCE.json": {
+      "sha256": "c22b676f1f673173ee2d53ff9c80dc449fa2f64e4916f3b14d5aae3a985e5d6c",
+      "bytes": 667
+    },
+    "docs/than/START_HERE.md": {
+      "sha256": "c227e72929d8254ecb02ca30f97222e7195fbff5847bf17f907568931e51ff33",
+      "bytes": 3579
+    },
+    "docs/than/evidence/3x3-desktop.png": {
+      "sha256": "60b4e6f9399a63478b4d8298c70d97d692eb8aa11fbee511e3ef4c4b43943bba",
+      "bytes": 76603
+    },
+    "docs/than/evidence/3x3-portrait.png": {
+      "sha256": "00b88d8727df8effb57da2ad8c5c3694f9f68612468f32b3fbb013c8cdb529fa",
+      "bytes": 43237
+    },
+    "docs/than/evidence/5x5-desktop.png": {
+      "sha256": "debbdb9db62be7b9e554fa9ed079219ae962032c1128872af9f359e57a3c9716",
+      "bytes": 480118
+    },
+    "docs/than/evidence/5x5-portrait.png": {
+      "sha256": "eb046d085ee386714eb3c3f4e9b32f7f83c33bfa459d90442dc2097ae85940cd",
+      "bytes": 246031
+    },
+    "docs/than/evidence/audio-audit.json": {
+      "sha256": "1a136e6186a6c6ea9cbda898faa9826161c4922ecbceb3ead62b3cce7933e967",
+      "bytes": 90
+    },
+    "docs/than/evidence/mock-BUILD_MANIFEST.json": {
+      "sha256": "961ec0bfadd7c03cc4679e904d8d37db4ad005f2cc66be913da736b1873486f2",
+      "bytes": 16481
+    },
+    "docs/than/evidence/production-BUILD_MANIFEST.json": {
+      "sha256": "a3baf704ac941eb249b7ed9ff5c08596d4be8662d7890359acc91d5f3055afdf",
+      "bytes": 1511
+    },
+    "docs/than/evidence/runtime-asset-audit.json": {
+      "sha256": "734b318b22271c5fed993a10049fb1044462d889e7fcadf8efaafff9c36b2220",
+      "bytes": 4775
+    },
+    "fixtures/rounds/slot-001-frontend/package.json": {
+      "sha256": "a90fc33418afa2b9cbf4768524b021135b965ecdf993457505bfae3ac44a8428",
+      "bytes": 33
+    },
+    "fixtures/rounds/slot-001-frontend/scenarios.js": {
+      "sha256": "62eb38be7730298122c9a7576fe47cb16bfc95a345cfbec560019b76c6eac554",
+      "bytes": 6615
+    },
+    "games/slot-001/client/renderer.js": {
+      "sha256": "6cc9909b6ab91ed66b59ddfb8501874312e18522fa66865e27890741b96c7d5a",
+      "bytes": 11214
+    },
+    "games/slot-001/client/symbols.svg": {
+      "sha256": "03bf758a533b8853d6d6e98d888c3fc50c2be7993e97e6fef48e772413b4988f",
+      "bytes": 16634
+    },
+    "games/slot-001/client/than/ASSET_INVENTORY.json": {
+      "sha256": "f640f0d3a499f4a168d2e89f13cb2f32fa28c87c8101cf7476608003817abe6b",
+      "bytes": 28938
+    },
+    "games/slot-001/client/than/IMPLEMENTATION.md": {
+      "sha256": "77a0d7d2d5f2db479de40c63a63bd82b51144e923dbbe27124c9932d203f7b45",
+      "bytes": 1988
+    },
+    "games/slot-001/client/than/README.md": {
+      "sha256": "1448e65276c7dcb6c751e44ba1a7fff34158d4a22a2758cef5e275e1290fc1d2",
+      "bytes": 344
+    },
+    "games/slot-001/client/than/art.ts": {
+      "sha256": "9202cf3cb6bdc1a5163d52a5605d7d4978fe7916993292106f1ced1dc839a6e6",
+      "bytes": 2203
+    },
+    "games/slot-001/client/than/asset-review.ts": {
+      "sha256": "051e86862f7cda038a00e061eaab7cc64b6801ac6ac886b48259aa283091a0b1",
+      "bytes": 5716
+    },
+    "games/slot-001/client/than/assets/runtime/assets/bonus_static.webp": {
+      "sha256": "2de6779b59d5e3e366ecb303732932c4403a796631b863e9fd58f601432f2157",
+      "bytes": 382764
+    },
+    "games/slot-001/client/than/assets/runtime/assets/continue.webp": {
+      "sha256": "0cda9fffffe0fce5301084ddd30a0a6c87a0ef29374409476780f7edcfc6f458",
+      "bytes": 15402
+    },
+    "games/slot-001/client/than/assets/runtime/assets/h1_static.webp": {
+      "sha256": "2827a91b98bc68a214ec160250466fd8bf6655d4313a3e8ff63cd448f4acce62",
+      "bytes": 168618
+    },
+    "games/slot-001/client/than/assets/runtime/assets/h2_static.webp": {
+      "sha256": "cf86f1cffb09d323bb92ac9aab6650299bbd48966151de3f9c43c19a930100f0",
+      "bytes": 45468
+    },
+    "games/slot-001/client/than/assets/runtime/assets/h3_static.webp": {
+      "sha256": "45ba8eabb19d9c7edf1a4f435de7353f43ff75fc72dcce0cc351abce2dbae0fd",
+      "bytes": 51696
+    },
+    "games/slot-001/client/than/assets/runtime/assets/h4_static.webp": {
+      "sha256": "147f6458be17f73b43fb702e711053a4b74b83671ab38bb6dc2fb9a149615002",
+      "bytes": 55806
+    },
+    "games/slot-001/client/than/assets/runtime/assets/hd/td_master.atlas": {
+      "sha256": "4814913d453854d20d82642f2a15eca3eede6d5e97ce646f0a23f2e87cf12754",
+      "bytes": 25795
+    },
+    "games/slot-001/client/than/assets/runtime/assets/hd/td_master.webp": {
+      "sha256": "dee1041bf4a9be8b3daf62ff15ff764de28e0cb76f66e4f9274dad1e94962199",
+      "bytes": 1854628
+    },
+    "games/slot-001/client/than/assets/runtime/assets/hd/td_master_2.webp": {
+      "sha256": "84f60163b6be8a817e9e5a8355188aa09dd03c18922c2b1ec415b4b25b13201d",
+      "bytes": 1168944
+    },
+    "games/slot-001/client/than/assets/runtime/assets/hd/td_master_3.webp": {
+      "sha256": "b119528cd7e08541b2d8854599ade311f92405730fd44ecb72745724a2bff020",
+      "bytes": 1631002
+    },
+    "games/slot-001/client/than/assets/runtime/assets/hd/td_master_4.webp": {
+      "sha256": "1f3db60e168d0019d757d37d25b095b2aa7c1fc31a17d571f33c064876666fd3",
+      "bytes": 2450616
+    },
+    "games/slot-001/client/than/assets/runtime/assets/hd/td_master_5.webp": {
+      "sha256": "ca8f06f5544ee030d359bdcd5d460f34389bec999372a91c90f32baa55290e8a",
+      "bytes": 1712752
+    },
+    "games/slot-001/client/than/assets/runtime/assets/l1_static.webp": {
+      "sha256": "f588197cd9896225fcc5aa6f54e6b3e95afb12dc9b86513114af4104e81a8412",
+      "bytes": 50618
+    },
+    "games/slot-001/client/than/assets/runtime/assets/l2_static.webp": {
+      "sha256": "ecf9131855e07ac26d54c3085d2b811c495076a67bf16fc21ef38dd04258837a",
+      "bytes": 57106
+    },
+    "games/slot-001/client/than/assets/runtime/assets/l3_static.webp": {
+      "sha256": "446b272d7eb935916743a254ab97712fd3e3b65e78e7a18e8c3480d2a290355f",
+      "bytes": 48102
+    },
+    "games/slot-001/client/than/assets/runtime/assets/l4_static.webp": {
+      "sha256": "bbb885946c1bb686b4c1c8b8f9fbd550714c6f72c264e888b4c2917e91b01fcc",
+      "bytes": 49794
+    },
+    "games/slot-001/client/than/assets/runtime/assets/l5_static.webp": {
+      "sha256": "139d6bd5b4fe90836197cb98212395608fcc37ce583a9836c8d64ac743b237bf",
+      "bytes": 66388
+    },
+    "games/slot-001/client/than/assets/runtime/assets/outfit-500-CMfhJlfe.woff2": {
+      "sha256": "e5776ecb08ef257d16da5ea48b27cc6e719c274ff7f9985e2c2b5a74d9a83126",
+      "bytes": 16708
+    },
+    "games/slot-001/client/than/assets/runtime/assets/outfit-600-DuSOvJ_5.woff2": {
+      "sha256": "df027166d7f19d4fc5212fcc62368d53f3c0ad36c3f10f899e29385401e77f17",
+      "bytes": 17732
+    },
+    "games/slot-001/client/than/assets/runtime/assets/outfit-700-D9T176aR.woff2": {
+      "sha256": "da98d434ebe44b2c8b42f2f26edc4b7e65300a089419ed041942a7299896a06f",
+      "bytes": 17612
+    },
+    "games/slot-001/client/than/assets/runtime/assets/outfit-800-ySok2YOt.woff2": {
+      "sha256": "0bc360ab632c415781c90bcd3309ac313c828dfb2011e3ec43cb0c3aee5acc66",
+      "bytes": 17604
+    },
+    "games/slot-001/client/than/assets/runtime/assets/outfit-v11-latin_latin-ext-300-COlrd1hX.woff2": {
+      "sha256": "89701b515a7936dbd47d5927a8fa56e17120c4854ed882c78af4b3cb4d02b87f",
+      "bytes": 17412
+    },
+    "games/slot-001/client/than/assets/runtime/assets/outfit-v11-latin_latin-ext-regular-BDXaL9-u.woff2": {
+      "sha256": "7de43d76771c6ba4c168e3af0364a0d500db46647eee134d28181dd16c998dec",
+      "bytes": 17484
+    },
+    "games/slot-001/client/than/assets/runtime/assets/paperclip-C0ObTQLL.webp": {
+      "sha256": "fe72aecd65659bd14c025eedfaee7ec57a4f313338ff1026fbbafc2b55c99705",
+      "bytes": 29366
+    },
+    "games/slot-001/client/than/assets/runtime/assets/paperclip-rMFDawAD.gif": {
+      "sha256": "f5ea52934ec8e25349f88b3cfb84cee9b03e7264c177a19e3f5633320b1e2e69",
+      "bytes": 533882
+    },
+    "games/slot-001/client/than/assets/runtime/assets/paperclip_full_logo.webp": {
+      "sha256": "1c151c07bd81b8e640f8f8c0bfd7de205e9ca09d56b0d691aca9cfe30eed5c0b",
+      "bytes": 64942
+    },
+    "games/slot-001/client/than/assets/runtime/assets/poweredby-D9-5QAZx.webp": {
+      "sha256": "b6092417e2e9883c99e2fa00b866bf8a996075268ca0c034606a0dac9f8c133f",
+      "bytes": 30282
+    },
+    "games/slot-001/client/than/assets/runtime/assets/sd/td_master.atlas": {
+      "sha256": "65597f9e55b4b573c612529a86c8d859df350e41cc91b0c5ecc4f08448cc2f70",
+      "bytes": 23205
+    },
+    "games/slot-001/client/than/assets/runtime/assets/sd/td_master.webp": {
+      "sha256": "3d7d764e6bcab77bc82c1de7abb7338feca30c55c8aa159bcf99875994857efd",
+      "bytes": 3117984
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_ante.webp": {
+      "sha256": "e76ef17da158c2f14f3c5f0d40ea4d5ca6f6861fd3ed7f7b1e1b4f2d811410dc",
+      "bytes": 111452
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_backgrounds.skel": {
+      "sha256": "5f8bff30c0a431e17fdabfc955c666b385712f06989736568feb98a633a346ce",
+      "bytes": 48223
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_bonus.webp": {
+      "sha256": "c063b60febc63cad1db18eb79ab3202a3ebb5185784ae911ea46c18fbb8f41d4",
+      "bytes": 60420
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_card_character.webp": {
+      "sha256": "618e3dee237111455656c5f7387efdff7d73a0fb91249c9b34d4f670ea4326fe",
+      "bytes": 123244
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_character.skel": {
+      "sha256": "af0426ebe2b2880b3c8362b14abfde9e315ae533643b03c823ed1f8671cb6945",
+      "bytes": 113449
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_gold.webp": {
+      "sha256": "8f81ea9c51455e9e47913c349eba142bd90b48b58702709c1d3cdeb6c0ca7d7e",
+      "bytes": 341026
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_gold.xml": {
+      "sha256": "2a3ff12fb4084b90718038a8a0b8dd7638bf028378d468bcf1165f40e507b5e9",
+      "bytes": 1942
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_green.webp": {
+      "sha256": "2b81ed5aaa94d5ba7fb7874a06b1fdaac6b0e2da95c07c9fbae813d3a4d0e709",
+      "bytes": 351070
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_green.xml": {
+      "sha256": "7c679c4c059e0d65cc02bc9d739936f3219269bb7f531cae9567788e13ad278f",
+      "bytes": 1944
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_loader.webp": {
+      "sha256": "33aa0a5757d0ee238002fb083ec9a0c01b71a9061581d9ac5a67ba54f288b98e",
+      "bytes": 107858
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_loader_bg.webp": {
+      "sha256": "dd6c1c1fe2ceed45c7c9cde177d3aaf4a0bbaa3677ee95986ff2f1e77616ec2e",
+      "bytes": 97996
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_red.webp": {
+      "sha256": "955d663ad20bc4da092d9854849a87d45995a362acdbc37bb5f804a6adffcdb5",
+      "bytes": 345376
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_red.xml": {
+      "sha256": "ee334a75a34ded58c6203c49262f31398b6044e3961d850bdce911cbecb3f99e",
+      "bytes": 1940
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_reelhouse.skel": {
+      "sha256": "4d77780458b05ec177288b995a17d24a73e4a5f0a46c47c99b9a7408811a1eee",
+      "bytes": 195688
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_screens.skel": {
+      "sha256": "89f2a71f5919b1f6dcd4a8962f704afefc62f2c884a0df5f8d25b88f98008de2",
+      "bytes": 403606
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_sounds.json": {
+      "sha256": "0e2f9a780fbc3c6928294eafd0c9173c18ea5a5440ac4cc3b55591d5d858293d",
+      "bytes": 4839
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_sounds.mp3": {
+      "sha256": "e7afc97efac0eb9787019fae6e7ee43df9cb3fdcb2397a87885c27813a41144b",
+      "bytes": 10064918
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_sounds.ogg": {
+      "sha256": "450843a128b8cd88fda47bc905ff30057495780653c4d87e60bc7bb8bbbc2deb",
+      "bytes": 7897825
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_super.webp": {
+      "sha256": "fc007f0c8d4d9baa5f41c3ff008143d5a100cde01600666ad82d602d31ea67e8",
+      "bytes": 86238
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_superante.webp": {
+      "sha256": "f218c40b725ce565fb21ed43497b44fef9547b8c2ae6c930724c5ed4c0adb445",
+      "bytes": 45676
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_symbols_bonus.skel": {
+      "sha256": "f6f097a70ae387c95f69370506faa9f09b65d4d236ff87d2b08f4637408057dc",
+      "bytes": 76955
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_symbols_high.skel": {
+      "sha256": "8e7d5ad074950e4bfdddfa6e7d2388c576ad7cb1bc045a781d7ce893490e5f9b",
+      "bytes": 110994
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_symbols_low.skel": {
+      "sha256": "6017fa902f31119858118eeaf59c45729bc6905f15892c02e60b9eefccb9391d",
+      "bytes": 81086
+    },
+    "games/slot-001/client/than/assets/runtime/assets/td_symbols_wild.skel": {
+      "sha256": "77c4b1c621bf018308b4a3ebe3fc6d82b283d4111db3456781e7d49b3cdcdbd7",
+      "bytes": 64615
+    },
+    "games/slot-001/client/than/assets/runtime/assets/wild_static.webp": {
+      "sha256": "0afb7ecb465a43f8eb369e1b29a565ff89552cf30ca715ca077e6014a9148750",
+      "bytes": 360210
+    },
+    "games/slot-001/client/than/assets/runtime/hud/autoplay-ready.svg": {
+      "sha256": "8e17857ec8d98a7ea3a702e3d36237ed519c22af68f2d406408392f4e2c9b6fb",
+      "bytes": 1886
+    },
+    "games/slot-001/client/than/assets/runtime/hud/autoplay.svg": {
+      "sha256": "bc37a10c1852ba5eb08c50cec01eafa3e6cadb3c4b47a93eb6f252eeda1acc00",
+      "bytes": 1884
+    },
+    "games/slot-001/client/than/assets/runtime/hud/bet-down.svg": {
+      "sha256": "a73679c3501b5d2d4c281497774dd85b21710c3e80a716e298299392a8f90906",
+      "bytes": 526
+    },
+    "games/slot-001/client/than/assets/runtime/hud/bet-up.svg": {
+      "sha256": "fa6292511dd24dc13bb5ca15b46a88e0f423d091dd7e3c2ddef43be98e22f163",
+      "bytes": 531
+    },
+    "games/slot-001/client/than/assets/runtime/hud/close.svg": {
+      "sha256": "01836e24351c93bb921ffbd23432b9b890f9c45f037759b9a43c1c670140fa82",
+      "bytes": 731
+    },
+    "games/slot-001/client/than/assets/runtime/hud/effects-muted.svg": {
+      "sha256": "d91120bb17dd27cae519bbd531b85a8810c41d313387bfcfdd8dbeaf5bdca1e6",
+      "bytes": 1795
+    },
+    "games/slot-001/client/than/assets/runtime/hud/effects.svg": {
+      "sha256": "001dd15f6c104853e65ccd77984279a9ef8958391d59e628db8daf2173ec63b7",
+      "bytes": 1528
+    },
+    "games/slot-001/client/than/assets/runtime/hud/feature-buy.svg": {
+      "sha256": "2fd8ccd6af0a3b5ef8cd51e67ba713b7074d20c866d9dc04cd624dcbf22af177",
+      "bytes": 1219
+    },
+    "games/slot-001/client/than/assets/runtime/hud/info.svg": {
+      "sha256": "b1bcec24c51d8bd3735f8dfc6cdbc70a200166edf9f8b8769ba3dd7fd38c29d2",
+      "bytes": 610
+    },
+    "games/slot-001/client/than/assets/runtime/hud/menu.svg": {
+      "sha256": "69593e8a0f1860d9eb040eb9ccf0db9e3556077a6b3629ab8c0bda1ee5b7c5d5",
+      "bytes": 738
+    },
+    "games/slot-001/client/than/assets/runtime/hud/music-muted.svg": {
+      "sha256": "eace199cefa78423faa367a666d2cf1bb4aadf91f34def08f88dd198bd78975e",
+      "bytes": 1318
+    },
+    "games/slot-001/client/than/assets/runtime/hud/music.svg": {
+      "sha256": "27de8527fde84b861083f9db6717dbe0d6717b25ff51ef558287c668510f630d",
+      "bytes": 900
+    },
+    "games/slot-001/client/than/assets/runtime/hud/share.svg": {
+      "sha256": "cd88171664aca9ed9ec9785a02c8280d21323116bef89a672437d675b157179d",
+      "bytes": 257
+    },
+    "games/slot-001/client/than/assets/runtime/hud/skip.svg": {
+      "sha256": "e22a74eacf43f0554b4aa6fbe6523631171a377ec9a4825b51ba04c3ad9e76d5",
+      "bytes": 365
+    },
+    "games/slot-001/client/than/assets/runtime/hud/spin.svg": {
+      "sha256": "06f5f537138fb1660fc2263f7cfcde75c3df4bb70cb62f20923fd5402594ad87",
+      "bytes": 1535
+    },
+    "games/slot-001/client/than/assets/runtime/hud/stop.svg": {
+      "sha256": "f36ce31b7d00ad4f94430bf7a3bcfd10d7a7382cd9f62dc3a21ab1f0da876660",
+      "bytes": 244
+    },
+    "games/slot-001/client/than/assets/runtime/hud/turbo.svg": {
+      "sha256": "77a34f26f0a942939023869611aa39fd5586b2de11c6b38b52b8fc90e228f03f",
+      "bytes": 685
+    },
+    "games/slot-001/client/than/game.config.json": {
+      "sha256": "ba14c5efb1329c4e4ad5e393fd328ddee9595c837e3cf3d81b0e60e11462fecb",
+      "bytes": 8811
+    },
+    "games/slot-001/client/than/skin.ts": {
+      "sha256": "5bb64636b5633f7cab7c8b7cde4d5f9e4fcc982636c701fefd99aec54f8a5577",
+      "bytes": 6497
+    },
+    "games/slot-001/client/than/symbol-vertical-bounds.json": {
+      "sha256": "e7276d3b4bf04ca7d3c1c71c321e36935a3445c0dc2858c6811edb7a304af9bf",
+      "bytes": 5302
+    },
+    "games/slot-001/spec/rules.js": {
+      "sha256": "a2cffe4bce52b2d0c52917c33858e718daa888270c40c5d01b6ee4f99bf806d1",
+      "bytes": 1931
+    },
+    "package.json": {
+      "sha256": "5718c0599ca309fd09eee2ba0c0ebaf9717557f47d1cbf2aa1ddde452173a073",
+      "bytes": 396
+    }
+  }
+}

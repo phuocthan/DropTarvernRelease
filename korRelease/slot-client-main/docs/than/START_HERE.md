@@ -17,6 +17,7 @@ From the client root (this folder), Node >=22.18:
 
 ```sh
 cd apps/player-web/than
+node tools/verify-delivery.mjs
 npm ci
 npm test
 npm run dev

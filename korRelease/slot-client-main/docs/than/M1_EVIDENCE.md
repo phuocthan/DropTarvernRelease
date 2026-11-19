@@ -27,3 +27,9 @@ Reviewed 19 November 2026. This is an initial source/build/compatibility candida
 ## Handoff limits
 
 Do not treat a loading screen, fixture arithmetic, sampled asset poses or these passing tests as completion of the full Tavern target. This increment does not deliver complete freegame/chest/menu/whole-scene/win-tier flow, final branding, production money admission/recovery or final math. A reviews the versioned adapter boundary; reference reviewers must test real devices and visuals on the same identified build; the authorized client records acceptance.
+
+## Reproducible build record
+
+Both build reports identify source commit `80b1ad0578d18a88ef9c6bdcdcc94e187b30d495`, a clean worktree at build time, the exact npm lockfile SHA-256, API proposal status and each artifact's SHA-256/size. [Mock report](evidence/mock-BUILD_MANIFEST.json) contains 94 allowlisted output files; [production core report](evidence/production-BUILD_MANIFEST.json) contains 6 output files and no fixture/reference-asset/test-hook data. Build bytes themselves remain generated, not committed.
+
+A second copy containing only tracked seed/client additions was installed with `npm ci` in an isolated directory outside the development/release package dependency trees. Its six tests and both builds passed, demonstrating no accidental dependency on the parent project's installed packages. The declared delivery directory remains the only maintained copy; the isolated directory is temporary verification output.

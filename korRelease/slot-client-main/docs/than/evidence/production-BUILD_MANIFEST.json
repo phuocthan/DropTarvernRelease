@@ -1,0 +1,49 @@
+{
+  "profile": "production",
+  "commitAtBuild": "80b1ad0578d18a88ef9c6bdcdcc94e187b30d495",
+  "workingTreeDirty": false,
+  "lockfileSha256": "c7405265d1fda43b50b5bf9b5e46117114bd44b9f20ef4b1a2d15e3f63cc6e01",
+  "apiRevision": "player-draft-v2 proposal",
+  "approvedApiRevision": null,
+  "apiConnected": false,
+  "productionIntegrationConfigured": false,
+  "clientPackage": "@fw-pixi/than-client",
+  "dependencies": {
+    "pixi.js": "8.23.0",
+    "@esotericsoftware/spine-pixi-v8": "4.2.120",
+    "howler": "2.2.4",
+    "fontfaceobserver": "2.1.0"
+  },
+  "files": [
+    {
+      "path": "assets/browserAll-D-x8m0Ll.js",
+      "sha256": "566620073f63c51e70f78b85f05b0e908b61540a216602a0e4954d71a90dd909",
+      "bytes": 43983
+    },
+    {
+      "path": "assets/index-Dvufkga3.css",
+      "sha256": "901741ccb8a9cbabc345ea74a01a5299e3b3ab0467e5d8d67d5d8a3f62957c4d",
+      "bytes": 1914
+    },
+    {
+      "path": "assets/index-Dzpek9PU.js",
+      "sha256": "c2a762315b44aa91dd68bf2d820b2645dd38873bc2877507bdb5b75304d27f79",
+      "bytes": 865
+    },
+    {
+      "path": "assets/webworkerAll-DbHEjTGm.js",
+      "sha256": "0ec37369f516f98885ec239d9df3ffd3d979a19e985c4801ea346db761df6c30",
+      "bytes": 49725
+    },
+    {
+      "path": "fw-pixi.js",
+      "sha256": "399b88bd9938c83c7a5b93f2d7c84b149d30d49be7d64cecd2361d1f43b64f27",
+      "bytes": 153764
+    },
+    {
+      "path": "index.html",
+      "sha256": "a1e100756923664375163e3b75aa74c1c142cb7b5fb30f4f4ab44f55424a89bb",
+      "bytes": 355
+    }
+  ]
+}
