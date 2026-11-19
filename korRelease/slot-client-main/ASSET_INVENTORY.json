@@ -1,0 +1,31 @@
+{
+  "assets": [
+    {
+      "file": "games/slot-001/client/symbols.svg",
+      "sha256": "03bf758a533b8853d6d6e98d888c3fc50c2be7993e97e6fef48e772413b4988f",
+      "type": "source-declared original vector placeholders; system font references, no font binary",
+      "use": "company-provided development reference; not final reference-game assets"
+    },
+    {
+      "file": "apps/player-web/styles.css",
+      "sha256": "9f2143d1a4a427d98c846525fe6f9adfb11854e53587900a3ca89e2fe1d86051",
+      "type": "temporary CSS scene/layout",
+      "use": "company-provided development reference; not final reference-game assets"
+    },
+    {
+      "file": "apps/board-sample/styles.css",
+      "sha256": "ef2972914f610e06911e0f8ee5b55b0bd14830d75f576c100935911e52a6fa9e",
+      "type": "temporary CSS layout",
+      "use": "company-provided development reference; not final reference-game assets"
+    },
+    {
+      "file": "apps/player-web/src/audio.js",
+      "sha256": "2f1299177a3d433978f077904b54756094992bf36d9dcd6c1596ef7247cf7529",
+      "type": "generated Web Audio oscillator tones; no recording",
+      "use": "company-provided development reference; not final reference-game assets"
+    }
+  ],
+  "externalAssetBinaries": [],
+  "thirdPartyDependenciesBundled": [],
+  "rightsScope": "See docs/ASSETS.md; no third-party or public-license grant is inferred"
+}

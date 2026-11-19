@@ -1,0 +1,25 @@
+{
+  "snapshots": [
+    {"contractVersion":"player-draft-v2","profile":"synthetic-contract","requestId":"request-super-win","roundId":"round-super-win","revision":1,"gameId":"slot-001","rulesVersion":"toy-arithmetic-v1","modeId":"super_chance","currency":"TST","currencyExponent":2,"baseBetMinor":"100","chargeMinor":"600","debitState":"UNCONFIRMED","resultState":"UNAVAILABLE","payoutState":"PENDING","releasedThrough":0,"replayComplete":false,"events":[],"visibleWinMinor":"0","totalWinMinor":null,"confirmedBalanceMinor":null},
+    {"contractVersion":"player-draft-v2","profile":"synthetic-contract","requestId":"request-super-win","roundId":"round-super-win","revision":2,"gameId":"slot-001","rulesVersion":"toy-arithmetic-v1","modeId":"super_chance","currency":"TST","currencyExponent":2,"baseBetMinor":"100","chargeMinor":"600","debitState":"CONFIRMED","resultState":"RECORDED","payoutState":"PENDING","releasedThrough":1,"replayComplete":false,"events":[{"eventSeq":1,"kind":"BOARD","deltaWinMinor":"600","cumulativeWinMinor":"600","grid":[["ten","jack","queen","king","ace"],["ten","jack","queen","king","ace"],["ten","jack","queen","king","ace"],["ten","jack","queen","king","ace"],["ten","jack","queen","king","ace"]],"wins":[{"lineId":1,"positions":[[0,0],[0,1],[0,2]],"rawWinMinor":"600"}]}],"visibleWinMinor":"600","totalWinMinor":null,"confirmedBalanceMinor":null},
+    {"contractVersion":"player-draft-v2","profile":"synthetic-contract","requestId":"request-super-win","roundId":"round-super-win","revision":3,"gameId":"slot-001","rulesVersion":"toy-arithmetic-v1","modeId":"super_chance","currency":"TST","currencyExponent":2,"baseBetMinor":"100","chargeMinor":"600","debitState":"CONFIRMED","resultState":"RECORDED","payoutState":"PENDING","releasedThrough":2,"replayComplete":true,"events":[{"eventSeq":1,"kind":"BOARD","deltaWinMinor":"600","cumulativeWinMinor":"600","grid":[["ten","jack","queen","king","ace"],["ten","jack","queen","king","ace"],["ten","jack","queen","king","ace"],["ten","jack","queen","king","ace"],["ten","jack","queen","king","ace"]],"wins":[{"lineId":1,"positions":[[0,0],[0,1],[0,2]],"rawWinMinor":"600"}]},{"eventSeq":2,"kind":"ROUND_END","deltaWinMinor":"0","cumulativeWinMinor":"600"}],"visibleWinMinor":"600","totalWinMinor":"600","confirmedBalanceMinor":null},
+    {"contractVersion":"player-draft-v2","profile":"synthetic-contract","requestId":"request-super-win","roundId":"round-super-win","revision":4,"gameId":"slot-001","rulesVersion":"toy-arithmetic-v1","modeId":"super_chance","currency":"TST","currencyExponent":2,"baseBetMinor":"100","chargeMinor":"600","debitState":"CONFIRMED","resultState":"RECORDED","payoutState":"CONFIRMED","releasedThrough":2,"replayComplete":true,"events":[{"eventSeq":1,"kind":"BOARD","deltaWinMinor":"600","cumulativeWinMinor":"600","grid":[["ten","jack","queen","king","ace"],["ten","jack","queen","king","ace"],["ten","jack","queen","king","ace"],["ten","jack","queen","king","ace"],["ten","jack","queen","king","ace"]],"wins":[{"lineId":1,"positions":[[0,0],[0,1],[0,2]],"rawWinMinor":"600"}]},{"eventSeq":2,"kind":"ROUND_END","deltaWinMinor":"0","cumulativeWinMinor":"600"}],"visibleWinMinor":"600","totalWinMinor":"600","confirmedBalanceMinor":"100000"}
+  ],
+  "requestExample": {
+    "requestId": "request-super-win",
+    "modeId": "super_chance",
+    "baseBetMinor": "100"
+  },
+  "expected": {
+    "openingMinor": "100000",
+    "chargeMinor": "600",
+    "totalWinMinor": "600",
+    "closingMinor": "100000"
+  },
+  "recoveryExample": {
+    "requestId": "request-super-win",
+    "roundId": "round-super-win",
+    "expectedFinalRevision": 4,
+    "rule": "Look up the same request/round. Do not create a replacement spin."
+  }
+}

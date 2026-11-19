@@ -1,0 +1,283 @@
+{
+  "snapshotVersion": "slot-client-seed-v1",
+  "purpose": "private client development seed; not production",
+  "manifestScope": "Every initial file except SNAPSHOT_MANIFEST.json itself",
+  "files": {
+    ".gitignore": {
+      "sha256": "ece7129cedb86932cbf7d7e4c070833ba17fd9636a6bf250955a14a05f74cd7d",
+      "bytes": 176
+    },
+    "AGENTS.md": {
+      "sha256": "11fab79505c74f2f568e64f15386145eafa660b6a9b2ac8164103e513d2d48fa",
+      "bytes": 1859
+    },
+    "ASSET_INVENTORY.json": {
+      "sha256": "1a2f077edbac870cfb6b7185e760e6225328794ce41779a7a9955c9ee06345b3",
+      "bytes": 1357
+    },
+    "README.md": {
+      "sha256": "3468d1d1699a3170513b7555b1fdefe362b6223cbcfeb39e10f01a7e7d20aae7",
+      "bytes": 2793
+    },
+    "apps/board-sample/contract.js": {
+      "sha256": "8089e3f2ee9047fc1e6f9efdbe9488c8ef8b34bfe1476f3c7a3226c32825510c",
+      "bytes": 1947
+    },
+    "apps/board-sample/index.html": {
+      "sha256": "fdda438683ba27716cff655a9ff1dd2bb1ac3a270aab4e8880f4260dd9449143",
+      "bytes": 1593
+    },
+    "apps/board-sample/main.js": {
+      "sha256": "7a6a7b178ce77e57a8680bf23db1624aecd3008aa079ddb57931474e8ad1d72f",
+      "bytes": 1571
+    },
+    "apps/board-sample/recorded.js": {
+      "sha256": "c3836d3bebe4e937ea895bee8d34e9d8b571e790fdfe1e3b733820c4b15746fa",
+      "bytes": 1255
+    },
+    "apps/board-sample/renderer.js": {
+      "sha256": "a4c44499dd1efec6856571056477181be9728ad917fa13e248b019cf5e841c77",
+      "bytes": 1038
+    },
+    "apps/board-sample/styles.css": {
+      "sha256": "ef2972914f610e06911e0f8ee5b55b0bd14830d75f576c100935911e52a6fa9e",
+      "bytes": 1832
+    },
+    "apps/player-web/index.html": {
+      "sha256": "407369918658b635fda5bbaf3d7e046cc7fe380dd54ef0818ad9ab30ff20db40",
+      "bytes": 8940
+    },
+    "apps/player-web/package.json": {
+      "sha256": "978d25ccf991061b56423a53afa8011f37b2ecc4123e884d52ce1d8b1ef63688",
+      "bytes": 436
+    },
+    "apps/player-web/src/adapters/mock-adapter.js": {
+      "sha256": "064cd5b95223dc0088b02f1758845a340a3d098b1f95622d627c1b0b5a1038a4",
+      "bytes": 7404
+    },
+    "apps/player-web/src/audio.js": {
+      "sha256": "2f1299177a3d433978f077904b54756094992bf36d9dcd6c1596ef7247cf7529",
+      "bytes": 1610
+    },
+    "apps/player-web/src/contract.js": {
+      "sha256": "8112152a5d4e1492316a0b899e7466d4d400943acfc71d44bf2c74b1736f0fa3",
+      "bytes": 7094
+    },
+    "apps/player-web/src/main.js": {
+      "sha256": "169b81e0bc0af073546f2a58da4d2512e095ec81246e71b9d9c318bf94da9edd",
+      "bytes": 8083
+    },
+    "apps/player-web/src/round-controller.js": {
+      "sha256": "3213fc45da0e91dc09226489947c42ec8e10dc5527f38021014ad95583b1269e",
+      "bytes": 10016
+    },
+    "apps/player-web/src/snapshot-revisions.js": {
+      "sha256": "255d04cebf48cce499edaf6a189f75cfbad9fc70c9fce90ee6a657df1278879c",
+      "bytes": 1255
+    },
+    "apps/player-web/src/wallet-balance.js": {
+      "sha256": "3fe89eb9ae6518dd59154cbb772b111e3dd74c190702a8d46cb4fd2d4b7f8756",
+      "bytes": 372
+    },
+    "apps/player-web/styles.css": {
+      "sha256": "9f2143d1a4a427d98c846525fe6f9adfb11854e53587900a3ca89e2fe1d86051",
+      "bytes": 22845
+    },
+    "apps/player-web/tests/controller.test.js": {
+      "sha256": "8a90f11904c786a00cec2f3edb828d25d0d7c2e955cbd88d0f2b0f4edc03d163",
+      "bytes": 11709
+    },
+    "apps/player-web/tests/core.test.js": {
+      "sha256": "1011f16fa565b70d1ae3731e47d1dfde4bab2dd9f2f78fbe8905e0615518c121",
+      "bytes": 13409
+    },
+    "apps/player-web/tests/hosting.test.js": {
+      "sha256": "0ea9e2b9a48d2f69dac17c08a09eaa0ee53bb799ddafa979b9001e795b1b60dd",
+      "bytes": 1711
+    },
+    "apps/player-web/tests/recorded-board.test.js": {
+      "sha256": "005f6b15d2fca4407b3bec5cb4ea993343d7612d4c6b3d9a3245b2613fe081bb",
+      "bytes": 2510
+    },
+    "apps/player-web/tests/renderer.test.js": {
+      "sha256": "63d9b59a6a653a5743e6e5fdfbf646862c9998e13feda5f89bbcb066ea62ff9c",
+      "bytes": 9969
+    },
+    "apps/player-web/than/README.md": {
+      "sha256": "036778a6c71dae5a46fab8fabd1ceaad76da85259d6d14bdbcdf7cd6676aed91",
+      "bytes": 348
+    },
+    "apps/player-web/tools/build.mjs": {
+      "sha256": "2022fdf8e8628b2b28f8ccbeb0331f699bb245b071470caf4564c28ab06a9d7e",
+      "bytes": 1620
+    },
+    "apps/player-web/tools/check.mjs": {
+      "sha256": "e525a521a1338e9183104fed9fba3576edd43eea717dd8e6ce6db90be6b8a0d8",
+      "bytes": 1046
+    },
+    "apps/player-web/tools/files.mjs": {
+      "sha256": "1ee38656963426d2b00760033d8b9c7f49bf33179846d43d7a9b96a11fcb441c",
+      "bytes": 1723
+    },
+    "apps/player-web/tools/server.mjs": {
+      "sha256": "991f127fcc9169cef786d780c0c69ed2e8a0b6b920f5844a3c0d83955faf3c90",
+      "bytes": 3002
+    },
+    "contracts/player-draft-v2/API.md": {
+      "sha256": "48cf09f0eeb6142e69567917bf67b0d8415d53d2ca1e8aff3646f5a711bf515a",
+      "bytes": 8969
+    },
+    "contracts/player-draft-v2/CASES.md": {
+      "sha256": "90231f8cbe1fa98a9c61647d1643c4b9991a75dc1a8083bcf89862e6d3a3c041",
+      "bytes": 3018
+    },
+    "contracts/player-draft-v2/README.md": {
+      "sha256": "b64b9451c98d3c35bbad423484b1499de467bebc942a176c9d3db3c4af9c32d3",
+      "bytes": 2939
+    },
+    "contracts/player-draft-v2/examples/FILES.json": {
+      "sha256": "7b1b265b79f7a39216f4407199b45c808f05e709b14c330108ca1442380c3915",
+      "bytes": 2225
+    },
+    "contracts/player-draft-v2/examples/cases/cap-below.json": {
+      "sha256": "a72e22ac6d075a91f2cc6e254d4c7e6e0d428668c56a4403d0aece581b9705a9",
+      "bytes": 9161
+    },
+    "contracts/player-draft-v2/examples/cases/cap-during-base.json": {
+      "sha256": "85d7bf559df031c34e0161d56cfa53f77d3968da81501ffd5a0bfa826aa013ce",
+      "bytes": 3949
+    },
+    "contracts/player-draft-v2/examples/cases/cap-during-bonus.json": {
+      "sha256": "67aa1e047ce8b3bf1d46fbcb768e0522949b81f0a5a24c131a455c1c690f87bf",
+      "bytes": 5435
+    },
+    "contracts/player-draft-v2/examples/cases/cap-exact.json": {
+      "sha256": "05822bff533ade09b7ae9f0afeb5341a6ead3f649520fef4a95a27fb286ea9b2",
+      "bytes": 15307
+    },
+    "contracts/player-draft-v2/examples/cases/cap-overshoot.json": {
+      "sha256": "a7e9deb9a10232c818a5b89cf1db1a966d7d63e0db20290bdec51a096a1f39e5",
+      "bytes": 19008
+    },
+    "contracts/player-draft-v2/examples/cases/chests-zero-win.json": {
+      "sha256": "723103bbac2fd1f99b478b4b4ffb905e195081c3f187ca82d6ea460932e361de",
+      "bytes": 17129
+    },
+    "contracts/player-draft-v2/examples/cases/drop-buy.json": {
+      "sha256": "8c6828ee79a7e5fcfc231d6eb8ab69279061b8db197c517e23e4e629860fb02f",
+      "bytes": 9044
+    },
+    "contracts/player-draft-v2/examples/cases/drop-chests.json": {
+      "sha256": "32b610187dbacf7cb44351ffb9d0cff7f792fb41d49c86e1dad2427cefeea7b5",
+      "bytes": 17719
+    },
+    "contracts/player-draft-v2/examples/cases/drop-retrigger.json": {
+      "sha256": "ebe6f6b1a76e86f0ed39c1f764b75d3ebd7009699618c5ec85495f2df3e65456",
+      "bytes": 14206
+    },
+    "contracts/player-draft-v2/examples/cases/extra-loss.json": {
+      "sha256": "de07a2951bc2cde84eabc576a86f09723e1841a1b4557b147d1b3480ea82f278",
+      "bytes": 3506
+    },
+    "contracts/player-draft-v2/examples/cases/extra-win.json": {
+      "sha256": "1b933745a1ac999f256d79f7ba50497756a29c5f76632e676a17574cf611a38e",
+      "bytes": 3717
+    },
+    "contracts/player-draft-v2/examples/cases/long-retrigger.json": {
+      "sha256": "d1a94888bcc0143100942e2471437736f1141bfaea4fc8599f75c5346b9dfada",
+      "bytes": 409343
+    },
+    "contracts/player-draft-v2/examples/cases/natural-drop.json": {
+      "sha256": "e3427f4d171b10d69e083684fc687270d7dd30f8df110b32be9716f47ae01e7c",
+      "bytes": 9082
+    },
+    "contracts/player-draft-v2/examples/cases/natural-tavern.json": {
+      "sha256": "d2f1a12979190fe69891c7dceb6e9ce44589eac96e2d2141fab4c0188c646861",
+      "bytes": 9146
+    },
+    "contracts/player-draft-v2/examples/cases/normal-loss.json": {
+      "sha256": "0df7cd1286ea87c5f3455fb69c2d4538eab38ffdf3542c6ac6192384f187cf1b",
+      "bytes": 3487
+    },
+    "contracts/player-draft-v2/examples/cases/normal-multiple.json": {
+      "sha256": "9d53e7eb39a680fe941631c25ca5f3f8757a7f93cd5d5a46407f7d761a402b9b",
+      "bytes": 3948
+    },
+    "contracts/player-draft-v2/examples/cases/normal-single.json": {
+      "sha256": "13a84b712c9c76d1d23593753d7d935524ec093139e4b5aa9cb6e64a6c4cefab",
+      "bytes": 3731
+    },
+    "contracts/player-draft-v2/examples/cases/super-loss.json": {
+      "sha256": "781e7d9ee2b9e2a59fb725fd06d3c423755bf6d9f43732bc754bb0f311acab2c",
+      "bytes": 3506
+    },
+    "contracts/player-draft-v2/examples/cases/super-win.json": {
+      "sha256": "b4efd86b6c72a7b99aee32b3b97f1f1449c7e8840cce3b022fc14b57fbdc43db",
+      "bytes": 3717
+    },
+    "contracts/player-draft-v2/examples/cases/tavern-buy.json": {
+      "sha256": "d6e95d553a3d5e7907996e8ef8d738d799340e6768d958070e1ce473c875c365",
+      "bytes": 9124
+    },
+    "contracts/player-draft-v2/examples/cases/tavern-chests.json": {
+      "sha256": "a2d502b69bee5fc30440fc5561179770abda0f4aca7bc3d16e4b965d5266d7b4",
+      "bytes": 17815
+    },
+    "contracts/player-draft-v2/examples/cases/tavern-retrigger.json": {
+      "sha256": "0ec5ce438380f0389881fe0eb3214dddc76769a69a1d8a6d06927348c4cf539e",
+      "bytes": 14328
+    },
+    "contracts/player-draft-v2/examples/catalog.json": {
+      "sha256": "c7b86996f55be7fc73704e0ed2e1e1e99770769a9fe921ac0dbdb469ebe60890",
+      "bytes": 5343
+    },
+    "contracts/player-draft-v2/preview.py": {
+      "sha256": "c3620739873a7761da45ccd490d071f303f492b9d95bcaee497e3b972a878698",
+      "bytes": 3677
+    },
+    "docs/ASSETS.md": {
+      "sha256": "873d66fb43a826befa684f00c42ad01edcbc72ed7d0c5e69930db297648c0edd",
+      "bytes": 1741
+    },
+    "docs/DEVELOPMENT.md": {
+      "sha256": "a1cca25fbc14f8e2add4adf38085c8223a99649c6be1924d6d62ce22ba8e3426",
+      "bytes": 3557
+    },
+    "docs/GAME_SCOPE.md": {
+      "sha256": "4bc017077a8ee98f0f679519c5a9a5f05ecc5420da9da6d8559aed8f4134c63d",
+      "bytes": 2155
+    },
+    "docs/M1_ACCEPTANCE.md": {
+      "sha256": "d9df6e0e21adcbf646a322432c194aeea428d55615e951b64caaa59efa8d8781",
+      "bytes": 2255
+    },
+    "fixtures/rounds/slot-001-frontend/package.json": {
+      "sha256": "a90fc33418afa2b9cbf4768524b021135b965ecdf993457505bfae3ac44a8428",
+      "bytes": 33
+    },
+    "fixtures/rounds/slot-001-frontend/scenarios.js": {
+      "sha256": "62eb38be7730298122c9a7576fe47cb16bfc95a345cfbec560019b76c6eac554",
+      "bytes": 6615
+    },
+    "games/slot-001/client/renderer.js": {
+      "sha256": "6cc9909b6ab91ed66b59ddfb8501874312e18522fa66865e27890741b96c7d5a",
+      "bytes": 11214
+    },
+    "games/slot-001/client/symbols.svg": {
+      "sha256": "03bf758a533b8853d6d6e98d888c3fc50c2be7993e97e6fef48e772413b4988f",
+      "bytes": 16634
+    },
+    "games/slot-001/client/than/README.md": {
+      "sha256": "1448e65276c7dcb6c751e44ba1a7fff34158d4a22a2758cef5e275e1290fc1d2",
+      "bytes": 344
+    },
+    "games/slot-001/spec/rules.js": {
+      "sha256": "a2cffe4bce52b2d0c52917c33858e718daa888270c40c5d01b6ee4f99bf806d1",
+      "bytes": 1931
+    },
+    "package.json": {
+      "sha256": "5718c0599ca309fd09eee2ba0c0ebaf9717557f47d1cbf2aa1ddde452173a073",
+      "bytes": 396
+    }
+  }
+}

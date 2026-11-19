@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <!-- Original vector placeholders for the local mock. No third-party art or fonts. -->
+  <symbol id="ten" viewBox="0 0 100 100">
+    <defs><linearGradient id="td-ten-ink" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c1e98b"/><stop offset=".45" stop-color="#86b84c"/><stop offset="1" stop-color="#4c7536"/></linearGradient></defs>
+    <text x="50" y="76" text-anchor="middle" font-family="Georgia, serif" font-size="73" font-weight="bold" letter-spacing="-8" fill="#1d2015" stroke="#1d2015" stroke-width="6" stroke-linejoin="round">10</text>
+    <text x="50" y="73" text-anchor="middle" font-family="Georgia, serif" font-size="73" font-weight="bold" letter-spacing="-8" fill="url(#td-ten-ink)" stroke="#d8ed9f" stroke-width="1.3">10</text>
+    <path d="M18 84q30 6 62-1" fill="none" stroke="#96ba68" stroke-width="2" opacity=".5"/>
+  </symbol>
+  <symbol id="jack" viewBox="0 0 100 100">
+    <defs><linearGradient id="td-jack-ink" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b1dfff"/><stop offset=".4" stop-color="#5598e0"/><stop offset="1" stop-color="#315d98"/></linearGradient></defs>
+    <text x="52" y="80" text-anchor="middle" font-family="Georgia, serif" font-size="86" font-weight="bold" fill="#1a263e" stroke="#1a263e" stroke-width="6">J</text>
+    <text x="52" y="77" text-anchor="middle" font-family="Georgia, serif" font-size="86" font-weight="bold" fill="url(#td-jack-ink)" stroke="#a7daff" stroke-width="1.3">J</text>
+    <path d="m75 17 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z" fill="#9bcdf5" opacity=".75"/>
+  </symbol>
+  <symbol id="queen" viewBox="0 0 100 100">
+    <defs><linearGradient id="td-queen-ink" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffbdc6"/><stop offset=".4" stop-color="#dc6687"/><stop offset="1" stop-color="#8f3e69"/></linearGradient></defs>
+    <text x="50" y="78" text-anchor="middle" font-family="Georgia, serif" font-size="82" font-weight="bold" fill="#3c2136" stroke="#3c2136" stroke-width="6">Q</text>
+    <text x="50" y="75" text-anchor="middle" font-family="Georgia, serif" font-size="82" font-weight="bold" fill="url(#td-queen-ink)" stroke="#ffbbc9" stroke-width="1.3">Q</text>
+    <path d="m17 20 2 4 4 2-4 2-2 4-2-4-4-2 4-2Z" fill="#e990ae" opacity=".7"/>
+  </symbol>
+  <symbol id="king" viewBox="0 0 100 100">
+    <defs><linearGradient id="td-king-ink" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#baf4e8"/><stop offset=".4" stop-color="#66c7b5"/><stop offset="1" stop-color="#307f7b"/></linearGradient></defs>
+    <text x="50" y="79" text-anchor="middle" font-family="Georgia, serif" font-size="83" font-weight="bold" fill="#1b3438" stroke="#1b3438" stroke-width="6">K</text>
+    <text x="50" y="76" text-anchor="middle" font-family="Georgia, serif" font-size="83" font-weight="bold" fill="url(#td-king-ink)" stroke="#b6f3d9" stroke-width="1.3">K</text>
+    <path d="M21 85h57" stroke="#8bd1bb" stroke-width="2" opacity=".45"/>
+  </symbol>
+  <symbol id="ace" viewBox="0 0 100 100">
+    <defs><linearGradient id="td-ace-ink" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffecaa"/><stop offset=".4" stop-color="#e9bc64"/><stop offset="1" stop-color="#a37437"/></linearGradient></defs>
+    <text x="50" y="79" text-anchor="middle" font-family="Georgia, serif" font-size="82" font-weight="bold" fill="#3d2d20" stroke="#3d2d20" stroke-width="6">A</text>
+    <text x="50" y="76" text-anchor="middle" font-family="Georgia, serif" font-size="82" font-weight="bold" fill="url(#td-ace-ink)" stroke="#ffdf9b" stroke-width="1.3">A</text>
+    <path d="m74 19 2 4 4 2-4 2-2 4-2-4-4-2 4-2Z" fill="#ffdf9b" opacity=".7"/>
+  </symbol>
+  <symbol id="potion" viewBox="0 0 100 100">
+    <defs>
+      <linearGradient id="td-potion-glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#cfb6ec"/><stop offset=".5" stop-color="#77559e"/><stop offset="1" stop-color="#33264c"/></linearGradient>
+      <linearGradient id="td-potion-wine" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dd80bf"/><stop offset=".5" stop-color="#943d85"/><stop offset="1" stop-color="#4c255b"/></linearGradient>
+    </defs>
+    <ellipse cx="51" cy="90" rx="25" ry="5" fill="#160d1d" opacity=".3"/>
+    <path d="M41 14h19v23c18 7 27 20 24 35-2 13-16 17-34 16S20 83 18 71c-3-15 6-28 23-34Z" fill="url(#td-potion-glass)" stroke="#30223f" stroke-width="3"/>
+    <path d="M26 56q12-5 25 0t25 0c8 18-3 25-26 25S19 72 26 56Z" fill="url(#td-potion-wine)"/>
+    <path d="M39 19h24v9H39Z" fill="#d7b36e" stroke="#795b39" stroke-width="2"/>
+    <path d="m43 9 16 0 1 11H42Z" fill="#a97643" stroke="#67482f" stroke-width="2"/>
+    <path d="M32 48q-10 11-8 20M46 33v6" fill="none" stroke="#ebdcff" stroke-width="4" stroke-linecap="round" opacity=".75"/>
+    <path d="m51 48 10 12-10 16-10-16Z" fill="#ddbc72" stroke="#886244" stroke-width="2"/>
+    <path d="m51 54 5 7-5 8-5-8Z" fill="#794a80"/>
+    <circle cx="66" cy="70" r="3" fill="#c676bd"/><circle cx="71" cy="64" r="2" fill="#d492cf"/>
+  </symbol>
+  <symbol id="meat" viewBox="0 0 100 100">
+    <defs><linearGradient id="td-meat-roast" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f3b678"/><stop offset=".4" stop-color="#c36c45"/><stop offset="1" stop-color="#723946"/></linearGradient></defs>
+    <ellipse cx="49" cy="87" rx="33" ry="5" fill="#160d11" opacity=".3"/>
+    <path d="m63 61 18 13c8-6 16 2 11 8 4 7-6 14-11 7L65 71Z" fill="#f5d9af" stroke="#8c6a4a" stroke-width="2.5"/>
+    <path d="M20 26C5 39 11 65 31 74c12 6 28 3 39-6 13-11 16-28 4-40S35 11 20 26Z" fill="url(#td-meat-roast)" stroke="#5a3031" stroke-width="3"/>
+    <path d="M21 34q13-16 35-6M19 42q-3 11 5 18" fill="none" stroke="#ffcc91" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <path d="m42 36 6 8m5-13 6 8m-4 12 5 7m-22-3 5 8" stroke="#813e32" stroke-width="3" stroke-linecap="round"/>
+    <path d="M55 24q18 3 21 18" fill="none" stroke="#d98b59" stroke-width="3"/>
+  </symbol>
+  <symbol id="meal" viewBox="0 0 100 100">
+    <defs>
+      <linearGradient id="td-meal-plate" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f1dfaf"/><stop offset="1" stop-color="#a58e60"/></linearGradient>
+      <linearGradient id="td-meal-roast" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9a26a"/><stop offset=".5" stop-color="#b95b43"/><stop offset="1" stop-color="#673345"/></linearGradient>
+    </defs>
+    <ellipse cx="50" cy="82" rx="40" ry="10" fill="#130f11" opacity=".25"/>
+    <ellipse cx="50" cy="70" rx="42" ry="16" fill="url(#td-meal-plate)" stroke="#786847" stroke-width="2.5"/>
+    <ellipse cx="50" cy="67" rx="34" ry="10" fill="#bdac7d" stroke="#f7eac5" stroke-width="2"/>
+    <path d="M20 65c-6-12 7-33 23-36 17-4 34 6 36 20 4 17-17 23-35 21Z" fill="url(#td-meal-roast)" stroke="#603833" stroke-width="3"/>
+    <path d="M29 49q12-19 34-8" fill="none" stroke="#f5bb7d" stroke-width="5" stroke-linecap="round"/>
+    <path d="m37 38 8 13m3-17 8 14m4-11 8 13" stroke="#8e4137" stroke-width="3" stroke-linecap="round"/>
+    <path d="M15 63q-5-16 9-15l5 17M68 67q10-17 20-5-5 10-20 5" fill="#5a9a58" stroke="#315335" stroke-width="2"/>
+    <circle cx="28" cy="69" r="5" fill="#e6a958" stroke="#ae773d" stroke-width="1.5"/><circle cx="37" cy="71" r="5" fill="#e6a958" stroke="#ae773d" stroke-width="1.5"/>
+    <path d="M44 20q-6-5 0-11M55 22q-6-5 0-11" fill="none" stroke="#dcc8ad" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+  </symbol>
+  <symbol id="mug" viewBox="0 0 100 100">
+    <defs>
+      <linearGradient id="td-mug-gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0a6"/><stop offset=".35" stop-color="#efb23d"/><stop offset="1" stop-color="#9d521a"/></linearGradient>
+      <linearGradient id="td-mug-ale" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffcf65"/><stop offset="1" stop-color="#bc641f"/></linearGradient>
+    </defs>
+    <ellipse cx="48" cy="89" rx="28" ry="5" fill="#150d08" opacity=".3"/>
+    <path d="M66 33h9c19 0 17 35-1 39l-10 1 2-12 7-1c8-2 9-16 1-16h-9Z" fill="url(#td-mug-gold)" stroke="#663716" stroke-width="3"/>
+    <path d="m24 28 4 50q1 9 20 9t20-9l4-50Z" fill="url(#td-mug-gold)" stroke="#673c1c" stroke-width="3"/>
+    <path d="m31 36 3 39q1 5 14 5t14-5l3-39Z" fill="url(#td-mug-ale)"/>
+    <path d="m36 42 2 28M48 43v30M60 42l-2 28" fill="none" stroke="#fff4b5" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+    <path d="M22 31c-8-8-1-20 9-18 3-12 18-13 24-5 12-5 22 3 20 14 10 5 6 17-3 17H29c-3 0-6-2-7-8Z" fill="#f9eac1" stroke="#9d743d" stroke-width="2.5"/>
+    <path d="M26 25c0-8 8-10 13-6 3-9 13-11 19-4 7-3 11 0 12 5" fill="none" stroke="#fff9e8" stroke-width="6" stroke-linecap="round"/>
+    <path d="M28 31v18q0 8 6 8t6-8V35" fill="#f9eac1"/>
+    <circle cx="50" cy="27" r="3" fill="#fffcef"/><circle cx="60" cy="31" r="2" fill="#fffcef"/>
+  </symbol>
+  <symbol id="crown" viewBox="0 0 100 100">
+    <defs>
+      <linearGradient id="td-crown-gold" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff2b2"/><stop offset=".4" stop-color="#f7c75c"/><stop offset="1" stop-color="#af6826"/></linearGradient>
+      <linearGradient id="td-crown-red" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffb9a9"/><stop offset=".4" stop-color="#dc5064"/><stop offset="1" stop-color="#781b47"/></linearGradient>
+    </defs>
+    <ellipse cx="50" cy="87" rx="32" ry="6" fill="#150d08" opacity=".3"/>
+    <path d="m18 32 19 16 13-29 14 29 19-16-8 42H26Z" fill="url(#td-crown-gold)" stroke="#6e421f" stroke-width="3" stroke-linejoin="round"/>
+    <path d="m26 46 10 9 14-22 14 22 11-9-5 19H31Z" fill="#8b3c53"/>
+    <path d="m27 67 48 0 1 14q-26 10-52 0Z" fill="url(#td-crown-gold)" stroke="#77491e" stroke-width="3"/>
+    <path d="M29 74q21 6 42 0" fill="none" stroke="#ffefac" stroke-width="3"/>
+    <path d="m50 52 9 10-9 12-9-12Z" fill="url(#td-crown-red)" stroke="#fff0b0" stroke-width="2"/>
+    <path d="m47 59 3-4 4 7" fill="none" stroke="#ffc6c6" stroke-width="2"/>
+    <circle cx="18" cy="30" r="6" fill="#ffe89d" stroke="#a16a2a" stroke-width="2"/>
+    <circle cx="50" cy="17" r="6" fill="#ffe89d" stroke="#a16a2a" stroke-width="2"/>
+    <circle cx="83" cy="30" r="6" fill="#ffe89d" stroke="#a16a2a" stroke-width="2"/>
+    <circle cx="33" cy="76" r="2" fill="#ef789a"/><circle cx="67" cy="76" r="2" fill="#ef789a"/>
+  </symbol>
+  <symbol id="gem" viewBox="0 0 100 100">
+    <defs><linearGradient id="td-gem-depth" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9affd6"/><stop offset=".4" stop-color="#37d6ac"/><stop offset="1" stop-color="#116b71"/></linearGradient></defs>
+    <ellipse cx="50" cy="89" rx="26" ry="5" fill="#061a19" opacity=".3"/>
+    <path d="m29 16 41 1 19 28-39 42L11 45Z" fill="url(#td-gem-depth)" stroke="#123e41" stroke-width="3" stroke-linejoin="round"/>
+    <path d="m29 17 9 27-26 1Z" fill="#8cf5d9"/>
+    <path d="m29 17 41 0-8 27H38Z" fill="#b0ffe0"/>
+    <path d="m70 17 18 28-26-1Z" fill="#43cfb1"/>
+    <path d="m12 45 26-1 12 42Z" fill="#1b9c91"/>
+    <path d="m38 44 24 0-12 42Z" fill="#68f0c6"/>
+    <path d="m62 44 26 1-38 41Z" fill="#128083"/>
+    <path d="m29 17 9 27 24 0 8-27M12 45l76 0M38 44l12 42 12-42" fill="none" stroke="#d1ffee" stroke-width="1.5" opacity=".7"/>
+    <path d="m23 30 3 7 7 3-7 3-3 7-3-7-7-3 7-3Z" fill="#e6fff0"/>
+    <path d="m74 14 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z" fill="#e6fff0"/>
+  </symbol>
+  <symbol id="sword" viewBox="0 0 100 100">
+    <defs>
+      <linearGradient id="td-sword-steel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f2faff"/><stop offset=".4" stop-color="#c2d5e6"/><stop offset=".5" stop-color="#7792ad"/><stop offset="1" stop-color="#e4effa"/></linearGradient>
+      <linearGradient id="td-sword-gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe8a2"/><stop offset="1" stop-color="#a56d30"/></linearGradient>
+    </defs>
+    <ellipse cx="46" cy="89" rx="28" ry="5" fill="#150d08" opacity=".3"/>
+    <path d="m76 10 8 4-3 18-39 39-12-12 39-39Z" fill="url(#td-sword-steel)" stroke="#31455b" stroke-width="3" stroke-linejoin="round"/>
+    <path d="m75 20-38 42" stroke="#f9fdff" stroke-width="3" stroke-linecap="round"/>
+    <path d="m26 60 14 14-16 16-12-12Z" fill="#6f508e" stroke="#382e53" stroke-width="3"/>
+    <path d="m19 74 9 9m-4-14 9 9m-5-14 9 9" stroke="#b294cb" stroke-width="3"/>
+    <path d="M21 49 51 79l-5 6-11-9-6-6-10-9-5-7Z" fill="url(#td-sword-gold)" stroke="#795125" stroke-width="3" stroke-linejoin="round"/>
+    <path d="m16 82 8 7-7 7-10-10Z" fill="url(#td-sword-gold)" stroke="#795125" stroke-width="2"/>
+    <path d="m74 42 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z" fill="#e8f7ff"/>
+  </symbol>
+  <symbol id="barrel" viewBox="0 0 100 100">
+    <defs>
+      <linearGradient id="td-barrel-wood" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#75401e"/><stop offset=".35" stop-color="#cf944d"/><stop offset=".7" stop-color="#ad6d31"/><stop offset="1" stop-color="#57311e"/></linearGradient>
+      <linearGradient id="td-barrel-hoop" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#68716f"/><stop offset=".4" stop-color="#bbc1a3"/><stop offset="1" stop-color="#4e6061"/></linearGradient>
+    </defs>
+    <ellipse cx="50" cy="90" rx="27" ry="5" fill="#150d08" opacity=".3"/>
+    <path d="M28 15q22-7 44 0c12 21 12 52 0 69q-22 9-44 0c-12-17-12-48 0-69Z" fill="url(#td-barrel-wood)" stroke="#4c2c1e" stroke-width="3"/>
+    <path d="M38 18q-10 33 0 66M51 17v70M63 18q11 33 0 66" fill="none" stroke="#66391e" stroke-width="2"/>
+    <path d="M31 37q-4 11-3 23M43 50l1 20M57 25v13M67 47l2 14" fill="none" stroke="#e6b971" stroke-width="2" opacity=".55"/>
+    <path d="m25 22-3 12q27 10 56 0l-3-12q-25 8-50 0Z" fill="url(#td-barrel-hoop)" stroke="#3f4a43" stroke-width="2.5"/>
+    <path d="m22 66 3 12q25 10 50 0l3-12q-28 9-56 0Z" fill="url(#td-barrel-hoop)" stroke="#3f4a43" stroke-width="2.5"/>
+    <ellipse cx="50" cy="16" rx="22" ry="7" fill="#d8ad6b" stroke="#714a2b" stroke-width="3"/>
+    <path d="M33 16h34M39 13h22" stroke="#a67843" stroke-width="2"/>
+    <circle cx="52" cy="52" r="8" fill="#70502d" stroke="#dfb96e" stroke-width="3"/>
+    <circle cx="32" cy="29" r="2" fill="#e2ddbc"/><circle cx="68" cy="29" r="2" fill="#e2ddbc"/>
+    <circle cx="32" cy="73" r="2" fill="#e2ddbc"/><circle cx="68" cy="73" r="2" fill="#e2ddbc"/>
+  </symbol>
+  <symbol id="wild" viewBox="0 0 100 100">
+    <defs>
+      <linearGradient id="td-wild-gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff6b9"/><stop offset=".4" stop-color="#e9ba54"/><stop offset="1" stop-color="#a36c29"/></linearGradient>
+      <radialGradient id="td-wild-green"><stop stop-color="#46896f"/><stop offset="1" stop-color="#173b35"/></radialGradient>
+    </defs>
+    <path d="m50 6 12 12 17 1 3 18 12 13-12 13-3 18-17 1-12 12-12-12-17-1-3-18L6 50l12-13 3-18 17-1Z" fill="url(#td-wild-gold)" stroke="#784e26" stroke-width="2.5"/>
+    <circle cx="50" cy="50" r="33" fill="url(#td-wild-green)" stroke="#f8e2a0" stroke-width="3"/>
+    <circle cx="50" cy="50" r="28" fill="none" stroke="#caa55a" stroke-width="1" opacity=".7"/>
+    <path d="m25 34 12 35h9l5-19 5 19h9l11-35H63l-4 20-5-20h-8l-6 20-5-20Z" fill="#fff0b7" stroke="#976d30" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="m47 14 3-5 3 5-3 4Z" fill="#fff9de"/>
+    <path d="m22 70 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z" fill="#fff5cc"/>
+    <path d="m77 22 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z" fill="#fff5cc"/>
+  </symbol>
+  <symbol id="bonus" viewBox="0 0 100 100">
+    <defs>
+      <linearGradient id="td-bonus-wood" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#9b5578"/><stop offset=".5" stop-color="#75405f"/><stop offset="1" stop-color="#462b45"/></linearGradient>
+      <linearGradient id="td-bonus-gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff3ac"/><stop offset=".4" stop-color="#e8b34e"/><stop offset="1" stop-color="#966028"/></linearGradient>
+    </defs>
+    <ellipse cx="50" cy="89" rx="35" ry="5" fill="#150d08" opacity=".3"/>
+    <path d="M15 45q0-27 22-29h26q22 2 22 29v36q-35 12-70 0Z" fill="url(#td-bonus-wood)" stroke="#3d2937" stroke-width="3"/>
+    <path d="M16 44h68v8H16Z" fill="url(#td-bonus-gold)" stroke="#744b2a" stroke-width="2"/>
+    <path d="M27 19h9q-11 10-10 25v37l-9-2V44q0-17 10-25ZM64 19h9q10 8 10 25v35l-9 2V44q0-15-10-25Z" fill="url(#td-bonus-gold)" stroke="#79522c" stroke-width="2"/>
+    <path d="M31 34h38M31 63h10M59 63h10M30 75h40" fill="none" stroke="#bc8ba2" stroke-width="2" opacity=".6"/>
+    <path d="M41 43h18v22l-9 8-9-8Z" fill="url(#td-bonus-gold)" stroke="#81562b" stroke-width="2"/>
+    <path d="m50 49 6 7-6 9-6-9Z" fill="#74d9b0" stroke="#316557" stroke-width="1.5"/>
+    <path d="m16 20 2 6 6 2-6 2-2 6-2-6-6-2 6-2Z" fill="#ffe9a2"/>
+    <path d="m79 8 2 6 6 2-6 2-2 6-2-6-6-2 6-2Z" fill="#ffe9a2"/>
+    <circle cx="22" cy="57" r="2" fill="#ffe9a2"/><circle cx="78" cy="57" r="2" fill="#ffe9a2"/>
+  </symbol>
+</svg>

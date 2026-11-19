@@ -1,0 +1,15 @@
+{
+  "name": "@slot-client/player-reference",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "node tools/server.mjs",
+    "preview": "node tools/server.mjs --dist",
+    "test": "node --test tests/*.test.js",
+    "check": "node tools/check.mjs",
+    "build:mock": "node tools/build.mjs --profile=mock",
+    "build:live": "node tools/build.mjs --profile=live"
+  }
+}

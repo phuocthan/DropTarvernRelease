@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Recorded 3×3 playback sample</title>
+  <link rel="stylesheet" href="/apps/board-sample/styles.css">
+  <script type="module" src="/apps/board-sample/main.js"></script>
+</head>
+<body>
+  <main>
+    <header><p class="eyebrow">DEVELOPMENT REFERENCE</p><h1>One controller, another board</h1><p>A recorded 3×3 loss. No spin, debit, settlement or server connection.</p></header>
+    <section class="layout">
+      <div class="game">
+        <div id="board" role="group" aria-label="3 by 3 recorded board"></div>
+        <div class="amounts"><div>Recorded demo balance<strong id="balance">—</strong></div><div>Recorded win<strong id="win">—</strong></div></div>
+        <div class="controls"><button id="replay" disabled>Replay recorded sample</button><button id="skip" hidden>Skip animation</button></div>
+        <p id="status" role="status">Preparing recorded playback.</p>
+      </div>
+      <aside><h2>Same recorded round</h2><dl><dt>Round</dt><dd id="round">—</dd><dt>Event</dt><dd id="event">—</dd></dl><p>Reload during playback, then replay to resume this record. The 5×5 reference uses the same round controller.</p><p>The displayed amounts are fixed fixture values, not a wallet ledger.</p><a href="/">5×5 mock reference</a></aside>
+    </section>
+    <footer>Temporary reference only. Than demonstrates both boards in the new TypeScript/PixiJS core.</footer>
+  </main>
+</body>
+</html>

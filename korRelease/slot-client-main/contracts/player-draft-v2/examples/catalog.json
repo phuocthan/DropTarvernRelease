@@ -1,0 +1,220 @@
+{
+  "profile": "synthetic-contract",
+  "contractVersion": "player-draft-v2",
+  "activationAllowed": false,
+  "assumptions": [
+    "Proposed mode prices 1/3/6/125/300, not approved costs",
+    "Toy boards and awards are not a payline evaluation",
+    "Toy initial spins 2 and retrigger +1 (long case 40), not game rules",
+    "Base award outside chest subtotal is an explicit unapproved accounting assumption",
+    "Weights and return ratios are arbitrary and never shipped to the player package",
+    "No real wallet, RNG, production credentials, final RTP or vendor acceptance"
+  ],
+  "cases": [
+    {
+      "id": "normal-loss",
+      "file": "cases/normal-loss.json",
+      "modeId": "normal",
+      "snapshots": 4
+    },
+    {
+      "id": "normal-single",
+      "file": "cases/normal-single.json",
+      "modeId": "normal",
+      "snapshots": 4
+    },
+    {
+      "id": "normal-multiple",
+      "file": "cases/normal-multiple.json",
+      "modeId": "normal",
+      "snapshots": 4
+    },
+    {
+      "id": "extra-loss",
+      "file": "cases/extra-loss.json",
+      "modeId": "extra_chance",
+      "snapshots": 4
+    },
+    {
+      "id": "extra-win",
+      "file": "cases/extra-win.json",
+      "modeId": "extra_chance",
+      "snapshots": 4
+    },
+    {
+      "id": "super-loss",
+      "file": "cases/super-loss.json",
+      "modeId": "super_chance",
+      "snapshots": 4
+    },
+    {
+      "id": "super-win",
+      "file": "cases/super-win.json",
+      "modeId": "super_chance",
+      "snapshots": 4
+    },
+    {
+      "id": "natural-tavern",
+      "file": "cases/natural-tavern.json",
+      "modeId": "normal",
+      "snapshots": 7
+    },
+    {
+      "id": "natural-drop",
+      "file": "cases/natural-drop.json",
+      "modeId": "normal",
+      "snapshots": 7
+    },
+    {
+      "id": "tavern-buy",
+      "file": "cases/tavern-buy.json",
+      "modeId": "tavern_buy",
+      "snapshots": 7
+    },
+    {
+      "id": "drop-buy",
+      "file": "cases/drop-buy.json",
+      "modeId": "drop_buy",
+      "snapshots": 7
+    },
+    {
+      "id": "tavern-retrigger",
+      "file": "cases/tavern-retrigger.json",
+      "modeId": "tavern_buy",
+      "snapshots": 9
+    },
+    {
+      "id": "drop-retrigger",
+      "file": "cases/drop-retrigger.json",
+      "modeId": "drop_buy",
+      "snapshots": 9
+    },
+    {
+      "id": "tavern-chests",
+      "file": "cases/tavern-chests.json",
+      "modeId": "tavern_buy",
+      "snapshots": 10
+    },
+    {
+      "id": "drop-chests",
+      "file": "cases/drop-chests.json",
+      "modeId": "drop_buy",
+      "snapshots": 10
+    },
+    {
+      "id": "chests-zero-win",
+      "file": "cases/chests-zero-win.json",
+      "modeId": "tavern_buy",
+      "snapshots": 10
+    },
+    {
+      "id": "cap-below",
+      "file": "cases/cap-below.json",
+      "modeId": "drop_buy",
+      "snapshots": 7
+    },
+    {
+      "id": "cap-exact",
+      "file": "cases/cap-exact.json",
+      "modeId": "drop_buy",
+      "snapshots": 9
+    },
+    {
+      "id": "cap-overshoot",
+      "file": "cases/cap-overshoot.json",
+      "modeId": "drop_buy",
+      "snapshots": 10
+    },
+    {
+      "id": "cap-during-bonus",
+      "file": "cases/cap-during-bonus.json",
+      "modeId": "drop_buy",
+      "snapshots": 5
+    },
+    {
+      "id": "cap-during-base",
+      "file": "cases/cap-during-base.json",
+      "modeId": "normal",
+      "snapshots": 4
+    },
+    {
+      "id": "long-retrigger",
+      "file": "cases/long-retrigger.json",
+      "modeId": "tavern_buy",
+      "snapshots": 47
+    }
+  ],
+  "errors": [
+    {
+      "code": "REQUEST_ID_CONFLICT",
+      "http": 409,
+      "action": "STOP; request ID semantics changed"
+    },
+    {
+      "code": "ROUND_PENDING",
+      "http": 409,
+      "action": "LOOKUP_SAME_REQUEST_ID"
+    },
+    {
+      "code": "WALLET_RECOVERING",
+      "http": 429,
+      "action": "WAIT_AND_LOOKUP; no automatic refund"
+    },
+    {
+      "code": "UNAUTHORIZED",
+      "http": 401,
+      "action": "REAUTHENTICATE_THEN_LOOKUP"
+    },
+    {
+      "code": "AMOUNT_PRECISION_OR_LIMIT",
+      "http": 400,
+      "action": "CORRECT_UNACCEPTED_INPUT"
+    },
+    {
+      "code": "HOLD",
+      "http": 200,
+      "action": "STOP_NEW_SPINS; operator investigation, never force success"
+    }
+  ],
+  "sessionExample": {
+    "contractVersion": "player-draft-v2",
+    "profile": "synthetic-contract",
+    "gameId": "slot-001",
+    "currency": "TST",
+    "currencyExponent": 2,
+    "sessionExpiresAt": "EXAMPLE_ONLY_NOT_A_TOKEN",
+    "modeQuotes": [
+      {
+        "modeId": "normal",
+        "baseBetMinor": "100",
+        "chargeMinor": "100",
+        "termsVersion": "toy-prices-v1"
+      },
+      {
+        "modeId": "extra_chance",
+        "baseBetMinor": "100",
+        "chargeMinor": "300",
+        "termsVersion": "toy-prices-v1"
+      },
+      {
+        "modeId": "super_chance",
+        "baseBetMinor": "100",
+        "chargeMinor": "600",
+        "termsVersion": "toy-prices-v1"
+      },
+      {
+        "modeId": "tavern_buy",
+        "baseBetMinor": "100",
+        "chargeMinor": "12500",
+        "termsVersion": "toy-prices-v1"
+      },
+      {
+        "modeId": "drop_buy",
+        "baseBetMinor": "100",
+        "chargeMinor": "30000",
+        "termsVersion": "toy-prices-v1"
+      }
+    ],
+    "identitySource": "Authenticated server session; no actor or wallet route accepted in spin body"
+  }
+}

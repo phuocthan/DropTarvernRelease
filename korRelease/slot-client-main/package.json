@@ -1,0 +1,13 @@
+{
+  "name": "@slot-client/development-seed",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "node apps/player-web/tools/server.mjs",
+    "test": "node --test apps/player-web/tests/*.test.js",
+    "check": "node apps/player-web/tools/check.mjs",
+    "build:mock": "node apps/player-web/tools/build.mjs --profile=mock"
+  }
+}
