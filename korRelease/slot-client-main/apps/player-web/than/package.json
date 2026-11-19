@@ -1,0 +1,32 @@
+{
+  "name": "@fw-pixi/than-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4361",
+    "check": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "test:browser": "playwright test",
+    "build": "npm run check && vite build --mode production && node tools/artifact-manifest.mjs production",
+    "build:mock": "npm run check && vite build --mode mock && node tools/artifact-manifest.mjs mock",
+    "preview:mock": "vite preview --outDir dist/mock --host 127.0.0.1 --port 4361"
+  },
+  "dependencies": {
+    "pixi.js": "8.23.0",
+    "@esotericsoftware/spine-pixi-v8": "4.2.120",
+    "howler": "2.2.4",
+    "fontfaceobserver": "2.1.0"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "vite": "7.3.8",
+    "@playwright/test": "1.65.1",
+    "@types/node": "26.6.6",
+    "@types/howler": "2.2.12",
+    "@types/fontfaceobserver": "2.1.3"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "purpose": "One-time user-authorized GitHub staging of supplied client seed plus scoped M1 client additions",
+  "officialRepository": "https://gitlab.com/game-studio9172445/slot-client",
+  "approvedStartingCommit": "880a75e406d3a28c03dfa39b3ead93d1a4b4a13b",
+  "approvedCommitVerified": false,
+  "reason": "ZIP has no git metadata; GitLab access unavailable",
+  "requiredSourceBranch": "feat/than-m1-client-core",
+  "requiredTargetBranch": "main",
+  "gitlabMRCreated": false,
+  "seedArchiveSha256": "c68f7738398be3d04876287306851572edd59b49c6cdffb6acb7e90b25256158",
+  "fwPixiSourceCommit": "9bfa923656095a265c5fdb146d8aa2d367510982",
+  "noBackendCopied": true
+}

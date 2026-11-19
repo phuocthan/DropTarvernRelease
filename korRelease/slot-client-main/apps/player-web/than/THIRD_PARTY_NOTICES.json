@@ -1,0 +1,524 @@
+{
+  "scope": "Installed dependency metadata and available upstream notice texts; see package-lock for complete platform optional graph",
+  "dependencies": [
+    {
+      "name": "@esbuild/win32-x64",
+      "version": "0.28.2",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.28.2.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/evanw/esbuild.git"
+      },
+      "notices": []
+    },
+    {
+      "name": "@esotericsoftware/spine-canvas",
+      "version": "4.2.120",
+      "license": "LicenseRef-LICENSE",
+      "resolved": "https://registry.npmjs.org/@esotericsoftware/spine-canvas/-/spine-canvas-4.2.120.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/esotericsoftware/spine-runtimes.git"
+      },
+      "notices": [
+        "licenses/@esotericsoftware__spine-canvas/LICENSE",
+        "licenses/@esotericsoftware__spine-canvas/license"
+      ]
+    },
+    {
+      "name": "@esotericsoftware/spine-core",
+      "version": "4.2.120",
+      "license": "LicenseRef-LICENSE",
+      "resolved": "https://registry.npmjs.org/@esotericsoftware/spine-core/-/spine-core-4.2.120.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/esotericsoftware/spine-runtimes.git"
+      },
+      "notices": [
+        "licenses/@esotericsoftware__spine-core/LICENSE",
+        "licenses/@esotericsoftware__spine-core/license"
+      ]
+    },
+    {
+      "name": "@esotericsoftware/spine-pixi-v8",
+      "version": "4.2.120",
+      "license": "LicenseRef-LICENSE",
+      "resolved": "https://registry.npmjs.org/@esotericsoftware/spine-pixi-v8/-/spine-pixi-v8-4.2.120.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/esotericsoftware/spine-runtimes.git"
+      },
+      "notices": []
+    },
+    {
+      "name": "@playwright/test",
+      "version": "1.65.1",
+      "license": "Apache-2.0",
+      "resolved": "https://registry.npmjs.org/@playwright/test/-/test-1.65.1.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/microsoft/playwright.git"
+      },
+      "notices": [
+        "licenses/@playwright__test/LICENSE",
+        "licenses/@playwright__test/license",
+        "licenses/@playwright__test/NOTICE"
+      ]
+    },
+    {
+      "name": "@rollup/rollup-win32-x64-gnu",
+      "version": "4.68.7",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-win32-x64-gnu/-/rollup-win32-x64-gnu-4.68.7.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rollup/rollup.git"
+      },
+      "notices": []
+    },
+    {
+      "name": "@rollup/rollup-win32-x64-msvc",
+      "version": "4.68.7",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.68.7.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rollup/rollup.git"
+      },
+      "notices": []
+    },
+    {
+      "name": "@types/earcut",
+      "version": "3.0.0",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/@types/earcut/-/earcut-3.0.0.tgz",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/earcut"
+      },
+      "notices": [
+        "licenses/@types__earcut/LICENSE",
+        "licenses/@types__earcut/license"
+      ]
+    },
+    {
+      "name": "@types/estree",
+      "version": "1.0.10",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/@types/estree/-/estree-1.0.10.tgz",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/estree"
+      },
+      "notices": [
+        "licenses/@types__estree/LICENSE",
+        "licenses/@types__estree/license"
+      ]
+    },
+    {
+      "name": "@types/fontfaceobserver",
+      "version": "2.1.3",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/@types/fontfaceobserver/-/fontfaceobserver-2.1.3.tgz",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/fontfaceobserver"
+      },
+      "notices": [
+        "licenses/@types__fontfaceobserver/LICENSE",
+        "licenses/@types__fontfaceobserver/license"
+      ]
+    },
+    {
+      "name": "@types/howler",
+      "version": "2.2.12",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/@types/howler/-/howler-2.2.12.tgz",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/howler"
+      },
+      "notices": [
+        "licenses/@types__howler/LICENSE",
+        "licenses/@types__howler/license"
+      ]
+    },
+    {
+      "name": "@types/node",
+      "version": "26.6.6",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-26.6.6.tgz",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/node"
+      },
+      "notices": [
+        "licenses/@types__node/LICENSE",
+        "licenses/@types__node/license"
+      ]
+    },
+    {
+      "name": "@webgpu/types",
+      "version": "0.1.74",
+      "license": "BSD-3-Clause",
+      "resolved": "https://registry.npmjs.org/@webgpu/types/-/types-0.1.74.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gpuweb/types.git"
+      },
+      "notices": [
+        "licenses/@webgpu__types/LICENSE",
+        "licenses/@webgpu__types/license"
+      ]
+    },
+    {
+      "name": "@xmldom/xmldom",
+      "version": "0.8.15",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/@xmldom/xmldom/-/xmldom-0.8.15.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/xmldom/xmldom.git"
+      },
+      "notices": [
+        "licenses/@xmldom__xmldom/LICENSE",
+        "licenses/@xmldom__xmldom/license"
+      ]
+    },
+    {
+      "name": "colord",
+      "version": "2.14.0",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/colord/-/colord-2.14.0.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/omgovich/colord.git"
+      },
+      "notices": [
+        "licenses/colord/LICENSE.md"
+      ]
+    },
+    {
+      "name": "earcut",
+      "version": "3.2.4",
+      "license": "ISC",
+      "resolved": "https://registry.npmjs.org/earcut/-/earcut-3.2.4.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/mapbox/earcut.git"
+      },
+      "notices": [
+        "licenses/earcut/LICENSE",
+        "licenses/earcut/license"
+      ]
+    },
+    {
+      "name": "esbuild",
+      "version": "0.28.2",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/esbuild/-/esbuild-0.28.2.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/evanw/esbuild.git"
+      },
+      "notices": [
+        "licenses/esbuild/LICENSE.md"
+      ]
+    },
+    {
+      "name": "eventemitter3",
+      "version": "5.0.4",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/eventemitter3/-/eventemitter3-5.0.4.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/primus/eventemitter3.git"
+      },
+      "notices": [
+        "licenses/eventemitter3/LICENSE",
+        "licenses/eventemitter3/license"
+      ]
+    },
+    {
+      "name": "fdir",
+      "version": "6.5.0",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thecodrr/fdir.git"
+      },
+      "notices": [
+        "licenses/fdir/LICENSE",
+        "licenses/fdir/license"
+      ]
+    },
+    {
+      "name": "fontfaceobserver",
+      "version": "2.1.0",
+      "license": "BSD-3-Clause",
+      "resolved": "https://registry.npmjs.org/fontfaceobserver/-/fontfaceobserver-2.1.0.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bramstein/fontfaceobserver.git"
+      },
+      "notices": [
+        "licenses/fontfaceobserver/LICENSE",
+        "licenses/fontfaceobserver/license"
+      ]
+    },
+    {
+      "name": "gifuct-js",
+      "version": "2.1.2",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/gifuct-js/-/gifuct-js-2.1.2.tgz",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/matt-way/gifuct-js.git"
+      },
+      "notices": [
+        "licenses/gifuct-js/LICENSE",
+        "licenses/gifuct-js/license"
+      ]
+    },
+    {
+      "name": "howler",
+      "version": "2.2.4",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/howler/-/howler-2.2.4.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/goldfire/howler.js.git"
+      },
+      "notices": [
+        "licenses/howler/LICENSE.md"
+      ]
+    },
+    {
+      "name": "ismobilejs",
+      "version": "1.1.1",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/ismobilejs/-/ismobilejs-1.1.1.tgz",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/kaimallea/isMobile.git"
+      },
+      "notices": [
+        "licenses/ismobilejs/LICENSE",
+        "licenses/ismobilejs/license"
+      ]
+    },
+    {
+      "name": "js-binary-schema-parser",
+      "version": "2.0.3",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/js-binary-schema-parser/-/js-binary-schema-parser-2.0.3.tgz",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/matt-way/jsBinarySchemaParser.git"
+      },
+      "notices": [
+        "licenses/js-binary-schema-parser/LICENSE",
+        "licenses/js-binary-schema-parser/license"
+      ]
+    },
+    {
+      "name": "nanoid",
+      "version": "3.3.20",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/nanoid/-/nanoid-3.3.20.tgz",
+      "repository": "ai/nanoid",
+      "notices": [
+        "licenses/nanoid/LICENSE",
+        "licenses/nanoid/license"
+      ]
+    },
+    {
+      "name": "parse-svg-path",
+      "version": "0.2.0",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/parse-svg-path/-/parse-svg-path-0.2.0.tgz",
+      "repository": "git://github.com/jkroso/parse-svg-path.git",
+      "notices": [
+        "licenses/parse-svg-path/LICENSE",
+        "licenses/parse-svg-path/license"
+      ]
+    },
+    {
+      "name": "picocolors",
+      "version": "1.1.1",
+      "license": "ISC",
+      "resolved": "https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz",
+      "repository": "alexeyraspopov/picocolors",
+      "notices": [
+        "licenses/picocolors/LICENSE",
+        "licenses/picocolors/license"
+      ]
+    },
+    {
+      "name": "picomatch",
+      "version": "4.0.7",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-4.0.7.tgz",
+      "repository": "micromatch/picomatch",
+      "notices": [
+        "licenses/picomatch/LICENSE",
+        "licenses/picomatch/license"
+      ]
+    },
+    {
+      "name": "pixi.js",
+      "version": "8.23.0",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/pixi.js/-/pixi.js-8.23.0.tgz",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/pixijs/pixijs.git"
+      },
+      "notices": [
+        "licenses/pixi.js/LICENSE",
+        "licenses/pixi.js/license"
+      ]
+    },
+    {
+      "name": "playwright",
+      "version": "1.65.1",
+      "license": "Apache-2.0",
+      "resolved": "https://registry.npmjs.org/playwright/-/playwright-1.65.1.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/microsoft/playwright.git"
+      },
+      "notices": [
+        "licenses/playwright/LICENSE",
+        "licenses/playwright/license",
+        "licenses/playwright/NOTICE"
+      ]
+    },
+    {
+      "name": "playwright-core",
+      "version": "1.65.1",
+      "license": "Apache-2.0",
+      "resolved": "https://registry.npmjs.org/playwright-core/-/playwright-core-1.65.1.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/microsoft/playwright.git"
+      },
+      "notices": [
+        "licenses/playwright-core/LICENSE",
+        "licenses/playwright-core/license",
+        "licenses/playwright-core/NOTICE"
+      ]
+    },
+    {
+      "name": "postcss",
+      "version": "8.5.33",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/postcss/-/postcss-8.5.33.tgz",
+      "repository": "postcss/postcss",
+      "notices": [
+        "licenses/postcss/LICENSE",
+        "licenses/postcss/license"
+      ]
+    },
+    {
+      "name": "rollup",
+      "version": "4.68.7",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/rollup/-/rollup-4.68.7.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rollup/rollup.git"
+      },
+      "notices": [
+        "licenses/rollup/LICENSE.md"
+      ]
+    },
+    {
+      "name": "source-map-js",
+      "version": "1.2.3",
+      "license": "BSD-3-Clause",
+      "resolved": "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.3.tgz",
+      "repository": "7rulnik/source-map-js",
+      "notices": [
+        "licenses/source-map-js/LICENSE",
+        "licenses/source-map-js/license"
+      ]
+    },
+    {
+      "name": "tiny-lru",
+      "version": "11.4.7",
+      "license": "BSD-3-Clause",
+      "resolved": "https://registry.npmjs.org/tiny-lru/-/tiny-lru-11.4.7.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git://github.com/avoidwork/tiny-lru.git"
+      },
+      "notices": [
+        "licenses/tiny-lru/LICENSE",
+        "licenses/tiny-lru/license"
+      ]
+    },
+    {
+      "name": "tinyglobby",
+      "version": "0.2.17",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.17.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SuperchupuDev/tinyglobby.git"
+      },
+      "notices": [
+        "licenses/tinyglobby/LICENSE",
+        "licenses/tinyglobby/license"
+      ]
+    },
+    {
+      "name": "typescript",
+      "version": "5.9.3",
+      "license": "Apache-2.0",
+      "resolved": "https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/TypeScript.git"
+      },
+      "notices": [
+        "licenses/typescript/LICENSE.txt"
+      ]
+    },
+    {
+      "name": "undici-types",
+      "version": "8.9.0",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/undici-types/-/undici-types-8.9.0.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nodejs/undici.git"
+      },
+      "notices": [
+        "licenses/undici-types/LICENSE",
+        "licenses/undici-types/license"
+      ]
+    },
+    {
+      "name": "vite",
+      "version": "7.3.8",
+      "license": "MIT",
+      "resolved": "https://registry.npmjs.org/vite/-/vite-7.3.8.tgz",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vitejs/vite.git",
+        "directory": "packages/vite"
+      },
+      "notices": [
+        "licenses/vite/LICENSE.md"
+      ]
+    }
+  ]
+}

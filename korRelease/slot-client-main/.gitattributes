@@ -1,0 +1,3 @@
+# Preserve seed, runtime exports and upstream notices byte-for-byte.
+* -text whitespace=cr-at-eol
+apps/player-web/than/licenses/** -whitespace

@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "id": "recorded-3x3",
+  "title": "3 × 3 Reuse Demo",
+  "reels": 3,
+  "rows": 3,
+  "initialBoard": [
+    [
+      "A",
+      "K",
+      "Q"
+    ],
+    [
+      "Q",
+      "A",
+      "K"
+    ],
+    [
+      "K",
+      "Q",
+      "A"
+    ]
+  ],
+  "lines": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      2
+    ],
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      2,
+      1,
+      0
+    ]
+  ],
+  "presentation": {
+    "allowForceStop": true,
+    "landing": {
+      "compressMs": 70,
+      "stretchMs": 90,
+      "settleMs": 120,
+      "leadMs": 80,
+      "squashX": 1.1,
+      "squashY": 0.88,
+      "stretchX": 0.94,
+      "stretchY": 1.06
+    },
+    "reelMaskPaddingPx": 10,
+    "spinType": "normal",
+    "cellSizePx": 96,
+    "gapPx": 6,
+    "normal": {
+      "speedPxPerSecond": 1700,
+      "turboSpeedPxPerSecond": 2800,
+      "stopDelayMs": 130,
+      "turboStopDelayMs": 20,
+      "bounceMs": 170,
+      "bouncePx": 14
+    },
+    "drop": {
+      "exit": {
+        "fallMs": 250,
+        "reelStaggerMs": 18,
+        "rowStaggerMs": 24,
+        "holdMs": 140
+      },
+      "enter": {
+        "fallMs": 390,
+        "reelStaggerMs": 76,
+        "rowStaggerMs": 52,
+        "holdMs": 0
+      },
+      "bounceMs": 200,
+      "bouncePx": 8,
+      "turboMultiplier": 4
+    }
+  },
+  "symbols": [
+    {
+      "id": "A",
+      "label": "A",
+      "glyph": "A",
+      "color": "#e8bd68"
+    },
+    {
+      "id": "K",
+      "label": "K",
+      "glyph": "K",
+      "color": "#80ccce"
+    },
+    {
+      "id": "Q",
+      "label": "Q",
+      "glyph": "Q",
+      "color": "#e49bb4"
+    }
+  ]
+}
