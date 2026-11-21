@@ -1,14 +1,14 @@
-import { loadGameConfig } from "../framework/game-config.ts";
-import tavernConfig from "./tavern/game.config.json" with { type: "json" };
 import { reuse } from "./reuse/definition.ts";
+import { tavern } from "./tavern/definition.ts";
 
-const presentation = tavernConfig.presentation;
-export const defaultGame = loadGameConfig({
-  ...tavernConfig,
-  title: "Tavern Drop — Framework Preview",
-  routing: { ...tavernConfig.routing, skin: "basic" },
-  presentation,
-  // This milestone demonstrates the base round. Feature checkpoints are exercised by API tests/examples.
-  demo: { ...tavernConfig.demo, scatterRates: { standard: 0, extra: 0, super: 0 } },
-});
+export const defaultGame = tavern;
 export const games = [defaultGame, reuse];
+
+for (const values of [
+  games.map((game) => game.id),
+  games.map((game) => game.routing.query),
+  games.map((game) => game.routing.apiBase),
+]) {
+  if (new Set(values).size !== values.length)
+    throw Error("Duplicate game ID, query or API path");
+}

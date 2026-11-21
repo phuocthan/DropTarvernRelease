@@ -1,0 +1,1944 @@
+@font-face {
+  font-family: Outfit;
+  src: url("/tavern-assets/assets/outfit-v11-latin_latin-ext-regular-BDXaL9-u.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: Outfit;
+  src: url("/tavern-assets/assets/outfit-v11-latin_latin-ext-300-COlrd1hX.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: Outfit;
+  src: url("/tavern-assets/assets/outfit-500-CMfhJlfe.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: Outfit;
+  src: url("/tavern-assets/assets/outfit-600-DuSOvJ_5.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: Outfit;
+  src: url("/tavern-assets/assets/outfit-700-D9T176aR.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: Outfit;
+  src: url("/tavern-assets/assets/outfit-800-ySok2YOt.woff2") format("woff2");
+  font-weight: 800 900;
+  font-display: swap;
+}
+/* Reference v13 global.css: html { overflow: hidden; height: 100% } - the game never scrolls. */
+html:has(.tavern-shell) {
+  overflow: hidden;
+  height: 100%;
+}
+.tavern-shell,
+.tavern-dialog {
+  font-family: Outfit, sans-serif;
+}
+.tavern-shell {
+  --frame-width: min(68vw, 92svh, 960px);
+  position: relative;
+  max-width: none;
+  height: 100svh;
+  /* Reference v13 fills the visible viewport with no page scroll. Override the shared
+     .game-shell min-height: 100vh, which on mobile is the toolbar-hidden height and pushed
+     the HUD below the screen once scrolling was locked. */
+  min-height: 0;
+  overflow: clip;
+  isolation: isolate;
+  color: white;
+  background: #31211d;
+}
+.tavern-shell [hidden] {
+  display: none;
+}
+.tavern-top {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 5;
+  padding: 3px 4px;
+  font-size: clamp(10px, 1.1vw, 14px);
+  font-weight: bold;
+  text-shadow: 0 1px 3px #201915;
+}
+.tavern-shell[data-mode] .stage {
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  min-height: 0;
+  isolation: auto;
+  background: none;
+}
+.tavern-shell .stage::before {
+  content: none;
+}
+.atlas-art {
+  display: block;
+  aspect-ratio: var(--art-ratio);
+  background-image: var(--art-image);
+  background-size: var(--art-size);
+  background-position: var(--art-position);
+  background-repeat: no-repeat;
+}
+.scenery {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.scenery .backdrop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100%, 150svh);
+  transform: translate(-50%, -50%);
+}
+.scenery .barrel {
+  position: absolute;
+  top: 0;
+  right: -1%;
+  height: 87%;
+}
+.tavern-foreground {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: var(--scene-layer-table, 5);
+}
+.tavern-foreground .table {
+  position: absolute;
+  left: 50%;
+  bottom: -1%;
+  width: max(100%, 103svh);
+  transform: translateX(-50%);
+}
+.tavern-foreground[data-anchored] .table {
+  inset: 0 auto auto 0;
+  transform-origin: top left;
+}
+.tavern-shell[data-mode="base"] .bonus-art,
+.tavern-shell:not([data-mode="base"]) .base-art {
+  opacity: 0;
+}
+.tavern-logo {
+  position: absolute;
+  top: 24%;
+  right: calc(50% + min(25vw, 34svh, 355px));
+  width: min(16vw, 32svh, 250px);
+  margin: 0;
+  z-index: 1;
+}
+.tavern-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.tavern-shell .machine {
+  --reel-top: 9.4%;
+  --reel-height: 81.5%;
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  width: var(--frame-width);
+  max-width: none;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  z-index: var(--scene-layer-reels, 3);
+}
+.tavern-shell:not([data-mode="base"]) .machine {
+  top: 43%;
+}
+.stage[data-chest-reveal] .machine {
+  z-index: calc(var(--scene-layer-table, 5) + 1);
+}
+.tavern-shell .reel-frame {
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  background: none;
+}
+.tavern-shell .reel-frame::before,
+.tavern-shell .reel-frame::after {
+  content: none;
+}
+.frame-art {
+  width: 100%;
+}
+.tavern-shell .board-loading,
+.tavern-shell .reel-host {
+  position: absolute;
+  inset: var(--reel-top) auto auto 14.15%;
+  width: 71.7%;
+  height: var(--reel-height);
+  aspect-ratio: auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+.tavern-shell .reel-host {
+  background: transparent;
+}
+.tavern-shell .reel-host canvas {
+  position: relative;
+  z-index: 3;
+}
+.tavern-shell .board-loading {
+  background: #271b33;
+  color: white;
+}
+.reel-keys {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  pointer-events: none;
+}
+.key-cell {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+}
+.key-cell.collected {
+  border: 1px solid #ffce65a0;
+  background: #ffb45432;
+  box-shadow: inset 0 0 9px #ffc34d55;
+}
+.key-art {
+  width: 58%;
+  transform: rotate(-90deg);
+  opacity: 0.26;
+}
+.collected .key-art {
+  opacity: 1;
+  filter: drop-shadow(0 0 6px #ffb200);
+}
+.tavern-shell .chest-row {
+  position: absolute;
+  top: calc(var(--reel-top) + var(--reel-height) - 2.5%);
+  left: 14.15%;
+  width: 71.7%;
+  height: auto;
+  gap: 1%;
+  padding: 0;
+  margin: 0;
+  z-index: 5;
+}
+.tavern-shell .chest {
+  position: relative;
+  display: block;
+  aspect-ratio: 1.2;
+  padding: 0;
+  filter: brightness(0.72);
+}
+.tavern-shell .chest.unlocked {
+  filter: brightness(1.14) drop-shadow(0 0 7px #ffdd64d9);
+}
+.tavern-chest-lid,
+.tavern-chest-front {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96%;
+}
+.tavern-chest-lid {
+  top: 0;
+}
+.tavern-chest-front {
+  top: 39%;
+  width: 89%;
+}
+.chest-multiplier {
+  position: absolute;
+  top: 8%;
+  inset-inline: 0;
+  text-align: center;
+  color: #fff191;
+  font-size: clamp(12px, 3vw, 34px);
+  font-weight: bold;
+  text-shadow: 0 2px 3px #38140d;
+}
+.mascot {
+  position: absolute;
+  right: -1%;
+  bottom: 9%;
+  width: min(40vw, 65svh, 570px);
+  z-index: var(--scene-layer-mascot, 4);
+  pointer-events: none;
+}
+.mascot[data-anchored] {
+  right: auto;
+  bottom: auto;
+}
+.mascot-animation,
+.mascot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.mascot[data-ready] img {
+  display: none;
+}
+.stage[data-mascot-behind-board] .mascot {
+  visibility: hidden;
+}
+:where(html[data-layout="portrait"]) .tavern-shell .mascot {
+  z-index: var(--scene-layer-mascot-behind, 2);
+}
+.tavern-hud {
+  --hud-unit: min(12px, 2.4svh, 1.153846vw);
+  --hud-accent: #41e1fb;
+  --hud-buy-size: calc(8.125 * var(--hud-unit));
+  --base-bar-height: calc(7.6 * var(--hud-unit));
+  --base-bar-rise: calc(.6 * var(--hud-unit));
+  position: absolute;
+  z-index: 6;
+  bottom: max(7px, env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  width: min(92vw, calc(69 * var(--hud-unit)));
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(4px, 1vw, 12px);
+  color: white;
+}
+.hud-bar {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: clamp(46px, 8svh, 74px);
+  padding: 2px 6px;
+  gap: clamp(4px, 0.9vw, 13px);
+  border-radius: 10px;
+}
+.hud-bar::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset-inline: 0;
+  top: 50%;
+  height: calc(6.4 * var(--hud-unit));
+  transform: translateY(-50%);
+  border-radius: inherit;
+  background: rgb(19 23 21 / 82%);
+}
+.tavern-shell[data-mode="base"] .hud-bar::before {
+  top: calc(50% - var(--base-bar-rise));
+  height: var(--base-bar-height);
+}
+.tavern-hud button {
+  color: white;
+  border: 0;
+  background: transparent;
+}
+.tavern-shell,
+.tavern-dialog {
+  -webkit-tap-highlight-color: transparent;
+}
+.tavern-shell button:focus:not(:focus-visible),
+.tavern-dialog button:focus:not(:focus-visible) {
+  outline: none;
+}
+.tavern-hud button:is(:hover, :active):not(:disabled) {
+  filter: none;
+  transform: none;
+}
+.tavern-hud .feature-button {
+  display: grid;
+  place-items: center;
+  width: var(--hud-buy-size);
+  aspect-ratio: 1;
+  padding: 0;
+  background: var(--hud-accent);
+  color: #000;
+  border-radius: calc(1.5625 * var(--hud-unit));
+  box-shadow: inset 0 0 0 calc(.25 * var(--hud-unit)) var(--hud-accent),
+    inset 0 0 0 calc(.625 * var(--hud-unit)) #000;
+  font-size: clamp(7.7px, 1.65vw, 14.3px);
+  font-weight: bold;
+}
+.hud-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  background: currentColor;
+  mask: var(--icon) center / contain no-repeat;
+}
+.feature-button .hud-icon {
+  width: 75%;
+  height: 75%;
+}
+.hud-menu .hud-icon {
+  width: 100%;
+  height: 100%;
+}
+.bet-arrows .hud-icon {
+  width: calc(3.5 * var(--hud-unit));
+  height: calc(1.5 * var(--hud-unit));
+}
+.hud-menu {
+  display: grid;
+  flex: 0 0 auto;
+  width: calc(3 * var(--hud-unit));
+  height: calc(3 * var(--hud-unit));
+  opacity: .9;
+  line-height: 1;
+  padding: 0;
+}
+.hud-money {
+  display: grid;
+  line-height: 1.06;
+  white-space: nowrap;
+}
+.hud-money > span,
+#free-spins > span {
+  color: #54d5ec;
+  text-transform: uppercase;
+}
+.hud-money > strong,
+#free-spins > strong {
+  font-variant-numeric: tabular-nums;
+}
+.tavern-hud :is(.hud-money, #free-spins) > span {
+  color: var(--hud-accent);
+  font-size: clamp(7.7px, 1.375vw, 12.1px);
+}
+.tavern-hud :is(.hud-money, #free-spins) > strong {
+  font-size: clamp(12.1px, 1.98vw, 22px);
+}
+#free-spins {
+  white-space: nowrap;
+  text-align: center;
+  margin-left: auto;
+}
+.hud-bet {
+  display: flex;
+  align-items: center;
+  gap: clamp(2px, 0.6vw, 10px);
+  margin-left: auto;
+}
+.tavern-hud .hud-bet-amount {
+  display: grid;
+  min-width: calc(8.5 * var(--hud-unit));
+  padding: 5px 7px 4px;
+  border-radius: 5px;
+  text-align: center;
+  background: rgb(0 0 0 / 60%);
+}
+.tavern-hud .hud-bet-amount:disabled { opacity: 1; }
+.bet-arrows,
+.hud-quick,
+.hud-aux {
+  display: grid;
+  gap: 2px;
+}
+.bet-arrows { row-gap: calc(1.5 * var(--hud-unit)); }
+.hud-quick { row-gap: calc(.9 * var(--hud-unit)); }
+.tavern-hud .bet-arrows button {
+  display: grid;
+  place-items: center;
+  width: calc(3.5 * var(--hud-unit));
+  height: calc(1.5 * var(--hud-unit));
+  padding: 0;
+}
+.hud-aux button {
+  width: clamp(19px, 3vw, 33px);
+  min-height: clamp(19px, 3.1svh, 32px);
+  padding: 0;
+  font-size: clamp(14px, 2.5vw, 24px);
+  line-height: 1;
+}
+.tavern-hud .hud-aux button {
+  border: 1px solid #eaffff47;
+  border-radius: 50%;
+  background: #1c231f;
+}
+.tavern-hud .hud-quick button {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: calc(3 * var(--hud-unit));
+  height: calc(3 * var(--hud-unit));
+  padding: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 0 calc(.3 * var(--hud-unit)) #000;
+}
+.hud-quick .hud-icon {
+  width: 75%;
+  height: 75%;
+}
+.hud-quick .hud-icon-turbo {
+  width: 20px;
+  max-width: 75%;
+}
+.hud-spin-control {
+  --auto-count-inset: 19%;
+  position: relative;
+  flex: 0 0 auto;
+}
+.tavern-hud .spin-button {
+  anchor-name: --tavern-spin;
+  position: relative;
+  display: grid;
+  place-content: center;
+  flex: 0 0 auto;
+  width: calc(8.5 * var(--hud-unit));
+  height: calc(8.5 * var(--hud-unit));
+  color: #000;
+  background: #fff;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 calc(.5 * var(--hud-unit)) #000;
+  font-size: clamp(24px, 5svh, 59px);
+  line-height: 0.72;
+}
+.spin-button .hud-icon {
+  position: absolute;
+  inset: 12.5%;
+  width: auto;
+  height: auto;
+}
+.spin-button .hud-icon-autoplay-ready,
+.tavern-hud:has(#auto-panel:popover-open) .spin-button:has(.hud-icon-autoplay-ready) .hud-icon-spin {
+  display: none;
+}
+.tavern-hud:has(#auto-panel:popover-open) .spin-button .hud-icon-autoplay-ready {
+  display: block;
+}
+.tavern-hud .feature-button:disabled,
+.tavern-hud #speed:disabled { opacity: .8; }
+.tavern-hud .hud-quick #auto:disabled,
+.tavern-hud .bet-arrows button:disabled { opacity: .7; }
+.tavern-hud .spin-button:disabled {
+  opacity: 1;
+  color: dimgrey;
+  cursor: default;
+}
+.spin-button .auto-count {
+  position: absolute;
+  inset: var(--auto-count-inset);
+  display: grid;
+  place-items: center;
+  background: #080909;
+  border-radius: 20%;
+  color: white;
+  font-size: calc(2.145 * var(--hud-unit));
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+.tavern-hud .auto-add {
+  position: absolute;
+  top: calc(100% - var(--auto-count-inset) + 4px);
+  left: 50%;
+  z-index: 1;
+  translate: -50% 0;
+  padding: .2em .55em;
+  border-radius: 999px;
+  background: #080909;
+  color: white;
+  font: 800 calc(1.595 * var(--hud-unit)) Outfit, sans-serif;
+  line-height: 1;
+}
+@media (hover: hover) and (pointer: fine) {
+  .tavern-hud .spin-button:hover:not(:disabled, .spinning) {
+    color: var(--hud-accent);
+  }
+  .spin-button:hover .auto-count {
+    background-color: var(--hud-accent);
+    color: #080909;
+  }
+  .tavern-dialog[data-look="shop"] .shop-tile:hover > .shop-card:not(:disabled) {
+    filter: none;
+    transform: translateY(-8.75px);
+  }
+  .tavern-hud-panel :is(.round-picker-options, .bet-picker-options) button:hover:not(:disabled) {
+    transform: translateY(-2px);
+  }
+  .tavern-hud-panel .round-picker-options button:hover:not([aria-pressed="true"]) {
+    background: #3c3c46;
+  }
+  .tavern-hud .auto-add:hover {
+    background: var(--hud-accent);
+  }
+}
+.tavern-hud .spin-button.spinning {
+  animation: none;
+  color: #a3a3a3;
+}
+.tavern-dialog::backdrop {
+  background: #110e0bbb;
+  backdrop-filter: blur(5px);
+}
+.tavern-dialog[data-look="resume"] {
+  width: min(90vw, 420px);
+  padding: 8px;
+  background: rgb(0 0 0 / 90%);
+  border: 0;
+  border-radius: 1.5em;
+  outline: solid 4px #00ccff;
+  outline-offset: -8px;
+  color: #fff;
+}
+.tavern-dialog[data-look="resume"] .modal-inner {
+  padding: 28px 24px;
+  text-align: center;
+}
+.tavern-dialog[data-look="resume"] h2 {
+  margin: 0 0 .5em;
+  color: #00ccff;
+  font-size: 1.75em;
+}
+.tavern-dialog[data-look="resume"] p {
+  margin: 0 0 2em;
+  color: rgb(255 255 255 / 70%);
+  font-size: .95em;
+}
+.tavern-dialog[data-look="resume"] #recover {
+  width: 50%;
+  margin-inline: auto;
+  min-height: 44px;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: .75em;
+  background: #00ccff;
+  color: #fff;
+  font-weight: 600;
+}
+.tavern-dialog[data-look="resume"] #recover:hover { background: #33d9ff; }
+/* State popups (balance, connection, reconnect, retry) reuse the Resume Active Game look. */
+.tavern-dialog[data-look="resume"] .notice-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.tavern-dialog[data-look="resume"] :is(.notice-primary, .notice-secondary) {
+  flex: 0 1 50%;
+  min-height: 44px;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: .75em;
+  background: #00ccff;
+  color: #fff;
+  font-weight: 600;
+}
+.tavern-dialog[data-look="resume"] .notice-secondary { background: transparent; }
+.tavern-dialog[data-look="resume"] .notice-primary:hover:not(:disabled) { background: #33d9ff; }
+.tavern-dialog[data-look="resume"] .notice-secondary:hover { background: rgb(255 255 255 / 10%); }
+.tavern-dialog[data-look="resume"] :is(.notice-primary, .notice-secondary):disabled {
+  opacity: .5;
+  cursor: default;
+}
+.tavern-dialog[data-look="shop"],
+.tavern-dialog[data-look="shop-confirm"],
+.tavern-dialog[data-look="bonus"],
+.tavern-dialog[data-look="total-win"] {
+  width: min(95vw, 1040px);
+  max-height: 96svh;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: white;
+}
+.tavern-dialog[data-look="total-win"] {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+.tavern-dialog[data-look="total-win"]::backdrop {
+  background: rgb(16 23 26 / 45%);
+  backdrop-filter: blur(3px);
+}
+.tavern-dialog[data-look="shop"] .modal-inner,
+.tavern-dialog[data-look="shop-confirm"] .modal-inner {
+  padding: 42px 8px 8px;
+}
+.tavern-dialog[data-look="shop"] .modal-inner {
+  padding-bottom: 64px;
+}
+.tavern-dialog .close-modal {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+}
+.tavern-dialog .close-modal[hidden] { display: none; }
+.shop-debug-entry {
+  position: fixed;
+  top: max(16px, env(safe-area-inset-top, 0px));
+  left: max(16px, env(safe-area-inset-left, 0px));
+  z-index: 2;
+  min-height: 44px;
+  padding-inline: 14px;
+  border-radius: 9px;
+  background: #101b20;
+  color: #6ee9ff;
+  font: inherit;
+}
+.tavern-dialog[data-look="debug-bonus"] { width: min(92vw, 420px); }
+.tavern-dialog[data-look="debug-bonus"] h2 { font-family: inherit; }
+.debug-bonus-form { display: grid; gap: 12px; }
+.debug-faults { display: grid; gap: 8px; }
+.debug-faults button { min-height: 36px; }
+.debug-faults-note { margin: 8px 0 0; opacity: .7; font-size: .85em; }
+.debug-bonus-form > label { display: grid; grid-template-columns: 1fr minmax(0, 1fr); align-items: center; gap: 8px; }
+.debug-bonus-form :is(input[type="number"], select) {
+  min-width: 0;
+  min-height: 42px;
+  padding-inline: 8px;
+  border-radius: 6px;
+  font: inherit;
+}
+.debug-bonus-form fieldset { min-width: 0; margin: 0; padding: 8px; }
+.debug-chests { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; }
+.debug-chests label { display: flex; min-height: 44px; align-items: center; justify-content: center; gap: 3px; cursor: pointer; }
+.debug-chests input { margin: 0; accent-color: #41e1fb; }
+.debug-bonus-form .primary { min-height: 44px; }
+.tavern-dialog[data-look^="shop"] .close-modal {
+  position: fixed;
+  top: max(16px, env(safe-area-inset-top, 0px));
+  right: max(22px, env(safe-area-inset-right, 0px));
+  z-index: 2;
+  width: 61.2px;
+  height: 61.2px;
+  border-radius: 12px;
+  background: rgb(8 9 9 / 70%);
+  color: white;
+}
+.tavern-dialog[data-look^="shop"] .close-modal .hud-icon {
+  width: 42.5px;
+  height: 42.5px;
+}
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(7px, 1.4vw, 17px);
+}
+.shop-tile {
+  display: grid;
+  min-width: 0;
+}
+.shop-card {
+  display: grid;
+  gap: 3px;
+  align-content: start;
+  padding: 0 0 7px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 13px;
+  background: #fff;
+  color: #111;
+  text-align: center;
+}
+.shop-card img {
+  width: 100%;
+  aspect-ratio: 2.05;
+  object-fit: cover;
+}
+.shop-card strong,
+.shop-card h2 {
+  font:
+    bold clamp(12px, 1.75vw, 20px) Outfit,
+    sans-serif;
+  color: #111;
+  text-transform: uppercase;
+  margin: 0;
+}
+.shop-card b {
+  font-size: clamp(18px, 2.55vw, 32px);
+}
+.shop-bolts,
+.shop-bolts i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .25em;
+}
+.shop-bolts {
+  color: #17bcd5;
+  min-height: 1em;
+  font-size: clamp(16px, 1.6vw, 18px);
+}
+.shop-bolts i {
+  color: #2e3535;
+}
+.shop-bolts i:empty { display: none; }
+.shop-bolts .hud-icon { width: .67em; }
+.shop-action {
+  display: block;
+  margin: 4px 7px 0;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 7px;
+  background: #26cbe3;
+  color: #081a20;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.shop-card.chance .shop-action {
+  background: #ffae13;
+  color: white;
+}
+.shop-controls {
+  position: fixed;
+  inset: auto 0 max(2px, env(safe-area-inset-bottom, 0px));
+  margin-inline: auto;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 188px;
+  min-height: 40px;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgb(9 13 14 / 85%);
+  color: white;
+}
+.shop-controls .hud-money {
+  min-width: 50px;
+  justify-items: center;
+  line-height: 1;
+}
+.shop-controls .hud-money span { font-size: 7px; }
+.shop-controls .hud-money strong { font-size: 11px; }
+.shop-bet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.shop-bet button {
+  display: grid;
+  place-items: center;
+  width: 29px;
+  height: 26px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: white;
+}
+.shop-bet .hud-icon { width: 18px; height: 12px; }
+.shop-confirm {
+  max-width: 390px;
+  margin: auto;
+}
+.shop-confirm p {
+  color: #242420;
+  margin: 5px 16px;
+}
+.shop-confirm .shop-action {
+  background: #36d9ef;
+  color: white;
+}
+.tavern-dialog[data-look="bonus"] {
+  box-sizing: border-box;
+  overflow: clip;
+}
+.tavern-dialog[data-look="bonus"] .modal-inner {
+  padding: min(3svh, 20px) 12px;
+  display: grid;
+  place-items: center;
+}
+.tavern-dialog[data-look="total-win"] .modal-inner {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.tavern-dialog[data-look="total-win"] #modal-content {
+  position: relative;
+  top: -9svh;
+  max-width: 100%;
+}
+.tavern-dialog:is([data-look="bonus"], [data-look="total-win"]) h2,
+.free-spin-title {
+  color: #ffd062;
+  font-size: clamp(25px, 7vw, 70px);
+  font-weight: bold;
+  line-height: 1;
+  margin: 12px auto;
+  text-shadow:
+    0 3px #733b0d,
+    0 5px #27150e;
+  text-transform: uppercase;
+}
+.bonus-preview {
+  width: min(62vw, 420px);
+  max-height: 33svh;
+  object-fit: contain;
+  display: block;
+  border-radius: 13px;
+}
+.scene-continue {
+  padding: 12px;
+  margin-top: 20px;
+  color: white;
+  background: #171c18a6;
+  border: 1px solid #fff8;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.total-win-art {
+  width: min(69vw, 530px);
+}
+.win-celebration {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  pointer-events: none;
+  background: rgb(16 23 32 / 49%);
+  backdrop-filter: blur(2px);
+}
+.win-celebration .tavern-screen-art {
+  /* Keep the authored art size, but let its slot amount render outside the old inset canvas. */
+  width: 100vw;
+  height: 100svh;
+}
+.tavern-shell[data-total-win="shown"] .tavern-hud { opacity: 0; }
+.tavern-shell[data-total-win="returning"] .tavern-hud {
+  opacity: 1;
+  transition: opacity 280ms ease 420ms;
+}
+.tavern-dialog[data-look="total-win"][data-returning] .scene-continue {
+  opacity: 0;
+  transition: opacity 120ms ease-out;
+}
+.tavern-dialog[data-look="total-win"][data-returning] #modal-content > :is(h2, .result-total) {
+  opacity: 0;
+}
+.tavern-dialog[data-look="total-win"][data-scene-reveal]:not([data-spine-dim])::backdrop {
+  background: transparent;
+  backdrop-filter: none;
+}
+.win-celebration strong {
+  color: #ffe285;
+  font-size: clamp(32px, 9vw, 90px);
+  font-weight: 900;
+  text-shadow: 0 3px #a94e0e, 0 6px 12px #220d00;
+}
+.win-celebration-value {
+  color: white;
+  font-size: clamp(26px, 7vw, 64px);
+  font-weight: bold;
+  text-shadow: 0 3px 8px #4d1f00;
+}
+.retrigger-celebration strong { font-size: clamp(22px, 5vw, 48px); }
+.retrigger-celebration .win-celebration-value { font-size: clamp(18px, 4vw, 36px); }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.reel-motion-setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 20px 0;
+}
+.reel-motion-setting select {
+  min-height: 42px;
+  padding: 8px 12px;
+  background: #392945;
+  color: #fff;
+  font: inherit;
+}
+:where(html[data-layout="portrait"]) .tavern-shell .machine {
+  width: min(125vw, 70svh);
+  top: 48%;
+}
+:where(html[data-layout="portrait"]) .tavern-shell:not([data-mode="base"]) .machine {
+  top: 45%;
+}
+:where(html[data-layout="portrait"]) .mascot {
+  right: -15%;
+  bottom: 13%;
+  width: min(51vw, 40svh);
+}
+:where(html[data-layout="portrait"]) .scenery .barrel {
+  right: -36%;
+}
+:where(html[data-layout="portrait"]) .tavern-hud {
+  --hud-unit: min(10px, 2.5vw);
+  width: 96vw;
+  bottom: env(safe-area-inset-bottom, 0px);
+  row-gap: 11px;
+  column-gap: 5px;
+  grid-template-columns: 1fr 1fr;
+}
+:where(html[data-layout="portrait"]) .tavern-hud .hud-aux {
+  grid-column: 2;
+  grid-row: 1;
+  grid-auto-flow: column;
+  justify-self: end;
+}
+:where(html[data-layout="portrait"]) .hud-bar {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+:where(html[data-layout="portrait"]) .tavern-hud .hud-menu {
+  width: calc(2.7 * var(--hud-unit));
+  height: calc(2.7 * var(--hud-unit));
+  padding: calc(.6 * var(--hud-unit));
+  border-radius: calc(.7 * var(--hud-unit));
+  background: rgb(9 13 14 / 85%);
+}
+:where(html[data-layout="portrait"]) .tavern-hud .hud-aux button {
+  width: 36px;
+  min-height: 36px;
+  font-size: 23px;
+}
+:where(html[data-layout="portrait"]) .tavern-hud .bet-arrows button {
+  width: calc(4.4 * var(--hud-unit));
+  height: calc(2.6 * var(--hud-unit));
+  background: rgb(9 13 14 / 80%);
+}
+:where(html[data-layout="portrait"]) .tavern-hud #bet-down { border-radius: calc(var(--hud-unit)) 0 0 calc(var(--hud-unit)); }
+:where(html[data-layout="portrait"]) .tavern-hud #bet-up { border-radius: 0 calc(var(--hud-unit)) calc(var(--hud-unit)) 0; }
+:where(html[data-layout="portrait"]) .tavern-hud .hud-bet-amount {
+  height: calc(2.6 * var(--hud-unit));
+  align-content: center;
+  border-radius: 0;
+  min-width: 82px;
+  padding: 0;
+  background: rgb(9 13 14 / 80%);
+}
+:where(html[data-layout="portrait"]) .tavern-logo {
+  top: 9%;
+  left: 50%;
+  right: auto;
+  width: min(31vw, 17svh);
+  transform: translateX(-50%);
+}
+:where(html[data-layout="portrait"]) .tavern-dialog[data-look="shop"] {
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  overflow: hidden;
+}
+:where(html[data-layout="portrait"]) .tavern-dialog[data-look="shop"] .modal-inner {
+  --shop-header-height: 90px;
+  padding: var(--shop-header-height) 0 0;
+}
+:where(html[data-layout="portrait"]) .shop-grid {
+  grid-template-columns: minmax(0, min(56vw, 320px));
+  justify-content: center;
+  gap: clamp(12px, 4vw, 20px);
+  max-height: calc(100dvh - var(--shop-header-height));
+  padding: 10px 0 calc(56px + env(safe-area-inset-bottom, 0px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+}
+:where(html[data-layout="portrait"]) .shop-controls {
+  bottom: 0;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  gap: 1px;
+  width: auto;
+  margin: 0;
+  padding: 3px 0 max(2px, env(safe-area-inset-bottom, 0px));
+  border-radius: 0;
+  background: linear-gradient(transparent, #101210 28%);
+  pointer-events: none;
+}
+:where(html[data-layout="portrait"]) .shop-controls .shop-balance {
+  min-width: 66px;
+  min-height: 23px;
+  align-content: center;
+  padding-inline: 5px;
+  border-radius: 5px;
+  background: rgb(9 13 14 / 85%);
+}
+:where(html[data-layout="portrait"]) .shop-controls .shop-bet button { pointer-events: auto; }
+:where(html[data-layout="portrait"]) .shop-controls .shop-bet .hud-money { min-width: 57px; }
+:where(html[data-layout="landscape"]) .tavern-shell {
+  --frame-width: min(62vw, 101svh);
+}
+:where(html[data-layout="landscape"]) .tavern-shell .machine {
+  top: 45%;
+}
+@media (max-width: 670px) {
+  :where(html:not([data-layout="portrait"])) .hud-bar { padding-inline: calc(1.25 * var(--hud-unit)); }
+}
+
+.chest-coins {
+  position: absolute;
+  top: 35%;
+  left: 13%;
+  width: 74%;
+}
+.tavern-dialog .chest-subtotal {
+  font-size: clamp(19px, 4vw, 38px);
+  color: #ffe099;
+  margin: 0;
+}
+.paytable-icon {
+  width: 28px;
+  margin: 0 auto;
+}
+
+.tavern-spine-scene {
+  position: absolute;
+  inset: 0;
+  z-index: var(--scene-layer-scenery, 1);
+  pointer-events: none;
+}
+.stage[data-spine-scene] :is(.scenery, .tavern-logo, .frame-art, .reel-keys, .chest-row) {
+  visibility: hidden;
+}
+.stage[data-bonus-intro] .machine,
+.stage[data-bonus-intro] ~ .tavern-hud,
+.stage[data-bonus-entry] ~ .tavern-hud {
+  visibility: hidden;
+}
+.tavern-spine-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.tavern-screen-art {
+  width: min(90vw, 820px);
+  height: min(49svh, 400px);
+  margin-inline: auto;
+  pointer-events: none;
+}
+.tavern-screen-art.bonus-intro-art {
+  width: min(90vw, 1000px);
+  height: min(65svh, 560px);
+}
+.tavern-screen-art.total-win-screen {
+  width: min(92vw, 1100px);
+  height: min(70svh, 620px);
+}
+:where(html[data-layout="portrait"]) .tavern-screen-art.total-win-screen { width: 100vw; }
+:where(html[data-layout="portrait"]) .tavern-dialog[data-look="total-win"] #modal-content { top: -6svh; }
+:where(html[data-layout="portrait"]) .win-celebration:not(.retrigger-celebration) .tavern-screen-art {
+  width: 100vw;
+  height: 100svh;
+}
+.chest-result-fallback {
+  position: absolute;
+  z-index: 8;
+  left: 50%;
+  top: 18%;
+  transform: translateX(-50%);
+  color: #ffe3a1;
+  font-size: clamp(14px, 2.5vw, 27px);
+  text-shadow: 0 3px 6px #200d00;
+  pointer-events: none;
+}
+.tavern-screen-art:empty {
+  display: none;
+}
+.win-celebration:has(:is([data-spine-ready], [data-spine-pending])) strong,
+#modal-content:has(> .tavern-screen-art:is([data-spine-ready], [data-spine-pending])) > h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.win-celebration:has([data-spine-clip="addfs"]) .win-celebration-value {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+#modal-content:has(> .tavern-screen-art:is([data-spine-ready], [data-spine-pending])) > :is(.bonus-preview, .bonus-instructions) {
+  display: none;
+}
+#modal-content:has(> .tavern-screen-art:is([data-spine-ready], [data-spine-pending])) > .free-spin-title {
+  font-size: clamp(20px, 3.5vw, 36px);
+  margin-block: 4px;
+}
+.tavern-bitmap-number {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+.tavern-bitmap-number > span {
+  display: inline-block;
+  flex: none;
+  background-repeat: no-repeat;
+}
+.tavern-shell[data-opening] :is(.machine, .mascot, .tavern-hud),
+.tavern-shell[data-entering="before-mascot"] .mascot {
+  visibility: hidden;
+}
+/* DOM layers that the reference draws under the reelhouse `fade` slot share its dim. */
+.stage[data-reel-fade] :is(.mascot, .tavern-foreground) {
+  filter: brightness(var(--reel-fade-brightness, 1));
+}
+.opening-continue {
+  position: absolute;
+  inset: auto 0 7%;
+  z-index: 5;
+  width: min(44vw, 235px);
+  height: 22px;
+  margin: auto;
+  border: 0;
+  color: transparent;
+  background: url("/tavern-assets/assets/continue.webp") center / contain no-repeat;
+}
+.opening-continue[hidden] { display: none !important; }
+.tavern-dialog:is([data-look="bonus"], [data-look="total-win"]) .scene-continue {
+  width: min(44vw, 235px);
+  height: 22px;
+  border: 0;
+  color: transparent;
+  background: url("/tavern-assets/assets/continue.webp") center / contain no-repeat;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .tavern-shell .opening-continue,
+  .tavern-dialog:is([data-look="bonus"], [data-look="total-win"]) .scene-continue {
+    transition: filter 180ms ease-out;
+  }
+  .tavern-shell .opening-continue:hover:not(:disabled),
+  .tavern-dialog:is([data-look="bonus"], [data-look="total-win"]) .scene-continue:hover:not(:disabled) {
+    filter: brightness(1.15) drop-shadow(0 0 8px #ffdd64b3);
+  }
+}
+.tavern-shell .opening-continue:disabled,
+.tavern-dialog:is([data-look="bonus"], [data-look="total-win"]) .scene-continue:disabled {
+  opacity: 1;
+  cursor: default;
+}
+#modal-content:has(> .tavern-screen-art:is([data-spine-ready], [data-spine-pending])) > .scene-continue {
+  position: fixed;
+  inset: auto 0 7svh;
+  margin: auto;
+}
+#modal-content:has(> .total-win-screen) > .scene-continue {
+  position: fixed;
+  inset: auto 0 2.5svh;
+  margin: auto;
+}
+.tavern-screen-art[data-spine-amount] ~ :is(.win-celebration-value, .result-total),
+.tavern-screen-art[data-spine-count] ~ .free-spin-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+#bet-track {
+  display: block;
+  width: 100%;
+  min-width: 26px;
+  height: 2px;
+  margin-top: 4px;
+  border-radius: 2px;
+  background: #ffffff35;
+}
+#bet-track::after {
+  content: "";
+  display: block;
+  width: max(3px, var(--bet-progress, 0%));
+  height: 100%;
+  border-radius: inherit;
+  background: #fff;
+}
+.tavern-hud:has(.hud-menu) {
+  grid-template-columns: auto minmax(0, 1fr);
+}
+.tavern-hud:has(.hud-menu) .hud-aux {
+  display: none;
+}
+.tavern-hud .hud-money strong::before {
+  content: none;
+}
+.tavern-hud .win-value #spin-win-label { color: white; }
+.tavern-hud .win-value > strong {
+  color: var(--hud-accent);
+}
+.tavern-shell:not([data-mode="base"]) .tavern-hud :is(#buy, #auto, .bet-arrows, #bet-track) {
+  display: none;
+}
+.tavern-shell:not([data-mode="base"]) .tavern-hud :is(#feature-total, #free-spins) {
+  padding: 3px 7px;
+  border-radius: 4px;
+  background: white;
+  color: black;
+  text-align: center;
+}
+.tavern-shell:not([data-mode="base"]) .tavern-hud :is(#feature-total-amount, #free-spins span) {
+  color: black;
+}
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .tavern-hud {
+  grid-template-columns: minmax(0, 1fr);
+}
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .hud-bar {
+  display: grid;
+  grid-template-columns: repeat(4, auto) minmax(0, 1fr) minmax(9em, auto) auto;
+  grid-template-rows: repeat(2, auto);
+  row-gap: 3px;
+}
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .hud-bar > :is(.hud-menu, .hud-balance, .hud-bet, .win-value) {
+  grid-row: 1 / 3;
+  align-self: center;
+}
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .hud-menu { grid-column: 1; }
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .hud-balance { grid-column: 2; }
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .hud-bet { grid-column: 3; margin: 0; }
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .win-value { grid-column: 4; }
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .hud-bet-amount {
+  min-width: 0;
+  padding: 0;
+  text-align: left;
+  background: transparent;
+}
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) #feature-total {
+  grid-area: 1 / 6;
+  align-content: center;
+}
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) #free-spins {
+  grid-area: 2 / 6;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .hud-spin-control { grid-area: 1 / 7; }
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) #spin {
+  width: calc(3 * var(--hud-unit));
+  height: calc(3 * var(--hud-unit));
+  box-shadow: 0 0 0 calc(.3 * var(--hud-unit)) black;
+}
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .hud-quick { grid-area: 2 / 7; }
+.tavern-hud .hud-quick #speed[aria-pressed="true"] {
+  color: var(--hud-accent);
+  background: #000;
+  box-shadow: 0 0 0 calc(.3 * var(--hud-unit)) var(--hud-accent);
+}
+.tavern-hud-panel:popover-open {
+  position: fixed;
+  inset: auto max(4vw, calc((100vw - 800px) / 2)) max(56px, 12svh) auto;
+  width: min(215px, 86vw);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 7px;
+  border: 1px solid #ffffff40;
+  border-radius: 6px;
+  background: rgb(9 13 14 / 85%);
+  color: white;
+  text-align: center;
+}
+#auto { anchor-name: --tavern-auto; }
+#auto-panel:popover-open {
+  position-anchor: --tavern-spin;
+  right: anchor(--tavern-auto right, max(4vw, calc((100vw - 800px) / 2)));
+  bottom: calc(anchor(top, 12svh) + var(--hud-unit));
+  width: clamp(130px, 27vw, 215px);
+}
+#bet-panel:popover-open {
+  position-anchor: --tavern-spin;
+  inset: auto 0 max(56px, 12svh);
+  inset: auto 0 calc(anchor(top, 12svh) + 5px);
+  margin-inline: auto;
+  width: min(65vw, 540px);
+}
+.tavern-hud-panel strong,
+.tavern-hud-panel > span {
+  display: block;
+  font-size: clamp(7.7px, calc(1.1 * var(--hud-unit)), 11px);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.round-picker-options,
+.bet-picker-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin-top: 6px;
+}
+.bet-picker-options {
+  max-height: min(56svh, 240px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  overscroll-behavior: contain;
+}
+.tavern-hud-panel button {
+  border: 0;
+  border-radius: 4px;
+  background: rgb(0 0 0 / 60%);
+  color: white;
+  min-height: clamp(15px, calc(2.2 * var(--hud-unit)), 25px);
+  padding: 1px 3px;
+  font: 700 clamp(7.7px, calc(1.1 * var(--hud-unit)), 12.1px) Outfit, sans-serif;
+}
+.tavern-hud-panel button[aria-pressed="true"],
+.tavern-hud-panel .round-picker-options button:active {
+  color: #000;
+  background: var(--hud-accent);
+}
+#hud-menu-panel:popover-open {
+  display: grid;
+  width: min(145px, 85vw);
+  inset-inline: max(4vw, calc((100vw - 670px) / 2)) auto;
+  gap: 6px;
+  background: rgb(9 13 14 / 85%);
+}
+#hud-menu-panel :is(#menu-rules, .menu-volume) {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  align-items: center;
+  min-height: 27px;
+  padding: 0 4px;
+  background: transparent;
+  color: white;
+  text-transform: uppercase;
+  text-align: left;
+}
+#hud-menu-panel span { font-size: 16px; }
+/* Reference menu: each row highlights on hover; the channel icon toggles mute. */
+#hud-menu-panel :is(#menu-rules, .menu-volume) {
+  gap: 0;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+#hud-menu-panel :is(#menu-rules, .menu-volume):hover { background: rgb(0 0 0 / 30%); }
+#hud-menu-panel .menu-volume > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+#hud-menu-panel .hud-icon { height: 13px; }
+#hud-menu-panel input {
+  width: 100%;
+  height: 13px;
+  margin: 0;
+  accent-color: white;
+}
+.tavern-dialog[data-look="share"] .modal-inner {
+  width: min(360px, 92vw);
+  background: #101616;
+  border: 1px solid #293330;
+  border-radius: 20px;
+  text-align: left;
+}
+.tavern-dialog[data-look="share"] h2,
+.tavern-dialog[data-look="share"] p {
+  margin: 0;
+}
+.share-game,
+.share-card p { color: #c7cbca; font-size: 13px; }
+.share-card {
+  margin-top: 22px;
+  padding: 22px 10px;
+  border: 1px dashed #ffffff35;
+  border-radius: 12px;
+  text-align: center;
+}
+.share-card p { margin-top: 6px; }
+.share-card button { margin-top: 10px; }
+@media (min-width: 661px) {
+  :where(html:not([data-layout="portrait"])) .tavern-hud {
+    /* Reference v13: .game-wrap centres .desktop-panel-wrap (buy + panel) as one unit. */
+    /* .fade-wrap is bottom: 0; .desktop-panel-wrap has margin-bottom: 1em (the HUD unit). */
+    bottom: calc(var(--hud-unit) + env(safe-area-inset-bottom, 0px));
+  }
+  :where(html:not([data-layout="portrait"])) .tavern-shell[data-mode="base"] .hud-bar > :is(.hud-menu, .hud-balance, .win-value, .hud-bet) {
+    position: relative;
+    top: calc(-1 * var(--base-bar-rise));
+  }
+  :where(html:not([data-layout="portrait"])) .tavern-shell[data-mode="base"] .tavern-hud .feature-button {
+    position: relative;
+    top: calc((var(--hud-buy-size) - var(--base-bar-height)) / 2 - var(--base-bar-rise));
+  }
+  /* Offsets were tuned at the full 12px unit; scale them with the HUD on short screens. */
+  :where(html:not([data-layout="portrait"])) .tavern-shell[data-mode="base"] .hud-spin-control { top: calc(-10 / 12 * var(--hud-unit)); }
+  :where(html:not([data-layout="portrait"])) .tavern-shell[data-mode="base"] .hud-quick #auto {
+    position: relative;
+    top: calc(-15 / 12 * var(--hud-unit));
+  }
+  :where(html:not([data-layout="portrait"])) .tavern-shell[data-mode="base"] .hud-quick #speed {
+    position: relative;
+    top: calc(-5 / 12 * var(--hud-unit));
+  }
+  :where(html:not([data-layout="portrait"])) .tavern-hud .hud-menu { anchor-name: --tavern-menu; }
+  :where(html:not([data-layout="portrait"])) #hud-menu-panel:popover-open {
+    position-anchor: --tavern-menu;
+    left: anchor(left, max(4vw, calc((100vw - 670px) / 2)));
+    bottom: calc(anchor(top, 12svh) + 8px);
+  }
+  :where(html:not([data-layout="portrait"])) #hud-menu-panel input { cursor: pointer; }
+}
+:where(html[data-layout="portrait"]) .tavern-hud:has(.hud-menu) {
+  grid-template-columns: 1fr 36px auto 36px 1fr;
+  justify-items: center;
+}
+:where(html[data-layout="portrait"]) .tavern-hud:has(.hud-menu) :is(.hud-bar, .hud-quick) { display: contents; }
+:where(html[data-layout="portrait"]) .tavern-hud:has(.hud-menu) .hud-bar::before { display: none; }
+:where(html[data-layout="portrait"]) .tavern-hud:has(.hud-menu) :is(.hud-aux, #bet-track) { display: none; }
+:where(html[data-layout="portrait"]) .tavern-hud .hud-menu { grid-area: 1 / 1; }
+:where(html[data-layout="portrait"]) .tavern-hud #auto { grid-area: 1 / 2; }
+:where(html[data-layout="portrait"]) .tavern-hud .hud-spin-control { grid-area: 1 / 3; }
+:where(html[data-layout="portrait"]) .tavern-hud #speed { grid-area: 1 / 4; }
+:where(html[data-layout="portrait"]) .tavern-hud:has(.hud-menu) #buy { grid-area: 1 / 5; }
+:where(html[data-layout="portrait"]) .tavern-hud:has(.hud-menu) .hud-balance { grid-area: 2 / 1; justify-self: start; }
+:where(html[data-layout="portrait"]) .tavern-hud:has(.hud-menu) .hud-bet { grid-area: 2 / 2 / 3 / 5; margin: 0; gap: 0; }
+:where(html[data-layout="portrait"]) .tavern-hud:has(.hud-menu) .win-value { grid-area: 2 / 5; justify-self: end; }
+:where(html[data-layout="portrait"]) .tavern-hud:has(.hud-menu) :is(.hud-balance, .win-value) {
+  min-height: calc(2.6 * var(--hud-unit));
+  align-content: center;
+  padding-inline: 9px;
+  border-radius: calc(var(--hud-unit)) calc(var(--hud-unit)) 0 0;
+  background: rgb(9 13 14 / 80%);
+}
+:where(html[data-layout="portrait"]) .tavern-shell:not([data-mode="base"]) .tavern-hud:has(.hud-menu) {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  row-gap: 6px;
+}
+:where(html[data-layout="portrait"]) .tavern-shell:not([data-mode="base"]) .tavern-hud:has(.hud-menu) :is(.hud-menu, .hud-balance) { justify-self: start; }
+:where(html[data-layout="portrait"]) .tavern-shell:not([data-mode="base"]) .tavern-hud:has(.hud-menu) .hud-spin-control { grid-area: 1 / 2; }
+:where(html[data-layout="portrait"]) .tavern-shell:not([data-mode="base"]) .tavern-hud:has(.hud-menu) #speed { grid-area: 1 / 3; justify-self: end; }
+:where(html[data-layout="portrait"]) .tavern-shell:not([data-mode="base"]) .tavern-hud:has(.hud-menu) .hud-bet { grid-area: 2 / 2; }
+:where(html[data-layout="portrait"]) .tavern-shell:not([data-mode="base"]) .tavern-hud:has(.hud-menu) .win-value { grid-area: 2 / 3; }
+:where(html[data-layout="portrait"]) .tavern-hud:has(.hud-menu) #feature-total { grid-area: 3 / 1 / 4 / 3; justify-self: stretch; }
+:where(html[data-layout="portrait"]) .tavern-hud:has(.hud-menu) #free-spins { grid-area: 3 / 3; justify-self: stretch; margin: 0; }
+:where(html[data-layout="portrait"]) .tavern-shell[data-mode="base"] .tavern-hud:has(.hud-menu) {
+  row-gap: 14px;
+  column-gap: 0;
+  grid-template-columns: 20% 22% 10% 20% 12% 16%;
+}
+:where(html[data-layout="portrait"]) .tavern-shell[data-mode="base"] .tavern-hud:has(.hud-menu) .win-value { grid-column: 5 / 7; }
+:where(html[data-layout="portrait"]) .tavern-hud .bet-arrows { display: contents; }
+:where(html[data-layout="portrait"]) .tavern-hud #bet-down { order: -1; }
+:where(html[data-layout="portrait"]) #auto-panel:popover-open,
+:where(html[data-layout="portrait"]) #bet-panel:popover-open,
+:where(html[data-layout="portrait"]) #hud-menu-panel:popover-open {
+  inset: auto auto 125px 50%;
+  transform: translateX(-50%);
+}
+:where(html[data-layout="portrait"]) #bet-panel:popover-open { width: min(92vw, 420px); }
+:where(html[data-layout="portrait"]) #auto-panel:popover-open {
+  bottom: calc(anchor(top, 115px) + 10px);
+  width: min(65vw, 330px);
+  padding: 10px;
+}
+:where(html[data-layout="portrait"]) #auto-panel > strong { font-size: clamp(13px, 3.35vw, 17px); }
+:where(html[data-layout="portrait"]) #auto-panel > span { font-size: clamp(11px, 2.8vw, 14px); }
+:where(html[data-layout="portrait"]) #auto-panel .round-picker-options {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 9px;
+}
+:where(html[data-layout="portrait"]) #auto-panel button {
+  min-height: clamp(28px, 7.5vw, 38px);
+  font-size: clamp(12px, 2.8vw, 14px);
+}
+:where(html[data-layout="portrait"]) #hud-menu-panel:popover-open {
+  inset-inline: 3vw auto;
+  transform: none;
+}
+@media (min-width: 450px) {
+  :where(html[data-layout="portrait"]) .tavern-shell[data-mode="base"] .tavern-hud:has(.hud-menu) {
+    grid-template-columns: 32% 9% 17% 12% 18% 12%;
+    row-gap: 10px;
+  }
+}
+
+/* Game information page, measured from the reference info screen. */
+dialog.info-screen {
+  --info-theme-color: #41e1fb;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0 0 0 / 80%);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  color: #fff;
+  font: 400 min(18px, calc(100svh * 18 / 500), calc(100vw * 18 / 1040)) Outfit, sans-serif;
+  animation: info-screen-in 60ms linear;
+}
+dialog.info-screen::backdrop { background: transparent; }
+:where(html[data-layout="portrait"]) dialog.info-screen { font-size: min(15px, calc(100vw * 15 / 400)); }
+@keyframes info-screen-in { from { opacity: 0; } }
+.info-screen .info-close-button {
+  position: absolute;
+  top: 1.8em;
+  right: 2.4em;
+  z-index: 10;
+  width: 4em;
+  height: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 0.8em;
+  background: rgb(0 0 0 / 40%);
+  color: #fff;
+  cursor: pointer;
+}
+/* The reference close SVG keeps its 43px authored size inside the 4em button. */
+.info-screen .info-close-button .hud-icon { width: 2.4em; height: 2.4em; }
+.info-screen .info-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  width: 80%;
+  height: 80%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-align: center;
+}
+.info-screen .info-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+.info-screen h1 {
+  margin: 0;
+  color: var(--info-theme-color);
+  font-size: 1.6em;
+  font-weight: 600;
+}
+dialog.info-screen p {
+  margin: 0;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: normal;
+  white-space: pre-wrap;
+}
+.info-screen .info-content-image { width: 12em; height: auto; }
+.info-screen .info-image-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1em;
+}
+.info-screen .info-payline-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1em;
+  width: 80%;
+}
+.info-screen .info-payline {
+  position: relative;
+  display: grid;
+  width: 100px;
+  height: 80px;
+  border: 1px solid #ffe;
+  border-radius: 1px;
+}
+.info-screen .info-payline-index {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ffe;
+  background: transparent;
+  transition: background-color 0.3s ease;
+}
+.info-screen .info-payline-index.is-active {
+  border-radius: 0.5px;
+  background: var(--info-theme-color);
+}
+.info-screen .info-paysection {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  color: #ffe;
+  text-align: center;
+}
+.info-screen .info-paytable-column-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.info-screen .info-paytable-column {
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
+  width: 120px;
+  padding-block: 1em;
+  border: 1px solid #ffe;
+  border-radius: 0.25em;
+  background: rgb(0 0 0 / 15%);
+}
+.info-screen .info-paytable-image {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Spine screens (bonus intro, Total Win, win tiers, retrigger) dim the scene like reference v13:
+   plain black driven by the screens `fade` slot alpha, without blurring the scene. */
+.tavern-dialog[data-spine-dim]::backdrop,
+.win-celebration[data-spine-dim] {
+  background: rgb(0 0 0 / var(--spine-screen-dim, 0));
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+/* ---------------------------------------------------------------------------------------
+ * Free-spin HUD - reference v13 (desktop iU / portrait lU, bonus info Wf, skip bonus i2).
+ * The feature has no Spin or Autoplay button: free spins run on their own. Controls are
+ * Skip bonus (disabled while the backend cannot skip) above Turbo.
+ * ------------------------------------------------------------------------------------- */
+.tavern-shell[data-mode="base"] .tavern-hud #skip-bonus { display: none; }
+.tavern-shell:not([data-mode="base"]) .tavern-hud .hud-spin-control { display: none; }
+.tavern-hud #skip-bonus:disabled { opacity: .7; cursor: default; }
+.tavern-hud #skip-bonus .hud-icon { width: 62%; height: 62%; }
+.tavern-shell:not([data-mode="base"]) .tavern-hud {
+  --wf-unit: var(--hud-unit);
+}
+:where(html[data-layout="landscape"]) .tavern-shell:not([data-mode="base"]) .tavern-hud {
+  /* Wf: transform: scale(0.8) in landscape. */
+  --wf-unit: calc(.8 * var(--hud-unit));
+}
+/* Wf boxes: white, black .25em border, .75em radius. */
+.tavern-shell:not([data-mode="base"]) .tavern-hud :is(#feature-total, #free-spins) {
+  box-sizing: border-box;
+  border: calc(.25 * var(--wf-unit)) solid #000;
+  border-radius: calc(.75 * var(--wf-unit));
+  background: #fff;
+  color: #000;
+  line-height: 1.1;
+}
+.tavern-shell:not([data-mode="base"]) .tavern-hud #feature-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: calc(.4 * var(--wf-unit)) var(--wf-unit);
+  text-align: center;
+}
+.tavern-shell:not([data-mode="base"]) .tavern-hud #feature-total > span {
+  color: var(--hud-accent);
+  font-size: calc(1.3 * var(--wf-unit));
+  font-weight: 700;
+}
+.tavern-shell:not([data-mode="base"]) .tavern-hud :is(#feature-total, #free-spins) > strong {
+  color: #000;
+  font-size: calc(1.8 * var(--wf-unit));
+  font-weight: 700;
+}
+.tavern-shell:not([data-mode="base"]) .tavern-hud #free-spins > span {
+  color: #000;
+  font-size: calc(1.2 * var(--wf-unit));
+  font-weight: 600;
+}
+/* Desktop / landscape: FREE SPINS | value on one row, under TOTAL WIN (min-width 13em). */
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .tavern-hud #feature-total {
+  grid-area: 1 / 6;
+  min-width: calc(13 * var(--wf-unit));
+}
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .tavern-hud #free-spins {
+  grid-area: 2 / 6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(.4 * var(--wf-unit));
+  min-width: calc(13 * var(--wf-unit));
+  margin: 0;
+  padding: 0 var(--wf-unit);
+}
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .tavern-hud #free-spins::after {
+  content: "";
+  order: 2;
+  align-self: stretch;
+  width: calc(.2 * var(--wf-unit));
+  min-height: calc(2.8 * var(--wf-unit));
+  background: #000;
+}
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .tavern-hud #free-spins > span { order: 1; }
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .tavern-hud #free-spins > strong { order: 3; }
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .hud-bar {
+  row-gap: calc(.2 * var(--wf-unit));
+  column-gap: var(--hud-unit);
+}
+/* control-buttons-wrap: column, .75em gap, beside the bonus info. */
+:where(html:not([data-layout="portrait"])) .tavern-shell:not([data-mode="base"]) .hud-quick {
+  grid-area: 1 / 7 / 3 / 8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: calc(.75 * var(--hud-unit));
+}
+/* Portrait: [menu] [TOTAL WIN | FREE SPINS] [skip / turbo] above [balance | bet | win]. */
+:where(html[data-layout="portrait"]) .tavern-shell:not([data-mode="base"]) .tavern-hud:has(.hud-menu) {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  column-gap: calc(.2 * var(--hud-unit));
+  row-gap: var(--hud-unit);
+  padding-inline: calc(1.5 * var(--hud-unit));
+}
+:where(html[data-layout="portrait"]) .tavern-shell:not([data-mode="base"]) .tavern-hud:has(.hud-menu) .hud-menu {
+  grid-area: 1 / 1;
+  justify-self: start;
+}
+:where(html[data-layout="portrait"]) .tavern-shell:not([data-mode="base"]) .tavern-hud:has(.hud-menu) #feature-total {
+  grid-area: 1 / 2 / 2 / 4;
+  justify-self: stretch;
+  align-self: center;
+}
+:where(html[data-layout="portrait"]) .tavern-shell:not([data-mode="base"]) .tavern-hud:has(.hud-menu) #free-spins {
+  grid-area: 1 / 4 / 2 / 6;
+  justify-self: stretch;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: calc(.4 * var(--wf-unit)) var(--wf-unit);
+}
+:where(html[data-layout="portrait"]) .tavern-shell:not([data-mode="base"]) .tavern-hud:has(.hud-menu) .hud-quick {
+  grid-area: 1 / 6;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: calc(.75 * var(--hud-unit));
+  min-height: calc(5.75 * var(--hud-unit));
+  justify-content: center;
+}
+:where(html[data-layout="portrait"]) .tavern-shell:not([data-mode="base"]) .tavern-hud:has(.hud-menu) .hud-quick > * { grid-area: auto; justify-self: auto; }
+:where(html[data-layout="portrait"]) .tavern-shell:not([data-mode="base"]) .tavern-hud:has(.hud-menu) .hud-balance { grid-area: 2 / 1 / 3 / 3; justify-self: center; }
+:where(html[data-layout="portrait"]) .tavern-shell:not([data-mode="base"]) .tavern-hud:has(.hud-menu) .hud-bet { grid-area: 2 / 3 / 3 / 5; justify-self: center; }
+:where(html[data-layout="portrait"]) .tavern-shell:not([data-mode="base"]) .tavern-hud:has(.hud-menu) .win-value { grid-area: 2 / 5 / 3 / 7; justify-self: center; }
+
+/* ---------------------------------------------------------------------------------------
+ * Buy screen bottom panel - reference v13 (.bottom-panel.svelte-1vd6a7q). The buy screen
+ * font is min(16px, w/58, h/22.5); portrait (h > w and w < 768) uses min(16px, w/20).
+ * ------------------------------------------------------------------------------------- */
+.tavern-dialog[data-look="shop"] {
+  --buy-unit: min(16px, calc(100vw / 58), calc(100dvh / 22.5));
+}
+@media (orientation: portrait) and (max-width: 767px) {
+  .tavern-dialog[data-look="shop"] { --buy-unit: min(16px, 5vw); }
+}
+:where(html) .tavern-dialog[data-look="shop"] .shop-controls {
+  position: fixed;
+  inset: auto 0 calc(.75 * var(--buy-unit) + env(safe-area-inset-bottom, 0px));
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(1.1 * var(--buy-unit));
+  width: fit-content;
+  min-width: 0;
+  min-height: 0;
+  margin-inline: auto;
+  padding: calc(.45 * var(--buy-unit)) calc(.9 * var(--buy-unit)) calc(.45 * var(--buy-unit)) calc(1.2 * var(--buy-unit));
+  border-radius: calc(.75 * var(--buy-unit));
+  background: rgb(9 13 14 / 70%);
+  font-size: var(--buy-unit);
+  pointer-events: auto;
+}
+:where(html) .tavern-dialog[data-look="shop"] .shop-controls .hud-money {
+  display: grid;
+  justify-items: center;
+  gap: calc(.05 * var(--buy-unit));
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  line-height: 1.1;
+}
+:where(html) .tavern-dialog[data-look="shop"] .shop-controls .hud-money span {
+  font-size: calc(.8 * var(--buy-unit));
+  color: #41e1fb;
+}
+:where(html) .tavern-dialog[data-look="shop"] .shop-controls .hud-money strong {
+  font-size: calc(1.15 * var(--buy-unit));
+  font-weight: 700;
+}
+:where(html) .tavern-dialog[data-look="shop"] .shop-bet { gap: calc(.3 * var(--buy-unit)); }
+:where(html) .tavern-dialog[data-look="shop"] .shop-bet .hud-money {
+  /* bet-indicator-button: 2.6em tall, min 6em wide, .3em .7em padding, .4em radius. */
+  height: calc(2.6 * var(--buy-unit));
+  min-width: calc(6 * var(--buy-unit));
+  padding: calc(.3 * var(--buy-unit)) calc(.7 * var(--buy-unit));
+  border-radius: calc(.4 * var(--buy-unit));
+  align-content: center;
+}
+:where(html) .tavern-dialog[data-look="shop"] .shop-bet button {
+  width: auto;
+  height: auto;
+  padding: 0 calc(.2 * var(--buy-unit));
+  pointer-events: auto;
+}
+:where(html) .tavern-dialog[data-look="shop"] .shop-bet button:hover:not(:disabled) { color: #41e1fb; }
+:where(html) .tavern-dialog[data-look="shop"] .shop-bet button:disabled { opacity: .7; }
+:where(html) .tavern-dialog[data-look="shop"] .shop-bet .hud-icon {
+  width: calc(1.6 * var(--buy-unit));
+  height: calc(1.15 * var(--buy-unit));
+}
+@media (orientation: portrait) and (max-width: 767px) {
+  /* .buy-cards-rows.portrait: padding-bottom 7.5em keeps the last card above the panel. */
+  :where(html) .tavern-dialog[data-look="shop"] .shop-grid { padding-bottom: calc(7.5 * var(--buy-unit) + env(safe-area-inset-bottom, 0px)); }
+  :where(html) .tavern-dialog[data-look="shop"] .shop-controls {
+    inset-inline: calc(.75 * var(--buy-unit));
+    width: auto;
+    flex-direction: column;
+    gap: calc(.35 * var(--buy-unit));
+    padding: calc(.35 * var(--buy-unit)) calc(.5 * var(--buy-unit));
+    border-radius: calc(.6 * var(--buy-unit));
+  }
+}
+
+/* Reference v13 .buy-card.disabled: a card that costs more than the balance fades to 0.6
+   and ignores input (no hover lift, no confirm). */
+.tavern-dialog[data-look="shop"] .shop-card:disabled {
+  opacity: .6;
+  pointer-events: none;
+  transform: none;
+}
+
+/* The Spine scene draws the stage art from the quality-tier atlas (sd on phones). The DOM
+   fallback art inside the stage stays unpainted so it never downloads the hd pages. */
+.tavern-shell[data-native-scene] .stage .atlas-art {
+  background-image: none;
+}

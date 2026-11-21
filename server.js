@@ -1,8 +1,10 @@
 import { createServer } from "node:http";
 import { randomUUID } from "node:crypto";
 import { readFile } from "node:fs/promises";
+import { existsSync, readFileSync } from "node:fs";
 import { extname, resolve, sep } from "node:path";
 import { MockGame } from "./server/mock-game.ts";
+import mockGamePolicy from "./server/demo-check.config.json" with { type: "json" };
 import { ProposalBackend, ProposalError } from "./server/proposal-backend.ts";
 import { gamePaths, readGameConfig } from "./tools/game-profile.ts";
 
@@ -19,7 +21,17 @@ if (profile) {
   ({ games: catalog } = await import("./src/games/catalog.ts"));
 }
 
-const proposal = new ProposalBackend(catalog, process.env.MOCK_API_DATA_FILE || ".runtime/backend-v1.json");
+const onRailway = Boolean(process.env.RAILWAY_ENVIRONMENT_ID);
+const debugRequested = process.argv.includes("--bonus-debug");
+// Optional developer override in the ignored .runtime folder: { "bonusDebug": true }.
+// Precedence: MOCK_DEBUG_BONUS env > --bonus-debug / Railway > local file > off.
+const localOverridePath = ".runtime/mock-server.local.json";
+const localOverride = existsSync(localOverridePath) ? JSON.parse(readFileSync(localOverridePath, "utf8")) : {};
+const enableMockBonus = (process.env.MOCK_DEBUG_BONUS ??
+  (onRailway || debugRequested || localOverride.bonusDebug === true ? "1" : "0")) === "1";
+const localMockBonus = enableMockBonus && !onRailway;
+const proposal = new ProposalBackend(catalog, process.env.MOCK_API_DATA_FILE ||
+  (localMockBonus ? ".runtime/backend-debug-bonus.json" : ".runtime/backend-v1.json"), { mockGamePolicy, enableMockBonus });
 proposal.sweepExpired();
 setInterval(() => {
   try { proposal.sweepExpired(); } catch (error) { console.error("Proposal settlement sweep failed", error); }
@@ -103,7 +115,7 @@ createServer(async (req, res) => {
         if (!sessions.has(sessionId)) {
           if (sessions.size >= 500)
             return json(res, 503, { error: "DEMO_SESSION_LIMIT" });
-          sessions.set(sessionId, new MockGame(definition));
+          sessions.set(sessionId, new MockGame(definition, undefined, mockGamePolicy));
         }
         res.setHeader(
           "Set-Cookie",
@@ -156,4 +168,4 @@ createServer(async (req, res) => {
   } catch {
     res.writeHead(404).end("Not found");
   }
-}).listen(Number(process.env.PORT) || 4000, "0.0.0.0");
+}).listen(Number(process.env.PORT) || (localMockBonus && debugRequested ? 4001 : 4000), localMockBonus ? "127.0.0.1" : "0.0.0.0");

@@ -1,76 +1,147 @@
 {
-  "milestone": "M1",
-  "reviewTag": null,
-  "checksumNormalization": "UTF-8 text without BOM with LF; binary unchanged",
-  "sourceRevision": "72e076cfe7380db534368d8860b34d0b45c35fc5",
+  "milestone": "M2",
+  "checksumNormalization": "UTF-8 text with LF line endings; binary files unchanged",
+  "sourceRevision": "19f5407857c28246b44d6e678b519e65ff1fb498",
   "files": [
     {
       "path": ".gitignore",
-      "sha256": "93f88db045cf1fc250b5ebe1c5527b4d3dae34858b46c2a8ef38078efe77d5c3"
+      "sha256": "409c0d14058400f2401a9f8240efbd291f0c4393ffabcc94ef3bd300dd44d803"
     },
     {
-      "path": "docs/architecture.md",
-      "sha256": "4a5c824f176844e6f81858c91ac32e992708793ac6b80500ecaf4e8198c37c38"
+      "path": "README.md",
+      "sha256": "eace3be9886ce2b83b867c07b3b8d58493524faa96459b8ca0919ccda14b754c"
     },
     {
-      "path": "docs/backend-localhost-v1.md",
-      "sha256": "26b568d929a9015801ce26f6d348fe39dd9d6b71d1b125f274aaf127213318f9"
+      "path": "SOURCE_REVISION",
+      "sha256": "4b186eabe866078914dd56ad9c4139b4f7715a5ff90a337fe57a5b79ae099007"
     },
     {
-      "path": "docs/FE-BE-Proposal.md",
-      "sha256": "3f404407d4720d90b6958741eb3c73efa62960aa71454347532c8e95decaeeac"
+      "path": "asset-viewer/app.js",
+      "sha256": "34d9d22403b44b462411b4a731343df284051ddc9bfe72fbd20962e0bcedb4cf"
+    },
+    {
+      "path": "asset-viewer/index.html",
+      "sha256": "407406d90e45881299cc5d0a299ad5fb3e016ab42a73eb928515930b21ca943f"
+    },
+    {
+      "path": "asset-viewer/sound.js",
+      "sha256": "b165c259a9a897a0fe52598db25f0306e1955c418983ffb8795d1c58fe7a83c9"
+    },
+    {
+      "path": "asset-viewer/style.css",
+      "sha256": "5bb6dd5a29d4cc70e33c4317da7bf51eb85d8e3ed4130cec7fe1d6fb8ce56cd0"
+    },
+    {
+      "path": "asset-viewer/vendor/LICENSE",
+      "sha256": "2296374e2333031c109abd96588bfbacb2dd04f253c80864f77d0ef336e1d668"
+    },
+    {
+      "path": "asset-viewer/vendor/spine-player.min.css",
+      "sha256": "e911ac88f6a8525d87f85d6301fecdd0f5e2b52834e3bfa594b6df407af9679a"
+    },
+    {
+      "path": "asset-viewer/vendor/spine-player.min.js",
+      "sha256": "c331c0c12abbc75fa4e40c6e7d7856925721f3ab2a75be385637bb07878dc4d9"
     },
     {
       "path": "docs/fw-pixi-architecture.md",
       "sha256": "4cb5f90ee4134de5d30af16df875dee444ba57eddf38958401d35c6ee4b40381"
     },
     {
-      "path": "docs/milestone-1-api.md",
-      "sha256": "38949cbb2039eeeab07a52f22952c72a5c9ef169d7969381e1d51dad4787a243"
+      "path": "docs/milestone-2-asset-checklist.md",
+      "sha256": "2075fbe01e4812ca76a2408697b421f6487e042640d35ad5681b7278c0477076"
     },
     {
-      "path": "docs/milestone-1-asset-spec.md",
-      "sha256": "40df86ded78b36594627e7383b98c4fea18a468fc2a2e119e4dff20484404d22"
+      "path": "docs/milestone-2-asset-checklist.pdf",
+      "sha256": "389452bcd76d39f8ff0a7e78d58b274d06efbf9ba682663df978a5f2f6fdff61"
     },
     {
-      "path": "docs/milestone-1-evidence/3x3-normal.jpg",
-      "sha256": "bf9ffe2127bcd238b7e30af112702852adb31a850a76d882a293a2fcf9de2bb7"
+      "path": "docs/milestone-2-evidence/error-states/0-bonus-debug-error-states-menu.jpg",
+      "sha256": "b68708b5fcb729829e55f6d871283bc6941daed0158b23ea5ca0bbc5d38e3649"
     },
     {
-      "path": "docs/milestone-1-evidence/5x5-drop.jpg",
-      "sha256": "ce07a6d86ff3b0f138ddf96a9fdb4de1276f2d89ea58527a2f3d219602cd961c"
+      "path": "docs/milestone-2-evidence/error-states/1-insufficient-balance.jpg",
+      "sha256": "a558e94d4159b0082f94a76c0ebe5a49cb34d300ce0dbaa24e572044240b1323"
     },
     {
-      "path": "docs/milestone-1-evidence/browser-tests.txt",
-      "sha256": "82e0da60a6d97f390873f8f25f65d96788cf3587705934db0640a542fc3f7adb"
+      "path": "docs/milestone-2-evidence/error-states/2-connection-lost-reply-lost.jpg",
+      "sha256": "4ba8ce48f14f1cfaa54aefabb4e4d0588aea52d9f945cf676f711dd3d27cd510"
     },
     {
-      "path": "docs/milestone-1-evidence/default-portrait.jpg",
-      "sha256": "1a98c3fe9c8f4b5607e084af61b4528ce168506564932f1754abdeacf57a321c"
+      "path": "docs/milestone-2-evidence/error-states/2b-after-retry-single-charge.jpg",
+      "sha256": "6746d945681e3c0801bd3d2f605179193b3158463b889dba1407f6ddc8c8d448"
     },
     {
-      "path": "docs/milestone-1-evidence/release-notes.md",
-      "sha256": "edecc1a602c40950f6917bf1f4085afe06179c7c61a640891794569d24b420a8"
+      "path": "docs/milestone-2-evidence/error-states/3-connection-lost-request-failed.jpg",
+      "sha256": "fa08672702d15699329031ecbb812dacd689e1467d38c37048f176fa43f955d8"
     },
     {
-      "path": "docs/milestone-1-evidence/tavern-portrait.jpg",
-      "sha256": "f618e54785e3895024a0ca11afd660a0aa7a4274be0937cb0fe2815a199a957d"
+      "path": "docs/milestone-2-evidence/error-states/3b-after-retry-single-charge.jpg",
+      "sha256": "44ba9b7fd9d0826fcb3d622cf11b5a2bef5a041f5264f233f7abf6fbcd7bfc1e"
     },
     {
-      "path": "docs/milestone-1-evidence/unit-tests.txt",
-      "sha256": "556138aa63b827d631a5aa9268b77fd6270ad7b647c7367bcde82e86986e3327"
+      "path": "docs/milestone-2-evidence/error-states/4-reconnecting-offline.jpg",
+      "sha256": "5db0cf95207525f48e9052c5dd0c25cd46e1f3f6404a68d01abba41c6402eee6"
     },
     {
-      "path": "docs/milestone-1-evidence/verification.md",
-      "sha256": "014d5b0797f1bf9e6118199a02824c10b3783999017418133f99bc5a7f3b72e8"
+      "path": "docs/milestone-2-evidence/error-states/5-connection-lost-mobile-portrait.jpg",
+      "sha256": "74f00422ddbb01f476cb8a480ab2176c1add4ac94fea8824ebc528cda24e5092"
     },
     {
-      "path": "docs/milestone-1-v1-examples.json",
-      "sha256": "445cc921bbd14afccce5366be7e70ee50cfb393b8c49112341d00b7c453dff87"
+      "path": "docs/milestone-2-evidence/error-states/README.md",
+      "sha256": "8e3e217a5b36517bb45d5faef3a438a2fd62df55bca435209596637105a53811"
     },
     {
-      "path": "docs/milestone-1.md",
-      "sha256": "5e64974fb6bbe977cdc80f97b4ceed5ba65c46105655a482c03ffc8b565bd121"
+      "path": "docs/milestone-2-evidence/screens/1-base-game-desktop.jpg",
+      "sha256": "54da40e9ca015ee54506943ff8e002e1a34c355ebcfeafe69029e6dec946316f"
+    },
+    {
+      "path": "docs/milestone-2-evidence/screens/2-feature-buy-panel.jpg",
+      "sha256": "7cb94553c29660564a18acabf48cd443eaf336dddd905bf45f7d8a534a790e2f"
+    },
+    {
+      "path": "docs/milestone-2-evidence/screens/3-bonus-buy-confirm.jpg",
+      "sha256": "a1c876224c710b7d1e0a867f93614ffa4c5eae162531d927443c7569ad4ed0a5"
+    },
+    {
+      "path": "docs/milestone-2-evidence/screens/4-coming-soon-in-m3.jpg",
+      "sha256": "43d9ff39f982be6369775fdb993f4ae66eb34661e0cc95a386d87a198969d23d"
+    },
+    {
+      "path": "docs/milestone-2-evidence/screens/5-game-rules-paytable.jpg",
+      "sha256": "25cba0e5948907ddcd214d869c840ba0ea42b0992df7419271045f080a01781a"
+    },
+    {
+      "path": "docs/milestone-2-evidence/screens/6-base-game-portrait-390x844.jpg",
+      "sha256": "5f6eca3e134d68ae29f0e2d6d958166bb7daafbc72428ec884ad99859c7e7755"
+    },
+    {
+      "path": "docs/milestone-2-evidence/screens/7-base-game-landscape-844x390.jpg",
+      "sha256": "eefa46007aea648eff1e2ee55347f331b963feaaffeb14ebd9cfc1c962b6852f"
+    },
+    {
+      "path": "docs/milestone-2-evidence/screens/README.md",
+      "sha256": "e8de925b9d72b3b33944d97cdd6690cd7e205dbbf9e90279b84b85c948eb59e5"
+    },
+    {
+      "path": "docs/milestone-2-evidence/verification.md",
+      "sha256": "a03ea8b605d718f6cb99456f4b094d9e4dd97b942d4bde467ff7fdc0da28b31a"
+    },
+    {
+      "path": "docs/milestone-2-features-and-testing.md",
+      "sha256": "77ef500adbb5e35e2e21349b02e5caa6864cf5a71a55d7d5d57ce135aefc43de"
+    },
+    {
+      "path": "docs/milestone-2-features-and-testing.pdf",
+      "sha256": "fca6e2116684836f37090712e10f5b66995992d13592dfdf67284842988a3225"
+    },
+    {
+      "path": "docs/milestone-2-upgrade-and-deploy.md",
+      "sha256": "40ae6140e3c7c9d86dc29980ee7acc9dfd8bc1e64d6e69c2c27102d33af5ea1e"
+    },
+    {
+      "path": "docs/tavern-asset-inventory.md",
+      "sha256": "7d1b8c71c2bb596431a4f409db9d601c8000883cd8c096b49c086bad9b404a39"
     },
     {
       "path": "index.html",
@@ -78,39 +149,355 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "8998dd75a78c83bb425c9729c89a7e21ac8134e820d55e27613f8583e88196ca"
+      "sha256": "50cd7c9860db79a2f0f0e61d9e84f86745fa3d81dd1c31a375e1c5f9c16d591f"
     },
     {
       "path": "package.json",
-      "sha256": "38f098ea7f4497abbf9533b5b5b1f385c53590b66f5a8dda5126979a905735c4"
+      "sha256": "d853b310a13cf79bf4df7a7399f54f995bf861cd18c4ebb494c4d9e02bc3c75c"
     },
     {
       "path": "playwright.config.ts",
-      "sha256": "d6a2c829b29bfcf63309595ae3ceaf4103ea398149b0b75192c962300fa17ec0"
+      "sha256": "ef67cef6f680ab93cd3db2cd69c6eab69b61b66e46a0a4e7aa809ae6032302df"
     },
     {
-      "path": "README.md",
-      "sha256": "e80768cb366fe5740fedf6fa3e490cd98d3a176968535daa7a33ecb4793309f5"
+      "path": "public/tavern-assets/assets/bonus_static.webp",
+      "sha256": "2de6779b59d5e3e366ecb303732932c4403a796631b863e9fd58f601432f2157"
+    },
+    {
+      "path": "public/tavern-assets/assets/continue.webp",
+      "sha256": "0cda9fffffe0fce5301084ddd30a0a6c87a0ef29374409476780f7edcfc6f458"
+    },
+    {
+      "path": "public/tavern-assets/assets/h1_static.webp",
+      "sha256": "2827a91b98bc68a214ec160250466fd8bf6655d4313a3e8ff63cd448f4acce62"
+    },
+    {
+      "path": "public/tavern-assets/assets/h2_static.webp",
+      "sha256": "cf86f1cffb09d323bb92ac9aab6650299bbd48966151de3f9c43c19a930100f0"
+    },
+    {
+      "path": "public/tavern-assets/assets/h3_static.webp",
+      "sha256": "45ba8eabb19d9c7edf1a4f435de7353f43ff75fc72dcce0cc351abce2dbae0fd"
+    },
+    {
+      "path": "public/tavern-assets/assets/h4_static.webp",
+      "sha256": "147f6458be17f73b43fb702e711053a4b74b83671ab38bb6dc2fb9a149615002"
+    },
+    {
+      "path": "public/tavern-assets/assets/hd/td_master.atlas",
+      "sha256": "4814913d453854d20d82642f2a15eca3eede6d5e97ce646f0a23f2e87cf12754"
+    },
+    {
+      "path": "public/tavern-assets/assets/hd/td_master.webp",
+      "sha256": "dee1041bf4a9be8b3daf62ff15ff764de28e0cb76f66e4f9274dad1e94962199"
+    },
+    {
+      "path": "public/tavern-assets/assets/hd/td_master_2.webp",
+      "sha256": "84f60163b6be8a817e9e5a8355188aa09dd03c18922c2b1ec415b4b25b13201d"
+    },
+    {
+      "path": "public/tavern-assets/assets/hd/td_master_3.webp",
+      "sha256": "b119528cd7e08541b2d8854599ade311f92405730fd44ecb72745724a2bff020"
+    },
+    {
+      "path": "public/tavern-assets/assets/hd/td_master_4.webp",
+      "sha256": "1f3db60e168d0019d757d37d25b095b2aa7c1fc31a17d571f33c064876666fd3"
+    },
+    {
+      "path": "public/tavern-assets/assets/hd/td_master_5.webp",
+      "sha256": "ca8f06f5544ee030d359bdcd5d460f34389bec999372a91c90f32baa55290e8a"
+    },
+    {
+      "path": "public/tavern-assets/assets/l1_static.webp",
+      "sha256": "f588197cd9896225fcc5aa6f54e6b3e95afb12dc9b86513114af4104e81a8412"
+    },
+    {
+      "path": "public/tavern-assets/assets/l2_static.webp",
+      "sha256": "ecf9131855e07ac26d54c3085d2b811c495076a67bf16fc21ef38dd04258837a"
+    },
+    {
+      "path": "public/tavern-assets/assets/l3_static.webp",
+      "sha256": "446b272d7eb935916743a254ab97712fd3e3b65e78e7a18e8c3480d2a290355f"
+    },
+    {
+      "path": "public/tavern-assets/assets/l4_static.webp",
+      "sha256": "bbb885946c1bb686b4c1c8b8f9fbd550714c6f72c264e888b4c2917e91b01fcc"
+    },
+    {
+      "path": "public/tavern-assets/assets/l5_static.webp",
+      "sha256": "139d6bd5b4fe90836197cb98212395608fcc37ce583a9836c8d64ac743b237bf"
+    },
+    {
+      "path": "public/tavern-assets/assets/outfit-500-CMfhJlfe.woff2",
+      "sha256": "e5776ecb08ef257d16da5ea48b27cc6e719c274ff7f9985e2c2b5a74d9a83126"
+    },
+    {
+      "path": "public/tavern-assets/assets/outfit-600-DuSOvJ_5.woff2",
+      "sha256": "df027166d7f19d4fc5212fcc62368d53f3c0ad36c3f10f899e29385401e77f17"
+    },
+    {
+      "path": "public/tavern-assets/assets/outfit-700-D9T176aR.woff2",
+      "sha256": "da98d434ebe44b2c8b42f2f26edc4b7e65300a089419ed041942a7299896a06f"
+    },
+    {
+      "path": "public/tavern-assets/assets/outfit-800-ySok2YOt.woff2",
+      "sha256": "0bc360ab632c415781c90bcd3309ac313c828dfb2011e3ec43cb0c3aee5acc66"
+    },
+    {
+      "path": "public/tavern-assets/assets/outfit-v11-latin_latin-ext-300-COlrd1hX.woff2",
+      "sha256": "89701b515a7936dbd47d5927a8fa56e17120c4854ed882c78af4b3cb4d02b87f"
+    },
+    {
+      "path": "public/tavern-assets/assets/outfit-v11-latin_latin-ext-regular-BDXaL9-u.woff2",
+      "sha256": "7de43d76771c6ba4c168e3af0364a0d500db46647eee134d28181dd16c998dec"
+    },
+    {
+      "path": "public/tavern-assets/assets/paperclip-C0ObTQLL.webp",
+      "sha256": "fe72aecd65659bd14c025eedfaee7ec57a4f313338ff1026fbbafc2b55c99705"
+    },
+    {
+      "path": "public/tavern-assets/assets/paperclip-rMFDawAD.gif",
+      "sha256": "f5ea52934ec8e25349f88b3cfb84cee9b03e7264c177a19e3f5633320b1e2e69"
+    },
+    {
+      "path": "public/tavern-assets/assets/paperclip_full_logo.webp",
+      "sha256": "1c151c07bd81b8e640f8f8c0bfd7de205e9ca09d56b0d691aca9cfe30eed5c0b"
+    },
+    {
+      "path": "public/tavern-assets/assets/poweredby-D9-5QAZx.webp",
+      "sha256": "b6092417e2e9883c99e2fa00b866bf8a996075268ca0c034606a0dac9f8c133f"
+    },
+    {
+      "path": "public/tavern-assets/assets/sd/td_master.atlas",
+      "sha256": "65597f9e55b4b573c612529a86c8d859df350e41cc91b0c5ecc4f08448cc2f70"
+    },
+    {
+      "path": "public/tavern-assets/assets/sd/td_master.webp",
+      "sha256": "3d7d764e6bcab77bc82c1de7abb7338feca30c55c8aa159bcf99875994857efd"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_ante.webp",
+      "sha256": "e76ef17da158c2f14f3c5f0d40ea4d5ca6f6861fd3ed7f7b1e1b4f2d811410dc"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_backgrounds.skel",
+      "sha256": "5f8bff30c0a431e17fdabfc955c666b385712f06989736568feb98a633a346ce"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_bonus.webp",
+      "sha256": "c063b60febc63cad1db18eb79ab3202a3ebb5185784ae911ea46c18fbb8f41d4"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_card_character.webp",
+      "sha256": "618e3dee237111455656c5f7387efdff7d73a0fb91249c9b34d4f670ea4326fe"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_character.skel",
+      "sha256": "af0426ebe2b2880b3c8362b14abfde9e315ae533643b03c823ed1f8671cb6945"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_gold.webp",
+      "sha256": "8f81ea9c51455e9e47913c349eba142bd90b48b58702709c1d3cdeb6c0ca7d7e"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_gold.xml",
+      "sha256": "2a3ff12fb4084b90718038a8a0b8dd7638bf028378d468bcf1165f40e507b5e9"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_green.webp",
+      "sha256": "2b81ed5aaa94d5ba7fb7874a06b1fdaac6b0e2da95c07c9fbae813d3a4d0e709"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_green.xml",
+      "sha256": "7c679c4c059e0d65cc02bc9d739936f3219269bb7f531cae9567788e13ad278f"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_loader.webp",
+      "sha256": "33aa0a5757d0ee238002fb083ec9a0c01b71a9061581d9ac5a67ba54f288b98e"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_loader_bg.webp",
+      "sha256": "dd6c1c1fe2ceed45c7c9cde177d3aaf4a0bbaa3677ee95986ff2f1e77616ec2e"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_red.webp",
+      "sha256": "955d663ad20bc4da092d9854849a87d45995a362acdbc37bb5f804a6adffcdb5"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_red.xml",
+      "sha256": "ee334a75a34ded58c6203c49262f31398b6044e3961d850bdce911cbecb3f99e"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_reelhouse.skel",
+      "sha256": "4d77780458b05ec177288b995a17d24a73e4a5f0a46c47c99b9a7408811a1eee"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_screens.skel",
+      "sha256": "89f2a71f5919b1f6dcd4a8962f704afefc62f2c884a0df5f8d25b88f98008de2"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_sounds.json",
+      "sha256": "0e2f9a780fbc3c6928294eafd0c9173c18ea5a5440ac4cc3b55591d5d858293d"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_sounds.mp3",
+      "sha256": "e7afc97efac0eb9787019fae6e7ee43df9cb3fdcb2397a87885c27813a41144b"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_sounds.ogg",
+      "sha256": "450843a128b8cd88fda47bc905ff30057495780653c4d87e60bc7bb8bbbc2deb"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_super.webp",
+      "sha256": "fc007f0c8d4d9baa5f41c3ff008143d5a100cde01600666ad82d602d31ea67e8"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_superante.webp",
+      "sha256": "f218c40b725ce565fb21ed43497b44fef9547b8c2ae6c930724c5ed4c0adb445"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_symbols_bonus.skel",
+      "sha256": "f6f097a70ae387c95f69370506faa9f09b65d4d236ff87d2b08f4637408057dc"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_symbols_high.skel",
+      "sha256": "8e7d5ad074950e4bfdddfa6e7d2388c576ad7cb1bc045a781d7ce893490e5f9b"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_symbols_low.skel",
+      "sha256": "6017fa902f31119858118eeaf59c45729bc6905f15892c02e60b9eefccb9391d"
+    },
+    {
+      "path": "public/tavern-assets/assets/td_symbols_wild.skel",
+      "sha256": "77c4b1c621bf018308b4a3ebe3fc6d82b283d4111db3456781e7d49b3cdcdbd7"
+    },
+    {
+      "path": "public/tavern-assets/assets/wild_static.webp",
+      "sha256": "0afb7ecb465a43f8eb369e1b29a565ff89552cf30ca715ca077e6014a9148750"
+    },
+    {
+      "path": "public/tavern-assets/cover/taverndrop.webp",
+      "sha256": "a2ba79639572310a41a02cd27cf150fdb582f296067884494db3b0ea25626e0e"
+    },
+    {
+      "path": "public/tavern-assets/cues/chest.mp3",
+      "sha256": "3672242f29fc4fbf6275d3982cc7b482c67a6dba757631093aedfc3f750c3d36"
+    },
+    {
+      "path": "public/tavern-assets/cues/entry.mp3",
+      "sha256": "88816c3e5921fa180dd3ef48badb51f813974791e43be3143274da34b311ede8"
+    },
+    {
+      "path": "public/tavern-assets/cues/start.mp3",
+      "sha256": "6301fa68c0c9aeedb110f7d72966b2e235bbcd94dc49eafd18828655a00fc28e"
+    },
+    {
+      "path": "public/tavern-assets/cues/stop.mp3",
+      "sha256": "d380413bdd893808b585364edb177edc19585b72f0916bd9aa965fd734a956dc"
+    },
+    {
+      "path": "public/tavern-assets/cues/win.mp3",
+      "sha256": "de586b3b84f21870bbdf884c0ecd204946d07ac2f4e656572db1faf18556ac7c"
+    },
+    {
+      "path": "public/tavern-assets/favicon.png",
+      "sha256": "66b1e9793934a85aa17607c7c9e14a5cd0cfc7ed1c4650cbc2cec168d5986fb9"
+    },
+    {
+      "path": "public/tavern-assets/hud/autoplay-ready.svg",
+      "sha256": "8e17857ec8d98a7ea3a702e3d36237ed519c22af68f2d406408392f4e2c9b6fb"
+    },
+    {
+      "path": "public/tavern-assets/hud/autoplay.svg",
+      "sha256": "bc37a10c1852ba5eb08c50cec01eafa3e6cadb3c4b47a93eb6f252eeda1acc00"
+    },
+    {
+      "path": "public/tavern-assets/hud/bet-down.svg",
+      "sha256": "a73679c3501b5d2d4c281497774dd85b21710c3e80a716e298299392a8f90906"
+    },
+    {
+      "path": "public/tavern-assets/hud/bet-up.svg",
+      "sha256": "fa6292511dd24dc13bb5ca15b46a88e0f423d091dd7e3c2ddef43be98e22f163"
+    },
+    {
+      "path": "public/tavern-assets/hud/close.svg",
+      "sha256": "01836e24351c93bb921ffbd23432b9b890f9c45f037759b9a43c1c670140fa82"
+    },
+    {
+      "path": "public/tavern-assets/hud/effects-muted.svg",
+      "sha256": "d91120bb17dd27cae519bbd531b85a8810c41d313387bfcfdd8dbeaf5bdca1e6"
+    },
+    {
+      "path": "public/tavern-assets/hud/effects.svg",
+      "sha256": "001dd15f6c104853e65ccd77984279a9ef8958391d59e628db8daf2173ec63b7"
+    },
+    {
+      "path": "public/tavern-assets/hud/feature-buy.svg",
+      "sha256": "2fd8ccd6af0a3b5ef8cd51e67ba713b7074d20c866d9dc04cd624dcbf22af177"
+    },
+    {
+      "path": "public/tavern-assets/hud/info.svg",
+      "sha256": "b1bcec24c51d8bd3735f8dfc6cdbc70a200166edf9f8b8769ba3dd7fd38c29d2"
+    },
+    {
+      "path": "public/tavern-assets/hud/menu.svg",
+      "sha256": "69593e8a0f1860d9eb040eb9ccf0db9e3556077a6b3629ab8c0bda1ee5b7c5d5"
+    },
+    {
+      "path": "public/tavern-assets/hud/music-muted.svg",
+      "sha256": "eace199cefa78423faa367a666d2cf1bb4aadf91f34def08f88dd198bd78975e"
+    },
+    {
+      "path": "public/tavern-assets/hud/music.svg",
+      "sha256": "27de8527fde84b861083f9db6717dbe0d6717b25ff51ef558287c668510f630d"
+    },
+    {
+      "path": "public/tavern-assets/hud/share.svg",
+      "sha256": "cd88171664aca9ed9ec9785a02c8280d21323116bef89a672437d675b157179d"
+    },
+    {
+      "path": "public/tavern-assets/hud/skip.svg",
+      "sha256": "e22a74eacf43f0554b4aa6fbe6523631171a377ec9a4825b51ba04c3ad9e76d5"
+    },
+    {
+      "path": "public/tavern-assets/hud/spin.svg",
+      "sha256": "06f5f537138fb1660fc2263f7cfcde75c3df4bb70cb62f20923fd5402594ad87"
+    },
+    {
+      "path": "public/tavern-assets/hud/stop.svg",
+      "sha256": "f36ce31b7d00ad4f94430bf7a3bcfd10d7a7382cd9f62dc3a21ab1f0da876660"
+    },
+    {
+      "path": "public/tavern-assets/hud/turbo.svg",
+      "sha256": "77a34f26f0a942939023869611aa39fd5586b2de11c6b38b52b8fc90e228f03f"
+    },
+    {
+      "path": "railway.json",
+      "sha256": "fd867c8a160ce1b3de6321e2e1b0878e051b0dd6797deac9a4b547ff34c03e2a"
+    },
+    {
+      "path": "scripts/audit-tavern-assets.mjs",
+      "sha256": "585b3dbce144fec268d9d03705fce804f2fe19c676716a4599b698cfd5ddfd1a"
+    },
+    {
+      "path": "server/demo-check.config.json",
+      "sha256": "17000d22ef9a1c3131d57af11d5859aacdd1e5a73141bc71079e087de6fb79e9"
     },
     {
       "path": "server/mock-game.ts",
-      "sha256": "6b42bee82a6bbd40bc9a14d881a7dc7029c941dd92d8d4a36300d8148562591b"
+      "sha256": "8e73285de99c4d2c531edf6c1936e91a0659883295d04b07e39d47030287a3f3"
     },
     {
       "path": "server/proposal-backend.ts",
-      "sha256": "e996fd8ed4223bfe3751aa0b3f258334d3ef9565414587af3d5b8f459932c9bd"
+      "sha256": "0b1351292adb96e561bdb9387bf85cc4dfaa3a37a931850b4fc0488575a2d94d"
     },
     {
       "path": "server.js",
-      "sha256": "0adaeef3950e95c444b5d086212db881752bedf3b2f6c119cd15a3ee505119bc"
-    },
-    {
-      "path": "SOURCE_REVISION",
-      "sha256": "5beb6075fb6a79695bea4600d867629dda4008a5407e2c0040a4f4e6d1179568"
+      "sha256": "44cdba901bc757d4ce1e5454bf8b30a31070df8f2265d5cd278dcc61cb2c19a4"
     },
     {
       "path": "src/framework/app/game-runtime.ts",
-      "sha256": "ee300a841a8860ba67b9b135fe0507ab936acae49a138c2113b5f25fceba49b3"
+      "sha256": "b16d92da38dcfef73299806cfae0827d30da818df4c3c4961b837158923c3aac"
     },
     {
       "path": "src/framework/app/session-entry.ts",
@@ -118,7 +505,7 @@
     },
     {
       "path": "src/framework/audio/howler-bus.ts",
-      "sha256": "eba384a83b028f7ba07caf8aef5f4c7269d73fa6012beb2d1cd1adc61a20d088"
+      "sha256": "c6ab5e52233153a7118814a6931289e96e49e23b3750da6214296deb8b8c2f19"
     },
     {
       "path": "src/framework/controller.ts",
@@ -126,7 +513,7 @@
     },
     {
       "path": "src/framework/domain/contracts.ts",
-      "sha256": "3462f145a1682d7882f74639a9b3eff6768ef1ee971e0695d6b41ab1d2958d14"
+      "sha256": "ac5fd5ac36f069cbd745c3e976a088f113b3486825edb0c5ae6c0868ee520b0c"
     },
     {
       "path": "src/framework/domain/rules.ts",
@@ -134,11 +521,11 @@
     },
     {
       "path": "src/framework/game-config.schema.json",
-      "sha256": "073cd1dbf054a23f511584d74a9a2869455d2e6daaa638d3e01b6eb43b305f5f"
+      "sha256": "5dc26836d5b70e223f4802ba70a574d4cc064a8e6a2448b0ed837715a091bf57"
     },
     {
       "path": "src/framework/game-config.ts",
-      "sha256": "306828da6a20c2dcaa94e61f0a7772270bee2baa1c6e885b0535a510cea96551"
+      "sha256": "be4a1ce7879f66745c5e00bca962859f9b142faa10ad354dea7de305a038a55d"
     },
     {
       "path": "src/framework/network/json-client.ts",
@@ -154,7 +541,7 @@
     },
     {
       "path": "src/framework/presentation/audio.ts",
-      "sha256": "3dee947be7fe49100421b4ab75f75ded98e878901dcbd25c3d929db52a0671c7"
+      "sha256": "08d4bcaa724d79fa291d73e749a6ed65bd6bb4217d81f15c61fcaba9aff7e3b1"
     },
     {
       "path": "src/framework/presentation/basic-game.css",
@@ -170,19 +557,27 @@
     },
     {
       "path": "src/framework/presentation/board.ts",
-      "sha256": "7be11429a403ecfe5aec4fb66709018ebfdd79371c279acb2efef164ba81f67c"
+      "sha256": "29bfe0b75f77c4856e4dab7437717d61d452cc85a5dc99235b8c4e76e878c99b"
     },
     {
       "path": "src/framework/presentation/brand-loading.css",
-      "sha256": "af62cc1ac59095a01dc3cdbda39c38f6b6a434a271a91c4072fb2223294c8084"
+      "sha256": "dbf4e2d9d99b96fcae5ade9179a1a75161064209645845cd12dcd0718dab1257"
     },
     {
       "path": "src/framework/presentation/brand-loading.ts",
-      "sha256": "e1ffc34bbd6d5190653074dfece4f6f6806f563b891710ab6541a74dba865729"
+      "sha256": "6f7384ab67b733cbe2b3a556ceabbcfa8ae8879fba089fd35bdd6b2dc874e3bf"
+    },
+    {
+      "path": "src/framework/presentation/custom-ease.ts",
+      "sha256": "5682cc8565ce88a109bb6a03aded265f307ca46b200352df132c59046b32896d"
     },
     {
       "path": "src/framework/presentation/drop-schedule.ts",
       "sha256": "7761bf16777804e81d9c4d0b1ea3123523b90a039f8f03f69dbaaadff1aca34d"
+    },
+    {
+      "path": "src/framework/presentation/drop-timeline.ts",
+      "sha256": "ae469a916a39586ebf653d69c42dc72d8315b322653b76b89f971e6af562e747"
     },
     {
       "path": "src/framework/presentation/grid.ts",
@@ -201,6 +596,10 @@
       "sha256": "665550b94d40137bc91e5e99fe393dc0eed8a105efc5138af727ac7080519d45"
     },
     {
+      "path": "src/framework/presentation/layout-mode.ts",
+      "sha256": "0a0fc5dafa90298eb23bf8faa5276315223ecd712f9dd77a2e2ea4b5e75c8a4f"
+    },
+    {
       "path": "src/framework/presentation/money.ts",
       "sha256": "c5906d5310cb439c3753ee1b755b11767278aeff74d4218aff61c3d2bce253ec"
     },
@@ -210,7 +609,11 @@
     },
     {
       "path": "src/framework/presentation/scene.ts",
-      "sha256": "c9d66e8dc34087f14d0f3ec1a66e2eccb3b5d7db97e06934119b219d07e48eff"
+      "sha256": "446a21110958cd8972c6605d790bed044410bb8a8c59c8aef8195c5063052e15"
+    },
+    {
+      "path": "src/framework/presentation/shockwave.ts",
+      "sha256": "52e0897a05d457bd0d7b0b26f19650e468876882b5455d4a3843f29506c847a1"
     },
     {
       "path": "src/framework/presentation/slot-content-fit.ts",
@@ -218,7 +621,11 @@
     },
     {
       "path": "src/framework/remote/asset-resolver.ts",
-      "sha256": "72c3748b3f194242b8d639035ff0fc4ea2670cd77a47aed9b1fbcb17669baf04"
+      "sha256": "d8c971759efab1bc03f578a6f4853b83aa3fa0b11e8879471d83937cb518f565"
+    },
+    {
+      "path": "src/framework/resources/asset-quality.ts",
+      "sha256": "20157886d78acd9e75736e3b1b56d48e41192e58c9ec0f13d763ea675b4883d8"
     },
     {
       "path": "src/framework/resources/browser-driver.ts",
@@ -242,7 +649,7 @@
     },
     {
       "path": "src/framework/session.ts",
-      "sha256": "0f5c09bb14efc8afe22bfae25e04a095664e418b55f537197d3c31b0b2bc11b6"
+      "sha256": "590139daecf1cbf712f1ebe6c1b6a98c296635c57f41a7b6eb0cd7d6d1797e31"
     },
     {
       "path": "src/framework/shared/disposables.ts",
@@ -253,20 +660,36 @@
       "sha256": "6b96d8d64b5daa8af7bbe080079ec454e8bb8ef70b4461acf559c5c518726763"
     },
     {
+      "path": "src/framework/testing/behavior-reporter.ts",
+      "sha256": "f89386e64127ab68ec8753b055f72fdc22e11a0eed3a5d458eabd93de802824a"
+    },
+    {
+      "path": "src/framework/testing/compare-game.mjs",
+      "sha256": "87182e4658cd541425f8cf8e390a22b1e14c3b15bba2ab85a23abc796f032355"
+    },
+    {
+      "path": "src/framework/testing/comparison-report.mjs",
+      "sha256": "7ff6b2c4585c2fb6bcfef0bda9fbb8329663f749ed173a905e86fe2f629ac553"
+    },
+    {
       "path": "src/framework/transport/http.ts",
       "sha256": "64db422a1e538f7f5a0482e9b8ae0e4cffae6ca664000d33fbe7b53fae6029d2"
     },
     {
       "path": "src/framework/transport/proposal.ts",
-      "sha256": "b3a802f10d0f7e4e6be847075c826b8dc006b4f6bfcc07fbc1c1abd98358d776"
+      "sha256": "3581648ac45a3aa2b7d1aa6dca3a7313bae1cfe2b329233fa92f67619f9fef34"
     },
     {
       "path": "src/framework/ui/index.ts",
       "sha256": "2e746ddc0c096e9aa3cb5a8a943457402df41e0d266f99ade2ce4b880a79eeba"
     },
     {
+      "path": "src/framework/ui/info-screen.ts",
+      "sha256": "f7b2fd45e4b3d5bc1fce8f9745649649b13fdb9147c9aa452df6f1830d272253"
+    },
+    {
       "path": "src/games/catalog.ts",
-      "sha256": "e62fb54c32106205ae5335057ce6fbb6ea0551e9c59678fba9d0d2bb44da0018"
+      "sha256": "c271c8ef64e4bdb69fc2962ab0c617bf7568a01abfe86fc653b1b67f602dd13c"
     },
     {
       "path": "src/games/reuse/definition.ts",
@@ -277,36 +700,172 @@
       "sha256": "378a9b30f97c0e0d37f0fc41858189b8b1eeb7171e19e489cf2d47fc72f7c3d0"
     },
     {
+      "path": "src/games/tavern/app.ts",
+      "sha256": "358ec4d6cf7e2a4fee911cfb0e2f03574e520aba15631c8899820c7904cd6858"
+    },
+    {
+      "path": "src/games/tavern/art.ts",
+      "sha256": "0132e95eabc9f4799a241d739cc45d89787e5b36ce1a95624e2d82326297e498"
+    },
+    {
+      "path": "src/games/tavern/audio.config.json",
+      "sha256": "9b8661fe2c023b5c019d40610f38770edb48c26dc4bab95632a9890de4802357"
+    },
+    {
+      "path": "src/games/tavern/audio.ts",
+      "sha256": "788f5d4d736fafb12168479f7ab6655a5073d3295b797ed38b72a22a075c2312"
+    },
+    {
       "path": "src/games/tavern/definition.ts",
       "sha256": "2a7bbf1794edd8a7feb4885738d5356b1225256a28836badf8a09db4ae2a15d4"
     },
     {
+      "path": "src/games/tavern/effects.ts",
+      "sha256": "635453efcc7bf58adba285b9b94628a5d013d1262b2f3712e72f45031dfb2934"
+    },
+    {
       "path": "src/games/tavern/game.config.json",
-      "sha256": "229416ff8e7cba648abb1511d84f4632eeae4c1d5e0f1388d8866fb6d570043b"
+      "sha256": "284f8a907fc37b1fc1a43fb6e60431cbd7d0187bdd971dd97f5bfe9cb4ad8a1c"
+    },
+    {
+      "path": "src/games/tavern/hud-icons.ts",
+      "sha256": "7510e3bab420dc4422e609e6ae41817409575d13437ab0259c3c34df9d5d76b3"
+    },
+    {
+      "path": "src/games/tavern/hud.reference.css",
+      "sha256": "b1563bb66e2a8227c61b451ad91b863825ebf93cbdca7fcc03b4e08687dea4b1"
+    },
+    {
+      "path": "src/games/tavern/info.json",
+      "sha256": "e492fb4b045ff1927ab832648f5c529b485a7074e1a7489ac1dda0a1047c251a"
+    },
+    {
+      "path": "src/games/tavern/mascot.ts",
+      "sha256": "e3c0aa8db7411a50d2b175b9f44955187f616013741f0cd90886ad1913b89210"
+    },
+    {
+      "path": "src/games/tavern/payline.ts",
+      "sha256": "bee900a9cd050b58ba82e23a3c5cef90135d6a2ed76cf2e4375dbeafbc2d9f1b"
+    },
+    {
+      "path": "src/games/tavern/skin.ts",
+      "sha256": "3e1ce91590762a972034d641c7676043b486329384a35985255a4e5d289170a3"
+    },
+    {
+      "path": "src/games/tavern/soundscape.ts",
+      "sha256": "b359295e76bdfad4a20ba40d538bd820367eb397c950d1aec10937479a5422e2"
+    },
+    {
+      "path": "src/games/tavern/spine-bounds.ts",
+      "sha256": "f139c7aa971d0999e53f3afe0c50e30c03543c853207faeb666b5de8ebd62449"
+    },
+    {
+      "path": "src/games/tavern/symbol-vertical-bounds.json",
+      "sha256": "e7276d3b4bf04ca7d3c1c71c321e36935a3445c0dc2858c6811edb7a304af9bf"
+    },
+    {
+      "path": "src/games/tavern/testing/comparison-fixture.mjs",
+      "sha256": "8b1a165095ad5b9881ca2ed71cd648c6659d7fa9f69e3a7e0c358d4ccb5766cb"
+    },
+    {
+      "path": "src/games/tavern/testing/comparison-profile.mjs",
+      "sha256": "2e8f40f3a89c353896b2fd494a4ca7c8b8982064cb75c01ffd8babacc48f7db0"
+    },
+    {
+      "path": "src/games/tavern/theme.css",
+      "sha256": "df1a27cc814e1b4a802ee14ed876df92e0a6a5aa9eef56a556f58233b6685cbe"
+    },
+    {
+      "path": "src/games/tavern/typography.ts",
+      "sha256": "7cbc73df0c912bd0b6f6bcda6f02a7b8d2bdc25b1be52c897e584cb0dec3fa43"
     },
     {
       "path": "src/main.ts",
-      "sha256": "de408ad53e33839d1b66476f137417449ad7d1a5d93a6efe1938c968fc5c1782"
+      "sha256": "cad29208ef1e38bf15a5e1351fec92a9b0bf7315ce46c09d022172172eadc6d8"
     },
     {
       "path": "src/style.css",
       "sha256": "d918c203a34e844416391bcff497e29a2b9e571555aadd8a1a408b263ed1b041"
     },
     {
-      "path": "tests/browser/milestone-1.spec.ts",
-      "sha256": "3535eca432c798daa8f6c02990530e85cb0ce3fb9cb885970399c85c7da71505"
+      "path": "tests/asset-quality.test.ts",
+      "sha256": "bd91397f322de2bba0bcd364350c0ffeb771d60132608a6b78739246dd9c29fc"
+    },
+    {
+      "path": "tests/browser/chest-resume.spec.ts",
+      "sha256": "e2dcce64e243fb4a30b45487b1ea0713b880e1062b4bd74fd27161f6f4516959"
+    },
+    {
+      "path": "tests/browser/fixtures/win-screen.ts",
+      "sha256": "2f768590dc96ff8615e435763418007aa9ee3b6f4c72485f214b029a4db4258f"
+    },
+    {
+      "path": "tests/browser/framework-policies.spec.ts",
+      "sha256": "f51ab6042bab9cab948bddf9fbdc4a627c90eedae5a73a6103e51e443a8ecc72"
+    },
+    {
+      "path": "tests/browser/game.spec.ts",
+      "sha256": "26c17114644dc8f065414bdb62891a3634a52615f78cea50fec78bfc6414de1f"
+    },
+    {
+      "path": "tests/browser/info-screen.spec.ts",
+      "sha256": "7a663e08621fb783718d2ae77906c0d24238318ccc7907659e70e04284eb1c28"
+    },
+    {
+      "path": "tests/browser/landing.spec.ts",
+      "sha256": "eb97b57fd5f018886d955bc3926770d3426d2d2ea274bcef398fb669711d2d4f"
+    },
+    {
+      "path": "tests/browser/loading.spec.ts",
+      "sha256": "1b298662ac5cdbab221cb35b959bfe418b8dc8ae8d0b208376b526ffa295f6cc"
+    },
+    {
+      "path": "tests/browser/proposal.spec.ts",
+      "sha256": "8cbe2b8ccad25b6a91eb29bb7921863694a859e4b16328d8ab8a67db8ce8e4d4"
+    },
+    {
+      "path": "tests/browser/startup-feature.spec.ts",
+      "sha256": "fa87796758d11dd4823e211fcd4297a70f3126eb9db585fd7e931896a5faa7b5"
+    },
+    {
+      "path": "tests/browser/tavern-policies.spec.ts",
+      "sha256": "2b7e55c3d7328fc9bdb1d6df4e7bef305eb8727bd4308e5e7f64572e820f39b2"
+    },
+    {
+      "path": "tests/browser/win-effects.spec.ts",
+      "sha256": "d014c1b754e2d6cced5df177b36c0e5f562386e9160a34342e94cb0fd8802290"
+    },
+    {
+      "path": "tests/browser/win-screen.spec.ts",
+      "sha256": "f12e3111d6eac0b409f527e73debc31c64f0113be2fd3502850d5bb1f25442b4"
+    },
+    {
+      "path": "tests/custom-ease.test.ts",
+      "sha256": "752f9f85276fb2cefdbb80288cc6a5f47173c2aecab68f5c828a9dd609316b63"
+    },
+    {
+      "path": "tests/drop-timeline.test.ts",
+      "sha256": "a36ec04fa3009145ea8aaf04f7ae91e44eef492bcf221ceb90655ad2f7b111d1"
     },
     {
       "path": "tests/landing-motion.test.ts",
       "sha256": "6ff2e0d15a0a138b28186ec06ef09e473b7bedc6115fc6bed492645cf6a7c531"
     },
     {
+      "path": "tests/layout-mode.test.ts",
+      "sha256": "2e7c50d7854070955a2b02269a3666b93a11ffbb4d9dad723911df0bdce2b2eb"
+    },
+    {
       "path": "tests/milestone-config.test.ts",
       "sha256": "8f47860d6736d2ae26a9dde5f689988a37e6fcd30d29be0afa76c79d319b24d8"
     },
     {
+      "path": "tests/mock-check-policy.test.ts",
+      "sha256": "161023e9776634b8d8b847ef9563fe464441ed83224435ecff5e8c77c368f99b"
+    },
+    {
       "path": "tests/proposal-backend.test.ts",
-      "sha256": "147dde859b06832e792271fa0bf4886f78b2bc5889744c5c45c20248d5cd6c49"
+      "sha256": "d8c404ad8d850e6c5afbfea6c857872827b3d067194b23bdf8f7cffbe0dac9f1"
     },
     {
       "path": "tests/proposal-transport.test.ts",
@@ -318,7 +877,7 @@
     },
     {
       "path": "tests/rules.test.ts",
-      "sha256": "c4559da92175d5d6a357e07cd31a55477d696c80ef485d42a577eeb49996a1f3"
+      "sha256": "b147da01f57168d9a70d8cc79bd2b9b838b4249ee9f5a77bccac601420e30ae9"
     },
     {
       "path": "tests/slot-content-fit.test.ts",
@@ -333,21 +892,12 @@
       "sha256": "2fbca54e32312aedcfad9d42861f36354d0cfbfb433182cff9253b370bb8b918"
     },
     {
-      "path": "tools/m1-api-examples.mjs",
-      "sha256": "52cecc66859877cf40a89029d5fb6f061ea5b8697b537decaf7e00a442c8c939"
-    },
-    {
-      "path": "tools/verify-m1.mjs",
-      "sha256": "e1be1fbe24bb69d16e77b567673147ef930fe8f993769f67fd19f4a87033ba4b"
-    },
-    {
       "path": "tsconfig.json",
       "sha256": "b3f14505dccdcc853ad0f8004ef6ab031f9dc6421df6081c09e155052cccbf84"
     },
     {
       "path": "vite.config.ts",
-      "sha256": "dd09fa87b49f14624e354479b6aaa7e55022f0ffe090c6705a20551b28792780"
+      "sha256": "f54ea59fc0ba6e6dcad2f869c0964d70fd0aab21e0d5bbacaa325253b05853d5"
     }
-  ],
-  "baseReviewTag": "milestone-1-v1.1"
+  ]
 }

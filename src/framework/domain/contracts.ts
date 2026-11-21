@@ -37,12 +37,18 @@ export interface Snapshot {
   feature: FeatureState | null;
   round: RoundState | null;
 }
+export interface MockBonusScenario {
+  spins: number;
+  chests: boolean[];
+  winTier: "normal" | "big" | "super" | "mega" | "epic" | "max";
+}
 export interface Command {
   requestId: string;
   expectedVersion: number;
   action: "spin" | "buy-tavern" | "buy-drop";
   bet: number;
   chance: Chance;
+  mockBonus?: MockBonusScenario;
 }
 export interface Completion {
   accumulated: number;
@@ -118,16 +124,41 @@ export interface ReelPresentation {
   winDimmerOpacity?: number;
   symbolLandingEffects?: Record<string, SymbolLandingEffects>;
   loadingScreen?: BrandLoadingConfig;
-  controls?: { menu: boolean; autoRounds: number[]; autoUnlimited?: boolean; autoTopUp?: number; betMenuCloseDelayMs?: number };
+  controls?: {
+    menu: boolean; autoRounds: number[]; autoUnlimited?: boolean; autoTopUp?: number; betMenuCloseDelayMs?: number;
+    /**
+     * Milestone gating: when set, confirming a Bonus Buy shows this notice instead of buying
+     * (no charge, no bonus). The buy screen, prices and confirmation stay available.
+     */
+    bonusBuyNotice?: { title: string; body: string };
+  };
   checkWinDelayMs?: { normal: number; turbo: number };
   animationGrid?: { originSlot: string; reelPitch: number; rowPitch: number };
+  /** Opt-in layout mode (desktop / landscape / portrait) published as `data-layout`. */
+  layout?: import("../presentation/layout-mode.ts").LayoutModeConfig;
   scene?: {
     layers: Record<string, number>;
     slots: Record<string, string>;
     openingDimmerOpacity?: number;
     openingReveal?: { durationMs: number; symbolDelayMs: number; mascotDelayMs: number; playbackRate?: number };
-    winScreen?: { centerY: number; paddingPx: number; landscapeFit: number; portraitFit: number };
-    chestCamera?: { scale: number; originY: number; durationMs: number };
+    bonusSceneVeil?: import("../presentation/scene.ts").SceneVeil;
+    winScreen?: {
+      centerY: number; paddingPx: number; landscapeFit: number; portraitFit: number;
+      /** Win counter duration in seconds per final win clip; the count runs continuously across tiers. */
+      countSeconds?: Record<string, number>;
+    };
+    shockwave?: import("../presentation/shockwave.ts").ShockwaveConfig;
+    /** Milliseconds after the Total Win click: background base entry and chest text clear, then reel entry. */
+    totalWinOutro?: { continueFadeMs: number; backgroundEnterMs: number; reelEnterMs: number };
+    chestCamera?: {
+      scale: number;
+      originY: number;
+      durationMs: number;
+      /** Zoom used by the portrait layout; defaults to `scale`. */
+      portraitScale?: number;
+      /** Upward camera lift in CSS px: portrait, then the first `[maxWidthExclusive, px]` step, else `default`. */
+      liftPx?: { portrait: number; steps: [number, number][]; default: number };
+    };
     sideLogo?: { referenceAspect: number; leftFactor: number; upFactor: number };
     backgroundCamera?: {
       width: number;
@@ -153,10 +184,17 @@ export interface ReelPresentation {
   drop: {
     exit: DropTiming;
     enter: DropTiming;
+    enterSpawnClearancePx?: number;
     bounceMs: number;
     bouncePx: number;
     turboMultiplier: number;
     anticipation?: DropAnticipation;
+    /**
+     * Opt-in reference timeline (eases, staggers and turbo values per phase). When present it
+     * replaces exit/enter/bounce/turboMultiplier timing; `anticipation.symbolId` still names
+     * the scatter. See presentation/drop-timeline.ts.
+     */
+    timeline?: import("../presentation/drop-timeline.ts").DropTimelineConfig;
   };
 }
 export interface GameDefinition {
@@ -189,6 +227,11 @@ export interface GameDefinition {
 }
 export interface GameTransport {
   hasResume?: boolean;
+  mockBonusEnabled?: boolean;
+  /** Mock review only: break the next paid request once (see ProposalTransport). */
+  debugFault?: "fail-request" | "drop-response" | null;
+  /** Mock review only: set the synthetic wallet balance. */
+  debugSetBalance?(balanceMinor: number): Promise<void>;
   resume?(refresh?: boolean): Promise<Outcome>;
   completePresentation?(): Promise<Snapshot>;
   nextPresentation?(): Outcome | null;

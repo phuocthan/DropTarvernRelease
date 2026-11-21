@@ -1,533 +1,528 @@
-﻿{
-    "$schema":  "../../framework/game-config.schema.json",
-    "schemaVersion":  1,
-    "id":  "tavern-template",
-    "title":  "Tavern Drop",
-    "resources":  {
-                      "assets":  {
-
-                                 },
-                      "bundles":  {
-                                      "core":  {
-                                                   "assets":  [
-
-                                                              ]
-                                               }
-                                  },
-                      "startup":  [
-                                      "core"
-                                  ],
-                      "concurrency":  4,
-                      "retries":  1
-                  },
-    "reels":  5,
-    "rows":  5,
-    "lines":  [
-                  [
-                      0,
-                      0,
-                      0,
-                      0,
-                      0
-                  ],
-                  [
-                      1,
-                      1,
-                      1,
-                      1,
-                      1
-                  ],
-                  [
-                      2,
-                      2,
-                      2,
-                      2,
-                      2
-                  ],
-                  [
-                      3,
-                      3,
-                      3,
-                      3,
-                      3
-                  ],
-                  [
-                      4,
-                      4,
-                      4,
-                      4,
-                      4
-                  ],
-                  [
-                      0,
-                      1,
-                      0,
-                      1,
-                      0
-                  ],
-                  [
-                      1,
-                      2,
-                      1,
-                      2,
-                      1
-                  ],
-                  [
-                      2,
-                      3,
-                      2,
-                      3,
-                      2
-                  ],
-                  [
-                      3,
-                      4,
-                      3,
-                      4,
-                      3
-                  ],
-                  [
-                      1,
-                      0,
-                      1,
-                      0,
-                      1
-                  ],
-                  [
-                      2,
-                      1,
-                      2,
-                      1,
-                      2
-                  ],
-                  [
-                      3,
-                      2,
-                      3,
-                      2,
-                      3
-                  ],
-                  [
-                      4,
-                      3,
-                      4,
-                      3,
-                      4
-                  ],
-                  [
-                      0,
-                      1,
-                      2,
-                      3,
-                      4
-                  ],
-                  [
-                      4,
-                      3,
-                      2,
-                      1,
-                      0
-                  ]
-              ],
-    "symbols":  [
-                    {
-                        "id":  "A",
-                        "label":  "A",
-                        "kind":  "royal",
-                        "color":  "#b94338",
-                        "glyph":  "A",
-                        "pays":  {
-                                     "3":  20,
-                                     "4":  50,
-                                     "5":  100
-                                 }
-                    },
-                    {
-                        "id":  "K",
-                        "label":  "K",
-                        "kind":  "royal",
-                        "color":  "#65a8b9",
-                        "glyph":  "K",
-                        "pays":  {
-                                     "3":  20,
-                                     "4":  50,
-                                     "5":  100
-                                 }
-                    },
-                    {
-                        "id":  "Q",
-                        "label":  "Q",
-                        "kind":  "royal",
-                        "color":  "#ad77b5",
-                        "glyph":  "Q",
-                        "pays":  {
-                                     "3":  20,
-                                     "4":  50,
-                                     "5":  100
-                                 }
-                    },
-                    {
-                        "id":  "J",
-                        "label":  "J",
-                        "kind":  "royal",
-                        "color":  "#6daa88",
-                        "glyph":  "J",
-                        "pays":  {
-                                     "3":  20,
-                                     "4":  50,
-                                     "5":  100
-                                 }
-                    },
-                    {
-                        "id":  "10",
-                        "label":  "10",
-                        "kind":  "royal",
-                        "color":  "#cba563",
-                        "glyph":  "10",
-                        "pays":  {
-                                     "3":  20,
-                                     "4":  50,
-                                     "5":  100
-                                 }
-                    },
-                    {
-                        "id":  "ale",
-                        "label":  "Ale",
-                        "kind":  "premium",
-                        "color":  "#e9b744",
-                        "glyph":  "🍺",
-                        "pays":  {
-                                     "3":  40,
-                                     "4":  100,
-                                     "5":  250
-                                 }
-                    },
-                    {
-                        "id":  "barrel",
-                        "label":  "Roast",
-                        "kind":  "premium",
-                        "color":  "#c98540",
-                        "glyph":  "🍖",
-                        "pays":  {
-                                     "3":  50,
-                                     "4":  125,
-                                     "5":  300
-                                 }
-                    },
-                    {
-                        "id":  "coin",
-                        "label":  "Potion",
-                        "kind":  "premium",
-                        "color":  "#f3cd67",
-                        "glyph":  "🧪",
-                        "pays":  {
-                                     "3":  60,
-                                     "4":  150,
-                                     "5":  400
-                                 }
-                    },
-                    {
-                        "id":  "crown",
-                        "label":  "Feast",
-                        "kind":  "premium",
-                        "color":  "#dbad50",
-                        "glyph":  "🍲",
-                        "pays":  {
-                                     "3":  75,
-                                     "4":  200,
-                                     "5":  500
-                                 }
-                    },
-                    {
-                        "id":  "wild",
-                        "label":  "Wild",
-                        "kind":  "wild",
-                        "color":  "#f1c35b",
-                        "glyph":  "W",
-                        "pays":  {
-                                     "3":  100,
-                                     "4":  300,
-                                     "5":  750
-                                 }
-                    },
-                    {
-                        "id":  "bonus",
-                        "label":  "Bonus",
-                        "kind":  "bonus",
-                        "color":  "#8ad4c5",
-                        "glyph":  "B",
-                        "pays":  {
-
-                                 }
-                    }
-                ],
-    "bets":  [
-                 1,
-                 2,
-                 5,
-                 10,
-                 20,
-                 40,
-                 60,
-                 80,
-                 100,
-                 120,
-                 140,
-                 160,
-                 180,
-                 200,
-                 300,
-                 400,
-                 500,
-                 600,
-                 700,
-                 800,
-                 900,
-                 1000,
-                 1200,
-                 1400,
-                 1600,
-                 1800,
-                 2000,
-                 3000,
-                 4000,
-                 5000,
-                 7500,
-                 10000
-             ],
-    "initialBoard":  [
-                         [
-                             "A",
-                             "ale",
-                             "K",
-                             "coin",
-                             "J"
-                         ],
-                         [
-                             "barrel",
-                             "Q",
-                             "wild",
-                             "J",
-                             "A"
-                         ],
-                         [
-                             "K",
-                             "coin",
-                             "bonus",
-                             "ale",
-                             "Q"
-                         ],
-                         [
-                             "Q",
-                             "ale",
-                             "A",
-                             "crown",
-                             "K"
-                         ],
-                         [
-                             "crown",
-                             "J",
-                             "coin",
-                             "Q",
-                             "barrel"
-                         ]
-                     ],
-    "routing":  {
-                    "query":  "tavern",
-                    "apiBase":  "/api",
-                    "skin":  "basic",
-                    "contract":  "proposal-v1"
-                },
-    "presentation":  {
-                         "allowForceStop":  false,
-                         "foregroundWinSymbols":  [
-                                                      "bonus"
-                                                  ],
-                         "winOverflowPaddingPx":  72,
-                         "landing":  {
-                                         "compressMs":  70,
-                                         "stretchMs":  90,
-                                         "settleMs":  120,
-                                         "leadMs":  80,
-                                         "squashX":  1.1,
-                                         "squashY":  0.88,
-                                         "stretchX":  0.94,
-                                         "stretchY":  1.06
-                                     },
-                         "spinType":  "drop",
-                         "cellSizePx":  102,
-                         "gapPx":  8,
-                         "reelMaskPaddingPx":  6,
-                         "checkWinDelayMs":  {
-                                                 "normal":  1000,
-                                                 "turbo":  500
-                                             },
-                         "controls":  {
-                                          "menu":  true,
-                                          "autoRounds":  [
-                                                             10,
-                                                             25,
-                                                             50,
-                                                             100,
-                                                             250,
-                                                             500,
-                                                             1000
-                                                         ],
-                                          "autoUnlimited":  true,
-                                          "autoTopUp":  10,
-                                          "betMenuCloseDelayMs":  100
-                                      },
-                         "winDimmerOpacity":  0.5,
-                         "animationGrid":  {
-                                               "originSlot":  "slot_symbols",
-                                               "reelPitch":  574,
-                                               "rowPitch":  564
-                                           },
-                         "scene":  {
-                                       "layers":  {
-                                                      "scenery":  1,
-                                                      "mascot-behind":  2,
-                                                      "reels":  3,
-                                                      "mascot":  4,
-                                                      "table":  5
-                                                  },
-                                       "openingDimmerOpacity":  0.55,
-                                       "winScreen":  {
-                                                         "centerY":  0.44,
-                                                         "paddingPx":  16,
-                                                         "landscapeFit":  1.55,
-                                                         "portraitFit":  1.71
-                                                     },
-                                       "openingReveal":  {
-                                                             "durationMs":  900,
-                                                             "symbolDelayMs":  288,
-                                                             "mascotDelayMs":  225,
-                                                             "playbackRate":  0.8
-                                                         },
-                                       "chestCamera":  {
-                                                           "scale":  1.24,
-                                                           "originY":  0.79,
-                                                           "durationMs":  500
-                                                       },
-                                       "backgroundCamera":  {
-                                                                "width":  6000,
-                                                                "top":  2060,
-                                                                "landscapeBottom":  1650,
-                                                                "portraitBottom":  1940,
-                                                                "centerOffsetX":  80
-                                                            },
-                                       "slots":  {
-                                                     "portraitMascot":  "slot_character",
-                                                     "landscapeMascot":  "slot_character",
-                                                     "baseTable":  "background_normal_foreground",
-                                                     "bonusTable":  "background_bonus_foreground"
-                                                 }
-                                   },
-                         "symbolLandingEffects":  {
-                                                      "bonus":  {
-                                                                    "background":  "3_shake",
-                                                                    "reelhouse":  "3_shake"
-                                                                }
-                                                  },
-                         "feature":  {
-                                         "startDelayMs":  2000,
-                                         "endDelayMs":  2000,
-                                         "hideSymbolsUntilFirstSpin":  true
-                                     },
-                         "normal":  {
-                                        "speedPxPerSecond":  1700,
-                                        "turboSpeedPxPerSecond":  1700,
-                                        "stopDelayMs":  130,
-                                        "turboStopDelayMs":  36,
-                                        "bounceMs":  170,
-                                        "bouncePx":  8
-                                    },
-                         "drop":  {
-                                      "exit":  {
-                                                   "fallMs":  250,
-                                                   "reelStaggerMs":  18,
-                                                   "rowStaggerMs":  24,
-                                                   "holdMs":  140
-                                               },
-                                      "enter":  {
-                                                    "fallMs":  390,
-                                                    "reelStaggerMs":  76,
-                                                    "rowStaggerMs":  52,
-                                                    "holdMs":  0
-                                                },
-                                      "bounceMs":  200,
-                                      "bouncePx":  8,
-                                      "turboMultiplier":  2.24,
-                                      "anticipation":  {
-                                                           "symbolId":  "bonus",
-                                                           "count":  2,
-                                                           "reelPauseMs":  800
-                                                       }
-                                  }
-                     },
-    "demo":  {
-                 "initialBalance":  100000,
-                 "capMultiplier":  5000,
-                 "buyPrices":  {
-                                   "tavern":  50,
-                                   "drop":  100
-                               },
-                 "chancePrices":  {
-                                      "standard":  1,
-                                      "extra":  2,
-                                      "super":  5
-                                  },
-                 "featureSpins":  {
-                                      "tavern":  10,
-                                      "drop":  10
-                                  },
-                 "retriggerSpins":  5,
-                 "maxFeatureSpins":  40,
-                 "chestMultipliers":  {
-                                          "tavern":  [
-                                                         2,
-                                                         3,
-                                                         5
-                                                     ],
-                                          "drop":  [
-                                                       5,
-                                                       10,
-                                                       25,
-                                                       50,
-                                                       100
-                                                   ]
-                                      },
-                 "winTiers":  [
-                                  {
-                                      "label":  "SMALL WIN",
-                                      "multiplier":  5
-                                  },
-                                  {
-                                      "label":  "NICE WIN",
-                                      "multiplier":  10
-                                  },
-                                  {
-                                      "label":  "BIG WIN",
-                                      "multiplier":  20
-                                  },
-                                  {
-                                      "label":  "SUPER WIN",
-                                      "multiplier":  50
-                                  },
-                                  {
-                                      "label":  "MEGA WIN",
-                                      "multiplier":  75
-                                  },
-                                  {
-                                      "label":  "EPIC WIN",
-                                      "multiplier":  100
-                                  }
-                              ],
-                 "scatterRates":  {
-                                      "standard":  0.03,
-                                      "extra":  0.05,
-                                      "super":  0.07
-                                  }
-             },
-    "defaultBet":  100
+{
+  "$schema": "../../framework/game-config.schema.json",
+  "schemaVersion": 1,
+  "id": "tavern-template",
+  "title": "Tavern Drop",
+  "resources": {
+    "base": "tavern-assets/assets/",
+    "concurrency": 4,
+    "retries": 1,
+    "assets": {
+      "atlas": { "src": "{quality}/td_master.atlas" },
+      "symbols.low": { "src": "td_symbols_low.skel" },
+      "symbols.high": { "src": "td_symbols_high.skel" },
+      "symbols.wild": { "src": "td_symbols_wild.skel" },
+      "symbols.bonus": { "src": "td_symbols_bonus.skel" },
+      "scene.background": { "src": "td_backgrounds.skel" },
+      "scene.reelhouse": { "src": "td_reelhouse.skel" },
+      "scene.screens": { "src": "td_screens.skel" },
+      "scene.mascot": { "src": "td_character.skel" },
+      "font.gold": { "src": "td_gold.xml" },
+      "font.green": { "src": "td_green.xml" },
+      "font.red": { "src": "td_red.xml" },
+      "font.ui": { "src": "outfit-700-D9T176aR.woff2", "type": "font", "family": "Outfit", "weight": "700", "optional": true },
+      "audio.manifest": { "src": "td_sounds.json", "type": "json", "optional": true },
+      "symbol.A": { "src": "l1_static.webp" },
+      "symbol.K": { "src": "l2_static.webp" },
+      "symbol.Q": { "src": "l3_static.webp" },
+      "symbol.J": { "src": "l4_static.webp" },
+      "symbol.10": { "src": "l5_static.webp" },
+      "symbol.ale": { "src": "h4_static.webp" },
+      "symbol.barrel": { "src": "h2_static.webp" },
+      "symbol.coin": { "src": "h3_static.webp" },
+      "symbol.crown": { "src": "h1_static.webp" },
+      "symbol.wild": { "src": "wild_static.webp" },
+      "symbol.bonus": { "src": "bonus_static.webp" }
+    },
+    "bundles": {
+      "fonts": { "assets": ["font.gold", "font.green", "font.red"] },
+      "ui": { "assets": ["font.ui"] },
+      "symbols-static": { "assets": ["symbol.A", "symbol.K", "symbol.Q", "symbol.J", "symbol.10", "symbol.ale", "symbol.barrel", "symbol.coin", "symbol.crown", "symbol.wild", "symbol.bonus"] },
+      "atlas": { "assets": ["atlas"] },
+      "symbol-spines": { "dependsOn": ["atlas"], "assets": ["symbols.low", "symbols.high", "symbols.wild", "symbols.bonus"] },
+      "scene": { "dependsOn": ["atlas"], "assets": ["scene.background", "scene.reelhouse", "scene.screens", "scene.mascot"] },
+      "audio": { "assets": ["audio.manifest"] }
+    },
+    "startup": ["fonts", "symbol-spines", "scene", "audio"]
+  },
+  "reels": 5,
+  "rows": 5,
+  "lines": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    [
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    [
+      1,
+      2,
+      1,
+      2,
+      1
+    ],
+    [
+      2,
+      3,
+      2,
+      3,
+      2
+    ],
+    [
+      3,
+      4,
+      3,
+      4,
+      3
+    ],
+    [
+      1,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      2,
+      1,
+      2,
+      1,
+      2
+    ],
+    [
+      3,
+      2,
+      3,
+      2,
+      3
+    ],
+    [
+      4,
+      3,
+      4,
+      3,
+      4
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    [
+      4,
+      3,
+      2,
+      1,
+      0
+    ]
+  ],
+  "symbols": [
+    {
+      "id": "A",
+      "label": "A",
+      "kind": "royal",
+      "color": "#b94338",
+      "glyph": "A",
+      "pays": {
+        "3": 20,
+        "4": 50,
+        "5": 100
+      }
+    },
+    {
+      "id": "K",
+      "label": "K",
+      "kind": "royal",
+      "color": "#65a8b9",
+      "glyph": "K",
+      "pays": {
+        "3": 20,
+        "4": 50,
+        "5": 100
+      }
+    },
+    {
+      "id": "Q",
+      "label": "Q",
+      "kind": "royal",
+      "color": "#ad77b5",
+      "glyph": "Q",
+      "pays": {
+        "3": 20,
+        "4": 50,
+        "5": 100
+      }
+    },
+    {
+      "id": "J",
+      "label": "J",
+      "kind": "royal",
+      "color": "#6daa88",
+      "glyph": "J",
+      "pays": {
+        "3": 20,
+        "4": 50,
+        "5": 100
+      }
+    },
+    {
+      "id": "10",
+      "label": "10",
+      "kind": "royal",
+      "color": "#cba563",
+      "glyph": "10",
+      "pays": {
+        "3": 20,
+        "4": 50,
+        "5": 100
+      }
+    },
+    {
+      "id": "ale",
+      "label": "Ale",
+      "kind": "premium",
+      "color": "#e9b744",
+      "glyph": "🍺",
+      "pays": {
+        "3": 40,
+        "4": 100,
+        "5": 250
+      }
+    },
+    {
+      "id": "barrel",
+      "label": "Roast",
+      "kind": "premium",
+      "color": "#c98540",
+      "glyph": "🍖",
+      "pays": {
+        "3": 50,
+        "4": 125,
+        "5": 300
+      }
+    },
+    {
+      "id": "coin",
+      "label": "Potion",
+      "kind": "premium",
+      "color": "#f3cd67",
+      "glyph": "🧪",
+      "pays": {
+        "3": 60,
+        "4": 150,
+        "5": 400
+      }
+    },
+    {
+      "id": "crown",
+      "label": "Feast",
+      "kind": "premium",
+      "color": "#dbad50",
+      "glyph": "🍲",
+      "pays": {
+        "3": 75,
+        "4": 200,
+        "5": 500
+      }
+    },
+    {
+      "id": "wild",
+      "label": "Wild",
+      "kind": "wild",
+      "color": "#f1c35b",
+      "glyph": "W",
+      "pays": {
+        "3": 100,
+        "4": 300,
+        "5": 750
+      }
+    },
+    {
+      "id": "bonus",
+      "label": "Bonus",
+      "kind": "bonus",
+      "color": "#8ad4c5",
+      "glyph": "B",
+      "pays": {}
+    }
+  ],
+  "bets": [
+    200, 400, 1000, 2000, 4000, 8000,
+    12000, 16000, 20000, 24000, 28000, 32000,
+    36000, 40000, 60000, 80000, 100000, 120000,
+    140000, 160000, 180000, 200000
+  ],
+  "initialBoard": [
+    [
+      "A",
+      "ale",
+      "K",
+      "coin",
+      "J"
+    ],
+    [
+      "barrel",
+      "Q",
+      "wild",
+      "J",
+      "A"
+    ],
+    [
+      "K",
+      "coin",
+      "bonus",
+      "ale",
+      "Q"
+    ],
+    [
+      "Q",
+      "ale",
+      "A",
+      "crown",
+      "K"
+    ],
+    [
+      "crown",
+      "J",
+      "coin",
+      "Q",
+      "barrel"
+    ]
+  ],
+  "routing": {
+    "query": "tavern",
+    "apiBase": "/api",
+    "skin": "tavern",
+    "contract": "proposal-v1"
+  },
+  "presentation": {
+    "layout": { "mobileWidth": 661, "mobileHeight": 449 },
+    "allowForceStop": false,
+    "foregroundWinSymbols": ["bonus"],
+    "winOverflowPaddingPx": 72,
+    "landing": { "compressMs": 70, "stretchMs": 90, "settleMs": 120, "leadMs": 80, "squashX": 1.1, "squashY": 0.88, "stretchX": 0.94, "stretchY": 1.06 },
+    "spinType": "drop",
+    "cellSizePx": 102,
+    "gapPx": 8,
+    "reelMaskPaddingPx": 6,
+    "checkWinDelayMs": { "normal": 500, "turbo": 300 },
+    "controls": {
+      "menu": true,
+      "autoRounds": [10, 25, 50, 100, 250, 500, 1000],
+      "autoUnlimited": true,
+      "autoTopUp": 10,
+      "betMenuCloseDelayMs": 100,
+      "bonusBuyNotice": {
+        "title": "Coming Soon in M3",
+        "body": "The Tavern and Drop bonus games arrive in Milestone 3. You have not been charged."
+      }
+    },
+    "loadingScreen": {
+      "background": "tavern-assets/assets/td_loader_bg.webp",
+      "brandLogo": "tavern-assets/assets/paperclip_full_logo.webp",
+      "brandName": "Paperclip Gaming",
+      "gameLogo": "tavern-assets/assets/td_loader.webp",
+      "brandIntro": {
+        "src": "tavern-assets/assets/paperclip-rMFDawAD.gif",
+        "durationMs": 2700,
+        "holdUntilReady": false
+      }
+    },
+    "winDimmerOpacity": 0.5,
+    "animationGrid": {
+      "originSlot": "slot_symbols",
+      "reelPitch": 574,
+      "rowPitch": 564
+    },
+    "scene": {
+      "layers": { "scenery": 1, "mascot-behind": 2, "reels": 3, "mascot": 4, "table": 5 },
+      "winScreen": {
+        "centerY": 0.44, "paddingPx": 16, "landscapeFit": 1.55, "portraitFit": 1.71,
+        "countSeconds": { "smallwin": 0.73, "bigwin": 0.75, "superwin": 2.4, "megawin": 3.8, "epicwin": 5.2, "maxwin": 6.5 }
+      },
+      "shockwave": {
+        "amplitude": 20, "wavelength": 450, "speed": 500, "brightness": 1, "radius": -1,
+        "durationMs": 500, "firstTime": 0, "restartTime": -1.5, "endTime": 2.4
+      },
+      "totalWinOutro": { "continueFadeMs": 250, "backgroundEnterMs": 200, "reelEnterMs": 500 },
+      "openingReveal": { "durationMs": 900, "symbolDelayMs": 288, "mascotDelayMs": 300, "playbackRate": 1 },
+      "chestCamera": {
+        "scale": 1.4, "portraitScale": 1.125, "originY": 0.5, "durationMs": 500,
+        "liftPx": { "portrait": 20, "steps": [[600, 15], [900, 100]], "default": 200 }
+      },
+      "backgroundCamera": {
+        "width": 6000,
+        "top": 2060,
+        "landscapeBottom": 1650,
+        "portraitBottom": 1940,
+        "centerOffsetX": 80
+      },
+      "slots": {
+        "portraitMascot": "slot_character",
+        "landscapeMascot": "slot_character",
+        "baseTable": "background_normal_foreground",
+        "bonusTable": "background_bonus_foreground"
+      }
+    },
+    "symbolLandingEffects": {
+      "bonus": {
+        "background": "3_shake",
+        "reelhouse": "3_shake"
+      }
+    },
+    "feature": {
+      "startDelayMs": 500,
+      "endDelayMs": 2000,
+      "hideSymbolsUntilFirstSpin": true
+    },
+    "normal": {
+      "speedPxPerSecond": 1700,
+      "turboSpeedPxPerSecond": 1700,
+      "stopDelayMs": 130,
+      "turboStopDelayMs": 36,
+      "bounceMs": 170,
+      "bouncePx": 8
+    },
+    "drop": {
+      "enterSpawnClearancePx": 48,
+      "exit": {
+        "fallMs": 250,
+        "reelStaggerMs": 18,
+        "rowStaggerMs": 24,
+        "holdMs": 140
+      },
+      "enter": {
+        "fallMs": 390,
+        "reelStaggerMs": 76,
+        "rowStaggerMs": 52,
+        "holdMs": 0
+      },
+      "bounceMs": 200,
+      "bouncePx": 8,
+      "turboMultiplier": 2.24,
+      "anticipation": {
+        "symbolId": "bonus",
+        "count": 2,
+        "reelPauseMs": 800
+      },
+      "timeline": {
+        "unitsPerRow": 564,
+        "exit": {
+          "durationMs": 340, "turboDurationMs": 90, "distance": 3400, "ease": "power3.in",
+          "rowStaggerMs": 40, "turboRowStaggerMs": 10, "reelStaggerMs": 0, "turboReelStaggerMs": 15
+        },
+        "enter": {
+          "durationMs": 290, "turboDurationMs": 120, "startY": -2200, "rowStartStep": 100,
+          "ease": "M0,0 C0.566,0.382 0.689,1.015 0.689,1.015 0.689,1.015 0.749,0.989 0.855,0.989 0.945,0.989 0.931,0.989 1,1",
+          "rowStaggerMs": 40, "turboRowStaggerMs": 15, "reelStaggerMs": 70, "turboReelStaggerMs": 15,
+          "waitMs": 350, "turboWaitMs": 50, "landLeadMs": 250,
+          "settleWaitMs": 380, "turboSettleWaitMs": 150
+        },
+        "anticipation": { "minCount": 2, "maxCount": 3, "rowStaggerMs": 100, "pauseMs": 800 }
+      }
+    }
+  },
+  "demo": {
+    "initialBalance": 10000000,
+    "capMultiplier": 10000,
+    "buyPrices": {
+      "tavern": 125,
+      "drop": 300
+    },
+    "chancePrices": {
+      "standard": 1,
+      "extra": 3,
+      "super": 6
+    },
+    "featureSpins": {
+      "tavern": 10,
+      "drop": 10
+    },
+    "retriggerSpins": 5,
+    "maxFeatureSpins": 40,
+    "chestMultipliers": {
+      "tavern": [
+        2,
+        3,
+        5
+      ],
+      "drop": [
+        5,
+        10,
+        25,
+        50,
+        100
+      ]
+    },
+    "winTiers": [
+      {
+        "label": "SMALL WIN",
+        "multiplier": 5
+      },
+      {
+        "label": "NICE WIN",
+        "multiplier": 10
+      },
+      {
+        "label": "BIG WIN",
+        "multiplier": 20
+      },
+      {
+        "label": "SUPER WIN",
+        "multiplier": 50
+      },
+      {
+        "label": "MEGA WIN",
+        "multiplier": 75
+      },
+      {
+        "label": "EPIC WIN",
+        "multiplier": 100
+      }
+    ],
+    "scatterRates": {
+      "standard": 0.03,
+      "extra": 0.05,
+      "super": 0.07
+    }
+  },
+  "defaultBet": 20000
 }

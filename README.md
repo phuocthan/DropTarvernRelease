@@ -1,45 +1,46 @@
-# Tavern Drop Framework Preview — Milestone 1
+# Tavern Drop — Milestone 2
 
-Reusable TypeScript/PixiJS core with a 5×5 Drop preview and a 3×3 Normal example, sharing the session, controller, reels, config and API adapter. Temporary Pixi-drawn symbols are intentional M1 placeholders. This is a runnable framework delivery candidate, not the finished Tavern presentation.
+The complete Tavern Drop **base game** on the reusable `fw-pixi` TypeScript/PixiJS framework, with the original Tavern Drop v13 art, Spine animations, fonts and sounds. The same framework also runs a 3×3 example. The Tavern and Drop bonus games follow in Milestone 3; in this build, confirming a Bonus Buy shows **Coming Soon in M3** and no bet is placed.
 
-## Build and run
+Results, balances and the KRW demo wallet come from the included mock API.
 
-Node >=22.18 and npm:
+## Run
+
+Node.js 22.18 or newer and npm:
 
 ```sh
-node tools/verify-m1.mjs
 npm ci
 npm test
 npm run build
 npm start
 ```
 
-Open `http://localhost:4000/?game=tavern` (5×5 Drop) or `http://localhost:4000/?game=default` (3×3 Normal). `?game=reuse` also opens 3×3. Click Spin. Each game has its own synthetic wallet. The preview fixes its base bet and does not expose a full bonus scene, bet shop or animation viewer.
+Open `http://localhost:4000/`, press **Press to continue** and spin.
 
-To run on another port in PowerShell:
+| URL | Opens |
+| --- | --- |
+| `/` or `/?game=tavern` | Tavern Drop 5×5 |
+| `/?game=reuse` | 3×3 example on the same framework |
+| `/?game=viewer` | Asset viewer: Spine clips, images and sound cues |
+| add `&quality=hd` or `&quality=sd` | Forces the texture tier |
 
-```powershell
-$env:PORT = '4351'
-npm start
-```
+Development server with hot reload: `npm run dev` (game on port 5173, API on 4000). Browser tests: `npm run test:browser` (set `CHROMIUM_PATH` if Chromium is not at `/usr/bin/chromium`).
 
-For development: `npm run dev` (Vite 5173; API 4000). The server runs the current body-only `/api/v1` mock. Its synthetic JSON store persists across restarts at `.runtime/backend-v1.json`; use `MOCK_API_DATA_FILE` to choose a separate store. Run one process per store. Real authentication, wallet, final math and production storage belong to the later agreed integration.
+Set `MOCK_DEBUG_BONUS=1` to show **Feature buy → Bonus debug**, which holds the error-state switches used in testing. It is on by default on Railway and off elsewhere.
 
-## Browser checks
+## Documents
 
-Install Playwright Chromium (`npx playwright install chromium`) or set `CHROMIUM_PATH` to an existing Chrome executable. `npm run test:browser` builds and starts an isolated production preview on 4352, then checks both routes, spin and reload. Set `PLAYWRIGHT_BASE_URL` to test an already-running M1 host instead.
+| Document | Content |
+| --- | --- |
+| [Upgrade from M1 and deploy](docs/milestone-2-upgrade-and-deploy.md) | What changed since M1, upgrade steps, Railway and Node deployment, applying M2 to the client project |
+| [Features and test guide](docs/milestone-2-features-and-testing.md) ([PDF](docs/milestone-2-features-and-testing.pdf)) | Every M2 scope item, how to test it and the expected result |
+| [Asset and sound checklist](docs/milestone-2-asset-checklist.md) ([PDF](docs/milestone-2-asset-checklist.pdf)) | Every file, sound cue and Spine clip: used or not, where, and whether it matches the original |
+| [Error-state evidence](docs/milestone-2-evidence/error-states/README.md) | Insufficient balance, connection lost, reconnecting and retry captures |
+| [fw-pixi architecture](docs/fw-pixi-architecture.md) | Framework structure and resource pipeline |
+| [API fields](docs/milestone-1-api.md) | Request and response fields of the mock API |
+| [Asset inventory](docs/tavern-asset-inventory.md) | Asset sources and how to recheck them against the provider's CDN |
+| [Milestone 1](docs/milestone-1.md) | M1 scope, kept for reference |
 
-## Review documents
+[`SOURCE_REVISION`](SOURCE_REVISION) records the development commit of this snapshot. [`EXPORT_MANIFEST.json`](EXPORT_MANIFEST.json) lists the SHA-256 of every exported file. Earlier milestone tags are unchanged.
 
-- [M1 scope and acceptance](docs/milestone-1.md)
-- [Shared architecture and flowchart](docs/architecture.md)
-- [Asset specifications and verification limits](docs/milestone-1-asset-spec.md)
-- [Current API fields and sanitized synthetic examples](docs/milestone-1-api.md)
-- [Local backend run instructions](docs/backend-localhost-v1.md)
-- [Verification evidence](docs/milestone-1-evidence/verification.md)
-- [Development source revision](SOURCE_REVISION)
-- [Export file checksums](EXPORT_MANIFEST.json)
-
-The public snapshot contains core source, placeholder configs, synthetic backend, tests, docs and evidence. Original reference artwork/audio/Spine exports, custom Tavern scenes, viewer, local player data, research captures and development history are excluded. Asset inventory/playback evidence describes the development reference pack; client approval of the final asset pack and branding remains open.
-
-This GitHub release snapshot is provided for review. Client acceptance/sign-off and a future GitLab destination are separate from pushing the source. Existing milestone tags remain unchanged.
+The `korRelease/` folder holds the Milestone 1 copy in the client repository layout. It is not changed by this release.
