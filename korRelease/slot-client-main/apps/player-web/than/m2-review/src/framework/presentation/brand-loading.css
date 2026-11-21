@@ -1,0 +1,63 @@
+.brand-loading {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background-color: #17100e;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+/* Reference v13 loader (.loader.svelte-1f5lgaa): column, 2rem gap, lifted 11%, the whole
+   group scaled by --brand-loader-scale = min(h/900, w/700, 1). */
+.brand-loading-logos {
+  position: fixed;
+  inset: -11% 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  transform: scale(var(--brand-loader-scale, 1));
+}
+.brand-loading-studio {
+  width: 500px;
+  height: auto;
+  transform: translateY(100px);
+}
+.brand-loading-game {
+  max-width: 720px;
+  height: auto;
+  transform: scale(.8) translateY(60px);
+}
+.brand-loading-intro {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #000;
+}
+.brand-loading-intro img {
+  display: block;
+  width: min(100%, 550px);
+  height: auto;
+}
+.brand-loading-progress {
+  position: absolute;
+  z-index: 2;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0 2px 2px #000, 0 3px 0 #000;
+}
+.brand-loading-reload {
+  position: absolute;
+  bottom: 72px;
+  padding: 9px 16px;
+}

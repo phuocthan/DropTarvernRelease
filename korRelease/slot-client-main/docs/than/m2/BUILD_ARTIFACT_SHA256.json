@@ -1,0 +1,399 @@
+{
+  "nodeVersion": "v24.20.0",
+  "sourceRevision": "1e22486f6dc0b6cf3799270105fd1fc4c5e4c82a",
+  "lockfileSha256": "b338f257c0d31ce4e4fd1b479953039a4307cc80a586f8882fec2a43331d71e8",
+  "artifactFiles": [
+    {
+      "path": "assets/app-71eFAdZ4.css",
+      "sha256": "aa3cadccb3ebe5158e812b3c66f1f472838a2aff84e4e3ce59e4e37cb4437a69"
+    },
+    {
+      "path": "assets/app-D7ZU7rWj.js",
+      "sha256": "3b0a634616facb96d53f74e0359b41e67dabde7a07b8b9348c4fd74b1fecb42b"
+    },
+    {
+      "path": "assets/asset-url-BMktSZvD.js",
+      "sha256": "3b760f7277dde6833f4fec2e5b7c98bbc750269ec7f20410f3c746c8240a75a8"
+    },
+    {
+      "path": "assets/basic-game-D1YM5DkD.css",
+      "sha256": "17df26ecd606e3a44af0a2e7fa45f3973ffaba2694a521238d9242021b2d8c69"
+    },
+    {
+      "path": "assets/basic-game-Df0RBmHC.js",
+      "sha256": "875981924e330e73d1f66b9537af9038c331154856daa6b3568f8a8eb99a6ab2"
+    },
+    {
+      "path": "assets/BitmapFont-C3DIcMku.js",
+      "sha256": "b97d25e0531fda86b7269c472cf2f87f71c1e40f33a36a679dbf18636c479503"
+    },
+    {
+      "path": "assets/BitmapFontManager-Dve2crvg.js",
+      "sha256": "39bb4a60201cef68bea680db4675653396f0012b9a22957214b407877d9f56c9"
+    },
+    {
+      "path": "assets/browserAll-CHszET3u.js",
+      "sha256": "90ec01030d810a78455f67a7643afd64d421cf0407be9e681cfecaeee313f059"
+    },
+    {
+      "path": "assets/CanvasRenderer-kJjToAZW.js",
+      "sha256": "beb1c9bffc705ea3c7eaa6fa80f4812fec4a124a1ffaf613360e9b0c5176b6fb"
+    },
+    {
+      "path": "assets/defaultFilter.vert-Dw338EcB.js",
+      "sha256": "0c1f354239fbc08790d808417f7ccffca94666f91bb5a8f3425eeaa5a6292035"
+    },
+    {
+      "path": "assets/Filter-Dwm4IG78.js",
+      "sha256": "ca9c53065fda98eb6fc115ff5b0379c6ad728297a14c662dbfd3f400aea03daf"
+    },
+    {
+      "path": "assets/getTexelRangeRects-BbMHlXRX.js",
+      "sha256": "b817e10db86a6406fce13b50ed3eff17b4b18298507b81ae35107d5a7ef123a8"
+    },
+    {
+      "path": "assets/index-CipT6-XK.js",
+      "sha256": "ff6f195fddfc192f21a96c6a00752037580e974fdfeff0f39dc6c0fb60a89ef6"
+    },
+    {
+      "path": "assets/index-DFcY3w8c.css",
+      "sha256": "532ac8428146375f8e5907a40a6b39c2a1361a9c34593b24e805c11a4f9a831e"
+    },
+    {
+      "path": "assets/money-CD86Mvub.js",
+      "sha256": "4cc820f73bae1610be58a870bd2a4a73725990b792c6c4bbc914497913c769aa"
+    },
+    {
+      "path": "assets/RenderTargetSystem-BESNVqNK.js",
+      "sha256": "75a11fa7c7cac486e6f58a20f20a11b774588bd5240fef205e9080612580fa76"
+    },
+    {
+      "path": "assets/WebGLRenderer-D-deO_LQ.js",
+      "sha256": "0a8c491169373d3ad425050da048c31acf645b53c459a43e0cb39a49d3736f4a"
+    },
+    {
+      "path": "assets/WebGPURenderer-LYY5nGb-.js",
+      "sha256": "43b5f28dfba4197914b543df3f5428bd0ac2dd9d08c3717ae1e9946214422f60"
+    },
+    {
+      "path": "assets/webworkerAll-CkEnG1n7.js",
+      "sha256": "25df9862ad155915a4704bc7835fefb46c71794d2b29e7a2071b00180f509a6e"
+    },
+    {
+      "path": "index.html",
+      "sha256": "caac5844123571ceb6e0b73157dbc6cc0ac68ea9e09f83a9e7139871326a4105"
+    },
+    {
+      "path": "tavern-assets/assets/bonus_static.webp",
+      "sha256": "2de6779b59d5e3e366ecb303732932c4403a796631b863e9fd58f601432f2157"
+    },
+    {
+      "path": "tavern-assets/assets/continue.webp",
+      "sha256": "0cda9fffffe0fce5301084ddd30a0a6c87a0ef29374409476780f7edcfc6f458"
+    },
+    {
+      "path": "tavern-assets/assets/h1_static.webp",
+      "sha256": "2827a91b98bc68a214ec160250466fd8bf6655d4313a3e8ff63cd448f4acce62"
+    },
+    {
+      "path": "tavern-assets/assets/h2_static.webp",
+      "sha256": "cf86f1cffb09d323bb92ac9aab6650299bbd48966151de3f9c43c19a930100f0"
+    },
+    {
+      "path": "tavern-assets/assets/h3_static.webp",
+      "sha256": "45ba8eabb19d9c7edf1a4f435de7353f43ff75fc72dcce0cc351abce2dbae0fd"
+    },
+    {
+      "path": "tavern-assets/assets/h4_static.webp",
+      "sha256": "147f6458be17f73b43fb702e711053a4b74b83671ab38bb6dc2fb9a149615002"
+    },
+    {
+      "path": "tavern-assets/assets/hd/td_master_2.webp",
+      "sha256": "84f60163b6be8a817e9e5a8355188aa09dd03c18922c2b1ec415b4b25b13201d"
+    },
+    {
+      "path": "tavern-assets/assets/hd/td_master_3.webp",
+      "sha256": "b119528cd7e08541b2d8854599ade311f92405730fd44ecb72745724a2bff020"
+    },
+    {
+      "path": "tavern-assets/assets/hd/td_master_4.webp",
+      "sha256": "1f3db60e168d0019d757d37d25b095b2aa7c1fc31a17d571f33c064876666fd3"
+    },
+    {
+      "path": "tavern-assets/assets/hd/td_master_5.webp",
+      "sha256": "ca8f06f5544ee030d359bdcd5d460f34389bec999372a91c90f32baa55290e8a"
+    },
+    {
+      "path": "tavern-assets/assets/hd/td_master.atlas",
+      "sha256": "8549b30a84287dfc0705c26939d421b268a0f5a4489368dbf4a307dd3eda9728"
+    },
+    {
+      "path": "tavern-assets/assets/hd/td_master.webp",
+      "sha256": "dee1041bf4a9be8b3daf62ff15ff764de28e0cb76f66e4f9274dad1e94962199"
+    },
+    {
+      "path": "tavern-assets/assets/l1_static.webp",
+      "sha256": "f588197cd9896225fcc5aa6f54e6b3e95afb12dc9b86513114af4104e81a8412"
+    },
+    {
+      "path": "tavern-assets/assets/l2_static.webp",
+      "sha256": "ecf9131855e07ac26d54c3085d2b811c495076a67bf16fc21ef38dd04258837a"
+    },
+    {
+      "path": "tavern-assets/assets/l3_static.webp",
+      "sha256": "446b272d7eb935916743a254ab97712fd3e3b65e78e7a18e8c3480d2a290355f"
+    },
+    {
+      "path": "tavern-assets/assets/l4_static.webp",
+      "sha256": "bbb885946c1bb686b4c1c8b8f9fbd550714c6f72c264e888b4c2917e91b01fcc"
+    },
+    {
+      "path": "tavern-assets/assets/l5_static.webp",
+      "sha256": "139d6bd5b4fe90836197cb98212395608fcc37ce583a9836c8d64ac743b237bf"
+    },
+    {
+      "path": "tavern-assets/assets/outfit-500-CMfhJlfe.woff2",
+      "sha256": "e5776ecb08ef257d16da5ea48b27cc6e719c274ff7f9985e2c2b5a74d9a83126"
+    },
+    {
+      "path": "tavern-assets/assets/outfit-600-DuSOvJ_5.woff2",
+      "sha256": "df027166d7f19d4fc5212fcc62368d53f3c0ad36c3f10f899e29385401e77f17"
+    },
+    {
+      "path": "tavern-assets/assets/outfit-700-D9T176aR.woff2",
+      "sha256": "da98d434ebe44b2c8b42f2f26edc4b7e65300a089419ed041942a7299896a06f"
+    },
+    {
+      "path": "tavern-assets/assets/outfit-800-ySok2YOt.woff2",
+      "sha256": "0bc360ab632c415781c90bcd3309ac313c828dfb2011e3ec43cb0c3aee5acc66"
+    },
+    {
+      "path": "tavern-assets/assets/outfit-v11-latin_latin-ext-300-COlrd1hX.woff2",
+      "sha256": "89701b515a7936dbd47d5927a8fa56e17120c4854ed882c78af4b3cb4d02b87f"
+    },
+    {
+      "path": "tavern-assets/assets/outfit-v11-latin_latin-ext-regular-BDXaL9-u.woff2",
+      "sha256": "7de43d76771c6ba4c168e3af0364a0d500db46647eee134d28181dd16c998dec"
+    },
+    {
+      "path": "tavern-assets/assets/paperclip_full_logo.webp",
+      "sha256": "1c151c07bd81b8e640f8f8c0bfd7de205e9ca09d56b0d691aca9cfe30eed5c0b"
+    },
+    {
+      "path": "tavern-assets/assets/paperclip-C0ObTQLL.webp",
+      "sha256": "fe72aecd65659bd14c025eedfaee7ec57a4f313338ff1026fbbafc2b55c99705"
+    },
+    {
+      "path": "tavern-assets/assets/paperclip-rMFDawAD.gif",
+      "sha256": "f5ea52934ec8e25349f88b3cfb84cee9b03e7264c177a19e3f5633320b1e2e69"
+    },
+    {
+      "path": "tavern-assets/assets/poweredby-D9-5QAZx.webp",
+      "sha256": "b6092417e2e9883c99e2fa00b866bf8a996075268ca0c034606a0dac9f8c133f"
+    },
+    {
+      "path": "tavern-assets/assets/sd/td_master.atlas",
+      "sha256": "5269204e0ca8343ee735e84cb9ab17dccf9b11b48761d025ef574de05f381333"
+    },
+    {
+      "path": "tavern-assets/assets/sd/td_master.webp",
+      "sha256": "3d7d764e6bcab77bc82c1de7abb7338feca30c55c8aa159bcf99875994857efd"
+    },
+    {
+      "path": "tavern-assets/assets/td_ante.webp",
+      "sha256": "e76ef17da158c2f14f3c5f0d40ea4d5ca6f6861fd3ed7f7b1e1b4f2d811410dc"
+    },
+    {
+      "path": "tavern-assets/assets/td_backgrounds.skel",
+      "sha256": "5f8bff30c0a431e17fdabfc955c666b385712f06989736568feb98a633a346ce"
+    },
+    {
+      "path": "tavern-assets/assets/td_bonus.webp",
+      "sha256": "c063b60febc63cad1db18eb79ab3202a3ebb5185784ae911ea46c18fbb8f41d4"
+    },
+    {
+      "path": "tavern-assets/assets/td_card_character.webp",
+      "sha256": "618e3dee237111455656c5f7387efdff7d73a0fb91249c9b34d4f670ea4326fe"
+    },
+    {
+      "path": "tavern-assets/assets/td_character.skel",
+      "sha256": "af0426ebe2b2880b3c8362b14abfde9e315ae533643b03c823ed1f8671cb6945"
+    },
+    {
+      "path": "tavern-assets/assets/td_gold.webp",
+      "sha256": "8f81ea9c51455e9e47913c349eba142bd90b48b58702709c1d3cdeb6c0ca7d7e"
+    },
+    {
+      "path": "tavern-assets/assets/td_gold.xml",
+      "sha256": "f833e44698a117504f68a95e43e79d4bd0207979ad8d88af6ebe59b26c695c02"
+    },
+    {
+      "path": "tavern-assets/assets/td_green.webp",
+      "sha256": "2b81ed5aaa94d5ba7fb7874a06b1fdaac6b0e2da95c07c9fbae813d3a4d0e709"
+    },
+    {
+      "path": "tavern-assets/assets/td_green.xml",
+      "sha256": "4c8511f2d7217811ffc8edbb83f0d029210b3bfbde443711ed967c0a7e3e0a28"
+    },
+    {
+      "path": "tavern-assets/assets/td_loader_bg.webp",
+      "sha256": "dd6c1c1fe2ceed45c7c9cde177d3aaf4a0bbaa3677ee95986ff2f1e77616ec2e"
+    },
+    {
+      "path": "tavern-assets/assets/td_loader.webp",
+      "sha256": "33aa0a5757d0ee238002fb083ec9a0c01b71a9061581d9ac5a67ba54f288b98e"
+    },
+    {
+      "path": "tavern-assets/assets/td_red.webp",
+      "sha256": "955d663ad20bc4da092d9854849a87d45995a362acdbc37bb5f804a6adffcdb5"
+    },
+    {
+      "path": "tavern-assets/assets/td_red.xml",
+      "sha256": "fce8c20634b7b03732e1b00bdaa7a8480a869550b7454813b62fbde52d5f66a1"
+    },
+    {
+      "path": "tavern-assets/assets/td_reelhouse.skel",
+      "sha256": "4d77780458b05ec177288b995a17d24a73e4a5f0a46c47c99b9a7408811a1eee"
+    },
+    {
+      "path": "tavern-assets/assets/td_screens.skel",
+      "sha256": "89f2a71f5919b1f6dcd4a8962f704afefc62f2c884a0df5f8d25b88f98008de2"
+    },
+    {
+      "path": "tavern-assets/assets/td_sounds.json",
+      "sha256": "a61d3d8a1eb43b25994a489cf2a46e00e267d32d72abd0b4daad2951ade2f697"
+    },
+    {
+      "path": "tavern-assets/assets/td_sounds.mp3",
+      "sha256": "e7afc97efac0eb9787019fae6e7ee43df9cb3fdcb2397a87885c27813a41144b"
+    },
+    {
+      "path": "tavern-assets/assets/td_sounds.ogg",
+      "sha256": "450843a128b8cd88fda47bc905ff30057495780653c4d87e60bc7bb8bbbc2deb"
+    },
+    {
+      "path": "tavern-assets/assets/td_super.webp",
+      "sha256": "fc007f0c8d4d9baa5f41c3ff008143d5a100cde01600666ad82d602d31ea67e8"
+    },
+    {
+      "path": "tavern-assets/assets/td_superante.webp",
+      "sha256": "f218c40b725ce565fb21ed43497b44fef9547b8c2ae6c930724c5ed4c0adb445"
+    },
+    {
+      "path": "tavern-assets/assets/td_symbols_bonus.skel",
+      "sha256": "f6f097a70ae387c95f69370506faa9f09b65d4d236ff87d2b08f4637408057dc"
+    },
+    {
+      "path": "tavern-assets/assets/td_symbols_high.skel",
+      "sha256": "8e7d5ad074950e4bfdddfa6e7d2388c576ad7cb1bc045a781d7ce893490e5f9b"
+    },
+    {
+      "path": "tavern-assets/assets/td_symbols_low.skel",
+      "sha256": "6017fa902f31119858118eeaf59c45729bc6905f15892c02e60b9eefccb9391d"
+    },
+    {
+      "path": "tavern-assets/assets/td_symbols_wild.skel",
+      "sha256": "77c4b1c621bf018308b4a3ebe3fc6d82b283d4111db3456781e7d49b3cdcdbd7"
+    },
+    {
+      "path": "tavern-assets/assets/wild_static.webp",
+      "sha256": "0afb7ecb465a43f8eb369e1b29a565ff89552cf30ca715ca077e6014a9148750"
+    },
+    {
+      "path": "tavern-assets/cover/taverndrop.webp",
+      "sha256": "a2ba79639572310a41a02cd27cf150fdb582f296067884494db3b0ea25626e0e"
+    },
+    {
+      "path": "tavern-assets/cues/chest.mp3",
+      "sha256": "3672242f29fc4fbf6275d3982cc7b482c67a6dba757631093aedfc3f750c3d36"
+    },
+    {
+      "path": "tavern-assets/cues/entry.mp3",
+      "sha256": "88816c3e5921fa180dd3ef48badb51f813974791e43be3143274da34b311ede8"
+    },
+    {
+      "path": "tavern-assets/cues/start.mp3",
+      "sha256": "6301fa68c0c9aeedb110f7d72966b2e235bbcd94dc49eafd18828655a00fc28e"
+    },
+    {
+      "path": "tavern-assets/cues/stop.mp3",
+      "sha256": "d380413bdd893808b585364edb177edc19585b72f0916bd9aa965fd734a956dc"
+    },
+    {
+      "path": "tavern-assets/cues/win.mp3",
+      "sha256": "de586b3b84f21870bbdf884c0ecd204946d07ac2f4e656572db1faf18556ac7c"
+    },
+    {
+      "path": "tavern-assets/favicon.png",
+      "sha256": "66b1e9793934a85aa17607c7c9e14a5cd0cfc7ed1c4650cbc2cec168d5986fb9"
+    },
+    {
+      "path": "tavern-assets/hud/autoplay-ready.svg",
+      "sha256": "c4060e1c131c3de51fb3c6159dbe65759346dc9f3bc1f653fb6344a31557f54f"
+    },
+    {
+      "path": "tavern-assets/hud/autoplay.svg",
+      "sha256": "56d4775d4c13f4e135bec108b355ba2c5bd13e7960583fce2c685186b4ac7282"
+    },
+    {
+      "path": "tavern-assets/hud/bet-down.svg",
+      "sha256": "f2f730bd031c78f9825698e15b7b7fa1e280db71df1f6068fcede32112f18ee1"
+    },
+    {
+      "path": "tavern-assets/hud/bet-up.svg",
+      "sha256": "ed8092f539e7e0a223e073cff7ead341d1ac3d6c14cca2731c264af35ec6d52d"
+    },
+    {
+      "path": "tavern-assets/hud/close.svg",
+      "sha256": "035677d4eb3cfdeada9bb31dc9414a014af1fdc47a4ab5efbee275ee62983db4"
+    },
+    {
+      "path": "tavern-assets/hud/effects-muted.svg",
+      "sha256": "7cfc0d0d6e4a35bbe883b21bb88bf51fb5a4c8c66704dbf6eea475f9ce731c4f"
+    },
+    {
+      "path": "tavern-assets/hud/effects.svg",
+      "sha256": "9ef3c881a8b5ea3febfd58ea945f8ffee7b1a37f73c297e4d582e2fcb01e226c"
+    },
+    {
+      "path": "tavern-assets/hud/feature-buy.svg",
+      "sha256": "508629389b5d0036a11ffa6e63710db3a57c3163da9dd0127d5200c49a6ab1b0"
+    },
+    {
+      "path": "tavern-assets/hud/info.svg",
+      "sha256": "17b06611854cfeb44305f51147555e65dac645fd45cd84fdd1f3742cd8d0d6a8"
+    },
+    {
+      "path": "tavern-assets/hud/menu.svg",
+      "sha256": "2cb1bac2ce447a2d5e90de9c5d25886dbd5b1dbf46f2942ea9746205d28713fd"
+    },
+    {
+      "path": "tavern-assets/hud/music-muted.svg",
+      "sha256": "f2c56e9eafee173ea5a2c6aeb3ab7e16ac5d46e048fa12aa8026e59612a3c9a0"
+    },
+    {
+      "path": "tavern-assets/hud/music.svg",
+      "sha256": "167dab6c9f1cdd80aabcc90b8098c435cdb53f25397a0f50acadc857bfc7a2cf"
+    },
+    {
+      "path": "tavern-assets/hud/share.svg",
+      "sha256": "fc1a28fc12644016ddfacad72169adc36627dff4923846bb894a824c9f05d7b7"
+    },
+    {
+      "path": "tavern-assets/hud/skip.svg",
+      "sha256": "c1bcb1a500ae2b1f7cfa4f7fc0bfef50812a4f9f0472be0084e22bbfcedc43b1"
+    },
+    {
+      "path": "tavern-assets/hud/spin.svg",
+      "sha256": "343a33cf75689ba05dabf06f41c8e9d37ad092ecb2f1ddf33565d450f1e09e1a"
+    },
+    {
+      "path": "tavern-assets/hud/stop.svg",
+      "sha256": "7cf010f8f7ad9a1ead19383926be998898e328eab9f0d5838d67c539898b1992"
+    },
+    {
+      "path": "tavern-assets/hud/turbo.svg",
+      "sha256": "975eb72be72c9f5a8f3b516267a6a11d43dfd3a38fe1ff4301fe0807e93f6a3f"
+    }
+  ]
+}

@@ -20,7 +20,7 @@ This guide explains what changed between Milestone 1 and Milestone 2, how to mov
 | Assets | Original Tavern Drop v13 runtime files under `public/tavern-assets/`. The build copies them to `dist/`. | Confirm the client's right to ship them (see the asset checklist) |
 | Game config | Bets are the KRW ladder ₩200–₩200,000 (default ₩20,000). Demo balance ₩10,000,000. Chance prices 1×/3×/6×, Bonus Buy 125×/300×, max win 10,000×. | Review against the approved math |
 | Mock API | Same `/api/v1` body-only contract as M1. Additions only: `settings.mockBonusEnabled` on the session, an optional `mockBonus` buy field and `POST /api/v1/debug/balance`, all available only when the review switch is on. Bets now come from the game config. | Backend team: no breaking change |
-| Server | `MOCK_DEBUG_BONUS` turns the review tools on or off. It defaults to on when the server runs on Railway and off elsewhere. | Set it explicitly per environment |
+| Server | `MOCK_DEBUG_BONUS` controls whether the mock server accepts review requests | Set it explicitly per environment |
 | Node | Node.js 22.18 or newer, unchanged. | None |
 | Docs | New: this guide, the features and test guide, the asset and sound checklist (Markdown and PDF), and error-state evidence. | None |
 
@@ -87,14 +87,13 @@ PORT=8080 MOCK_DEBUG_BONUS=0 npm start
 | Setting | Where | Notes |
 | --- | --- | --- |
 | `PORT` | Environment | HTTP port, default 4000 |
-| `MOCK_DEBUG_BONUS` | Environment | `1` shows **Feature buy → Bonus debug**; `0` hides it |
+| `MOCK_DEBUG_BONUS` | Environment | `1` allows mock review requests; `0` rejects them |
 | `MOCK_API_DATA_FILE` | Environment | Path of the mock wallet/session store |
 | `GAME_TARGET` | Environment | Set by `game:build`/`game:start` for single-game deployments |
 | `?game=` | URL | `tavern` (default), `reuse` (3×3 example), `viewer` (asset viewer) |
 | `?quality=` | URL | `hd` or `sd` to override the automatic texture tier |
 | Bets, prices, timings, texts | `src/games/tavern/game.config.json` | Validated at build time against `src/framework/game-config.schema.json` |
 | Rules text, RTP | `src/games/tavern/info.json` | `rtp` is `null` until the approved figure is supplied; the RTP line is then shown |
-| Bonus Buy notice | `presentation.controls.bonusBuyNotice` in the game config | Remove it in M3 to enable the bonus buy |
 
 ## 5. Smoke test after each deployment
 
@@ -104,19 +103,14 @@ PORT=8080 MOCK_DEBUG_BONUS=0 npm start
 4. **Menu → Game Rules** opens; the volume sliders work.
 5. **Feature buy** shows four cards with KRW prices. Tavern Bonus → Confirm shows **Coming Soon in M3**.
 6. Reload during a spin; **Resume Active Game?** finishes the round.
-7. With `MOCK_DEBUG_BONUS=1`, run the error states in section 9 of the features and test guide.
+7. Run the error states in section 9 of the features and test guide with a designated review session.
 8. Repeat steps 1–3 on a phone in portrait and landscape.
 
-## 6. Bring M2 into the client project (GitLab `slot-client`)
+## 6. Review M2 in the client project
 
-M1 was placed in the client repository as `apps/player-web/than/` (reusable client), `games/slot-001/client/than/` (game module and review asset pack) and `contracts/player-draft-v2/than/` (API mapping). M2 is one self-contained package. Apply it on a new branch from the coordinator's integration branch:
+The GitLab layout places the local M2 mock review app in `apps/player-web/than/m2-review/`, the Tavern module and runtime assets in `games/slot-001/client/than/m2/`, and its setup guide in `docs/than/m2/START_HERE.md`. The release staging copy uses the same paths under `korRelease/slot-client-main/`.
 
-1. **Client package.** Replace the contents of `apps/player-web/than/` with the M2 snapshot: everything in the release repository except `.git`. Keep any client-owned files you added there, such as `.env.example` or the `licenses/` notices, and refresh the notices from `npm ci` if your process requires them.
-2. **Game module and assets.** The Tavern presentation now lives in `src/games/tavern/` and its runtime assets in `public/tavern-assets/` inside the package, so the build copies exactly that allowlisted tree. The M1 review files in `games/slot-001/client/than/` (review skin, M1 inventory and the `assets/runtime/` pack) are superseded. Keep them only for history, or replace the inventory with `docs/milestone-2-asset-checklist.md`. The `assets/` files are identical to the M1 runtime pack and are listed with SHA-256 in the checklist.
-3. **Contracts.** `contracts/player-draft-v2/than/` is unchanged by M2. The M2 mock API is backwards compatible with M1 (section 1).
-4. **Run** from `apps/player-web/than/`: `npm ci`, `npm test`, `npm run build`, `npm start`.
-5. **Backend integration.** The game talks to the server only through the transport in `src/framework/transport/proposal.ts` (contract `proposal-v1`). To connect the real backend, implement the agreed adapter behind the same `GameTransport` interface (`src/framework/domain/contracts.ts`) and keep the mock out of the production entry. The current request and response fields are in `docs/milestone-1-api.md`; the resource pipeline is in `docs/fw-pixi-architecture.md`.
-6. Commit, push the branch and open a Draft MR for review.
+From the review app directory, install the locked dependencies with `npm ci`, run `npm test` and `npm run build`, then launch with `npm start`. The framework and Tavern source are staged from the explicit runtime manifest for this local review. The existing M1 production entry and versioned API examples remain available. Backend integration requires the agreed adapter and approved assets and rules.
 
 ## 7. Release record
 

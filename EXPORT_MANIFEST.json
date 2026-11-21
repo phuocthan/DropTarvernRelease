@@ -1,7 +1,7 @@
 {
   "milestone": "M2",
   "checksumNormalization": "UTF-8 text with LF line endings; binary files unchanged",
-  "sourceRevision": "19f5407857c28246b44d6e678b519e65ff1fb498",
+  "sourceRevision": "1e22486f6dc0b6cf3799270105fd1fc4c5e4c82a",
   "files": [
     {
       "path": ".gitignore",
@@ -9,11 +9,11 @@
     },
     {
       "path": "README.md",
-      "sha256": "eace3be9886ce2b83b867c07b3b8d58493524faa96459b8ca0919ccda14b754c"
+      "sha256": "abd1a37cfa029c812c79e8dc6eb823c33de528c59cd16dce22f6d9c9fe04085a"
     },
     {
       "path": "SOURCE_REVISION",
-      "sha256": "4b186eabe866078914dd56ad9c4139b4f7715a5ff90a337fe57a5b79ae099007"
+      "sha256": "cb2b9fa853d603a6c56adeff384d09f2bdaf696154dce2b6393fcd056bde6a80"
     },
     {
       "path": "asset-viewer/app.js",
@@ -129,7 +129,7 @@
     },
     {
       "path": "docs/milestone-2-features-and-testing.md",
-      "sha256": "77ef500adbb5e35e2e21349b02e5caa6864cf5a71a55d7d5d57ce135aefc43de"
+      "sha256": "f7b3fef0e2de23bf803e509a249e19649b31d838c05e7df61baef3fcb7fb21d1"
     },
     {
       "path": "docs/milestone-2-features-and-testing.pdf",
@@ -137,7 +137,7 @@
     },
     {
       "path": "docs/milestone-2-upgrade-and-deploy.md",
-      "sha256": "40ae6140e3c7c9d86dc29980ee7acc9dfd8bc1e64d6e69c2c27102d33af5ea1e"
+      "sha256": "ceb5550c47adc86149e04496f27919f79fdc21e354cf45c397ce1abcac0b0ecf"
     },
     {
       "path": "docs/tavern-asset-inventory.md",
@@ -153,7 +153,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "d853b310a13cf79bf4df7a7399f54f995bf861cd18c4ebb494c4d9e02bc3c75c"
+      "sha256": "a06858cc189bbefe8e11ae4c7c64c920c72cdfda13e8afdc3d56561edf4a72a1"
     },
     {
       "path": "playwright.config.ts",
@@ -493,7 +493,7 @@
     },
     {
       "path": "server.js",
-      "sha256": "44cdba901bc757d4ce1e5454bf8b30a31070df8f2265d5cd278dcc61cb2c19a4"
+      "sha256": "94b691ce12fcf292da720ce5ff5dca27c4ecbf75c793d407ec6f3ff606723e9f"
     },
     {
       "path": "src/framework/app/game-runtime.ts",
@@ -513,7 +513,7 @@
     },
     {
       "path": "src/framework/domain/contracts.ts",
-      "sha256": "ac5fd5ac36f069cbd745c3e976a088f113b3486825edb0c5ae6c0868ee520b0c"
+      "sha256": "8de217ed97109a75b2347451e919cb029eac076dfe4f9fd4594817e451658eab"
     },
     {
       "path": "src/framework/domain/rules.ts",
@@ -521,11 +521,11 @@
     },
     {
       "path": "src/framework/game-config.schema.json",
-      "sha256": "5dc26836d5b70e223f4802ba70a574d4cc064a8e6a2448b0ed837715a091bf57"
+      "sha256": "7545cce6204073a57e596bbcc4dc0e32752d131959a2136917879f2bc3ab056a"
     },
     {
       "path": "src/framework/game-config.ts",
-      "sha256": "be4a1ce7879f66745c5e00bca962859f9b142faa10ad354dea7de305a038a55d"
+      "sha256": "876f9cc30bb227c639ca8293715d9b248efcd053e79d3319fb6193e668eef6df"
     },
     {
       "path": "src/framework/network/json-client.ts",
@@ -701,11 +701,11 @@
     },
     {
       "path": "src/games/tavern/app.ts",
-      "sha256": "358ec4d6cf7e2a4fee911cfb0e2f03574e520aba15631c8899820c7904cd6858"
+      "sha256": "fc3df2af1393b34f6a3367492195f421ac21fe899c12bf7a1105593b0784709d"
     },
     {
       "path": "src/games/tavern/art.ts",
-      "sha256": "0132e95eabc9f4799a241d739cc45d89787e5b36ce1a95624e2d82326297e498"
+      "sha256": "f4e22b275510611bb8557c2f9cddca690df070ada1dd107ee921c4a0947a2a09"
     },
     {
       "path": "src/games/tavern/audio.config.json",
@@ -721,11 +721,11 @@
     },
     {
       "path": "src/games/tavern/effects.ts",
-      "sha256": "635453efcc7bf58adba285b9b94628a5d013d1262b2f3712e72f45031dfb2934"
+      "sha256": "0c6e8bfd04be2e3d82def76c138552ac8c4518dc46864cdba5045e353d9f351e"
     },
     {
       "path": "src/games/tavern/game.config.json",
-      "sha256": "284f8a907fc37b1fc1a43fb6e60431cbd7d0187bdd971dd97f5bfe9cb4ad8a1c"
+      "sha256": "a525f0fc00b3ac5b65047cff1cfd0ebe2939f2a9099c761045383d6a494cd560"
     },
     {
       "path": "src/games/tavern/hud-icons.ts",
@@ -773,7 +773,7 @@
     },
     {
       "path": "src/games/tavern/theme.css",
-      "sha256": "df1a27cc814e1b4a802ee14ed876df92e0a6a5aa9eef56a556f58233b6685cbe"
+      "sha256": "8a8f1d66ddc271a7172b47d650cee5bd1986b7a84fd4c84cf04d69c1acc1c48c"
     },
     {
       "path": "src/games/tavern/typography.ts",
@@ -793,7 +793,7 @@
     },
     {
       "path": "tests/browser/chest-resume.spec.ts",
-      "sha256": "e2dcce64e243fb4a30b45487b1ea0713b880e1062b4bd74fd27161f6f4516959"
+      "sha256": "cf1557a41792806cd412be51fb83942227a46747455939006ec93cf1a36c4d72"
     },
     {
       "path": "tests/browser/fixtures/win-screen.ts",
@@ -805,7 +805,7 @@
     },
     {
       "path": "tests/browser/game.spec.ts",
-      "sha256": "26c17114644dc8f065414bdb62891a3634a52615f78cea50fec78bfc6414de1f"
+      "sha256": "91d99fa42763831373f578343ee8bd8cda1c037a85baf9e8223bcf86704349f3"
     },
     {
       "path": "tests/browser/info-screen.spec.ts",
@@ -821,7 +821,7 @@
     },
     {
       "path": "tests/browser/proposal.spec.ts",
-      "sha256": "8cbe2b8ccad25b6a91eb29bb7921863694a859e4b16328d8ab8a67db8ce8e4d4"
+      "sha256": "dcb74c226d6cb08eb5e0046215bf37247694707aebc2a05df42a87b5fd7a3f20"
     },
     {
       "path": "tests/browser/startup-feature.spec.ts",
@@ -829,11 +829,11 @@
     },
     {
       "path": "tests/browser/tavern-policies.spec.ts",
-      "sha256": "2b7e55c3d7328fc9bdb1d6df4e7bef305eb8727bd4308e5e7f64572e820f39b2"
+      "sha256": "c6a444155996ec87f24b706ea12f4949e1d8f630edeccfc12075e87a6b484710"
     },
     {
       "path": "tests/browser/win-effects.spec.ts",
-      "sha256": "d014c1b754e2d6cced5df177b36c0e5f562386e9160a34342e94cb0fd8802290"
+      "sha256": "0f723a1343dd06a43094d514d47c69f03f9060ebd21641846be54559a1a99149"
     },
     {
       "path": "tests/browser/win-screen.spec.ts",

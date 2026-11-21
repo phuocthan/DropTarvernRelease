@@ -26,7 +26,7 @@ Open `http://localhost:4000/`, press **Press to continue** and spin.
 
 Development server with hot reload: `npm run dev` (game on port 5173, API on 4000). Browser tests: `npm run test:browser` (set `CHROMIUM_PATH` if Chromium is not at `/usr/bin/chromium`).
 
-Set `MOCK_DEBUG_BONUS=1` to show **Feature buy → Bonus debug**, which holds the error-state switches used in testing. It is on by default on Railway and off elsewhere.
+Designated mock review sessions can open **Feature buy → Bonus debug** for error-state testing. Set `MOCK_DEBUG_BONUS=0` to reject debug requests at the server.
 
 ## Documents
 
@@ -43,4 +43,4 @@ Set `MOCK_DEBUG_BONUS=1` to show **Feature buy → Bonus debug**, which holds th
 
 [`SOURCE_REVISION`](SOURCE_REVISION) records the development commit of this snapshot. [`EXPORT_MANIFEST.json`](EXPORT_MANIFEST.json) lists the SHA-256 of every exported file. Earlier milestone tags are unchanged.
 
-The `korRelease/` folder holds the Milestone 1 copy in the client repository layout. It is not changed by this release.
+The `korRelease/` folder contains the client-layout staging copy. See its `docs/than/m2/START_HERE.md` for the separate M2 mock review package.
