@@ -1,6 +1,6 @@
 # Tavern Drop — Milestone 2
 
-The complete Tavern Drop **base game** on the reusable `fw-pixi` TypeScript/PixiJS framework, with the original Tavern Drop v13 art, Spine animations, fonts and sounds. The same framework also runs a 3×3 example. The Tavern and Drop bonus games follow in Milestone 3; in this build, confirming a Bonus Buy shows **Coming Soon in M3** and no bet is placed.
+The complete Tavern Drop **base game** on the reusable `fw-pixi` TypeScript/PixiJS framework, with the original Tavern Drop v13 art, Spine animations, fonts and sounds. The same framework also runs a 3×3 example. The Tavern and Drop bonus games follow in Milestone 3; in this build, confirming a Bonus Buy shows **Bonus not available** and no bet is placed.
 
 Results, balances and the KRW demo wallet come from the included mock API.
 
@@ -33,6 +33,7 @@ Designated mock review sessions can open **Feature buy → Bonus debug** for err
 | Document | Content |
 | --- | --- |
 | [Upgrade from M1 and deploy](docs/milestone-2-upgrade-and-deploy.md) | What changed since M1, upgrade steps, Railway and Node deployment, applying M2 to the client project |
+| [M2 re-review evidence](docs/milestone-2-evidence/re-review/README.md) | Approved stakes, recovery fixtures, recordings, verification results and build hashes |
 | [Features and test guide](docs/milestone-2-features-and-testing.md) ([PDF](docs/milestone-2-features-and-testing.pdf)) | Every M2 scope item, how to test it and the expected result |
 | [Asset and sound checklist](docs/milestone-2-asset-checklist.md) ([PDF](docs/milestone-2-asset-checklist.pdf)) | Every file, sound cue and Spine clip: used or not, where, and whether it matches the original |
 | [Error-state evidence](docs/milestone-2-evidence/error-states/README.md) | Insufficient balance, connection lost, reconnecting and retry captures |

@@ -1,0 +1,17 @@
+{
+  "preview": "https://slotdemo.up.railway.app/?game=tavern",
+  "sourceCommit": "b51ebe0c0ebda237db31c3249c229a624ab82142",
+  "deploymentId": "f8b5e720-8296-4c00-9a19-360b0d37e325",
+  "status": "success",
+  "node": "22.23.4",
+  "wallet": "synthetic KRW",
+  "checks": {
+    "homeHttp": 200,
+    "portraitWidth": 390,
+    "portraitSmoke": "passed",
+    "orderedStakes": 25,
+    "roundLockedAfterDebit": true,
+    "spinEnabledAfterCompletion": true,
+    "repeatedCompletionReceiptUnchanged": true
+  }
+}

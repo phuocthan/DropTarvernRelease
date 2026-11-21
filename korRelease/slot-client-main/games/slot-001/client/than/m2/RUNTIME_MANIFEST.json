@@ -394,7 +394,7 @@
     {
       "from": "source/app.ts",
       "to": "src/games/tavern/app.ts",
-      "sha256": "fc3df2af1393b34f6a3367492195f421ac21fe899c12bf7a1105593b0784709d"
+      "sha256": "df449ebe53b71b95859e554121e3f2c3f06228bf94464ff0c2594f5cba25b951"
     },
     {
       "from": "source/art.ts",
@@ -424,7 +424,7 @@
     {
       "from": "source/game.config.json",
       "to": "src/games/tavern/game.config.json",
-      "sha256": "a525f0fc00b3ac5b65047cff1cfd0ebe2939f2a9099c761045383d6a494cd560"
+      "sha256": "c9934564e95addd7f7e4454881ed771c6f3788f99210c52e0419e538703ef233"
     },
     {
       "from": "source/hud-icons.ts",
@@ -439,7 +439,7 @@
     {
       "from": "source/info.json",
       "to": "src/games/tavern/info.json",
-      "sha256": "e492fb4b045ff1927ab832648f5c529b485a7074e1a7489ac1dda0a1047c251a"
+      "sha256": "f34da6eba628d028d0d4b8d10ee43cf1d5cb614547baf2d21d95541f2f675508"
     },
     {
       "from": "source/mascot.ts",
@@ -474,12 +474,17 @@
     {
       "from": "source/theme.css",
       "to": "src/games/tavern/theme.css",
-      "sha256": "8a8f1d66ddc271a7172b47d650cee5bd1986b7a84fd4c84cf04d69c1acc1c48c"
+      "sha256": "319f888ba98aabb8dc07ea24501c3ccf0101ebfd37ca85e28b012e4e036e7da6"
     },
     {
       "from": "source/typography.ts",
       "to": "src/games/tavern/typography.ts",
       "sha256": "7cbc73df0c912bd0b6f6bcda6f02a7b8d2bdc25b1be52c897e584cb0dec3fa43"
+    },
+    {
+      "from": "source/base-presentation.config.json",
+      "to": "src/games/tavern/base-presentation.config.json",
+      "sha256": "242fa136157ae1fa790b6e1d0b5bb92643b7222e5cfbdaef2856410bc347d7f0"
     }
   ]
 }

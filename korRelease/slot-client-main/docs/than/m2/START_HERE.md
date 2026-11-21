@@ -16,10 +16,11 @@ npm run build
 npm start
 ```
 
-Open `http://127.0.0.1:4000/?game=tavern` for Tavern Drop or `http://127.0.0.1:4000/?game=default` for the shared 3×3 example. Press Continue and spin. The review app uses synthetic KRW data with the versioned v1 adapter. Real-backend integration and final RTP, math and rule approval remain pending. The default Bonus Buy confirmation shows the M3 notice and does not charge the wallet. The runtime asset exports are listed in the checklist. Approval for commercial distribution remains separate.
+Open `http://127.0.0.1:4000/?game=tavern` for Tavern Drop or `http://127.0.0.1:4000/?game=default` for the shared 3×3 example. Press Continue and spin. The review app uses synthetic KRW data with the versioned v1 adapter. Real-backend integration and final RTP, math and rule approval remain pending. The default Bonus Buy confirmation shows the Bonus not available notice and does not charge the wallet. The runtime asset exports are listed in the checklist. Approval for commercial distribution remains separate.
 
 | Document | Purpose |
 | --- | --- |
+| [M2 re-review evidence](milestone-2-evidence/re-review/README.md) | Revised build checks, recovery fixtures and recordings |
 | [Features and testing](milestone-2-features-and-testing.md) · [PDF](milestone-2-features-and-testing.pdf) | Scope, verification steps and expected results |
 | [Asset and sound checklist](milestone-2-asset-checklist.md) · [PDF](milestone-2-asset-checklist.pdf) | Runtime artwork, Spine, fonts and audio inventory |
 | [Upgrade and deploy](milestone-2-upgrade-and-deploy.md) | Standalone review distribution and deployment instructions |

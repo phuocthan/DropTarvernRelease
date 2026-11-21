@@ -1,0 +1,22 @@
+{
+  "unit": {
+    "passed": 68,
+    "failed": 0
+  },
+  "isolatedProductionBuild": "passed",
+  "browserInteraction": {
+    "passed": 5,
+    "failed": 0,
+    "renderer": "reduced-motion"
+  },
+  "browserAudio": {
+    "passed": 1,
+    "failed": 0,
+    "environment": "Chrome headless on the isolated main-repository build",
+    "assertion": "One sound-pack load and actual audio playback advances after bet-step input."
+  },
+  "referenceVideo": {
+    "normalReelTapAndHold": "recorded",
+    "tapDuringWinCount": "not captured"
+  }
+}

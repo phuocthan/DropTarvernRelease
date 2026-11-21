@@ -1,0 +1,24 @@
+{
+  "format": "OGG",
+  "check": "Decoded the original sprite segments with FFmpeg. Browser playback and device output are separate checks.",
+  "cues": [
+    {
+      "cue": "shared_click",
+      "offsetMs": 57000,
+      "durationMs": 130.02267573696003,
+      "peak": "-3.9 dB"
+    },
+    {
+      "cue": "shared_buy_click",
+      "offsetMs": 55000,
+      "durationMs": 939.9999999999977,
+      "peak": "-6.8 dB"
+    },
+    {
+      "cue": "shared_betlevel",
+      "offsetMs": 53000,
+      "durationMs": 235.01133786847817,
+      "peak": "-10.4 dB"
+    }
+  ]
+}
